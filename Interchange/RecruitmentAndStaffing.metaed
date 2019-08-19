@@ -2,8 +2,10 @@ Interchange RecruitmentAndStaffing
 
   documentation "?"
 
-  domain entity EdFi.Credential
   domain entity Applicant
+  domain entity Application
+  domain entity ApplicationEvent
+  domain entity EdFi.Credential
   domain entity Prospect
   domain entity RecruitmentEvent
 
