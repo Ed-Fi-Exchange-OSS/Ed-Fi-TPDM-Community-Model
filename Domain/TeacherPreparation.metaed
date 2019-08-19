@@ -87,6 +87,7 @@ Domain TeacherPreparation
     association StaffTeacherPreparationProviderProgramAssociation
     association SurveyCourseAssociation
     association SurveyProgramAssociation
+    association SurveyResponseTeacherCandidateTargetAssociation
     association SurveySectionAssociation
     association SurveyStaffAssociation
     association SurveyTeacherCandidateAssociation
