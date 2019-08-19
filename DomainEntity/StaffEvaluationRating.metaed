@@ -1,0 +1,21 @@
+Domain Entity StaffEvaluationRating
+    documentation "The summary rating for a staff evaluation applied to an individual educator."
+    shared decimal StaffRating named Rating
+        documentation "The numerical summary rating or score for the evaluation."
+        is required
+    date StaffEvaluationDate
+        documentation "The date for the staff evaluation."
+        is part of identity
+    descriptor StaffEvaluationRatingLevel
+        documentation "The rating level achieved based upon the rating or score."
+        is optional
+    domain entity EdFi.Staff
+        documentation "The staff member evaluated."
+        is part of identity
+    domain entity EdFi.Staff
+        documentation "The staff member performing the evaluation."
+        is optional
+        role name EvaluatedBy
+    domain entity StaffEvaluation
+        documentation "The Staff Evaluation applied for the staff member."
+        is part of identity

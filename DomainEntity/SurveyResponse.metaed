@@ -1,0 +1,26 @@
+Domain Entity SurveyResponse
+  documentation "Responses to a Survey for named or anonymous persons."
+    shared string SurveyResponseIdentifier
+    documentation "The identifier of the survey typically from the survey application."
+    is part of identity
+  date ResponseDate
+    documentation "Date of the survey response."
+    is required
+  descriptor SurveyLevel
+    documentation "Provides information about the respondents of a survey and how they can be grouped together (ex., grade level, grade band, course type, etc.)."
+    is optional collection
+  shared string EdFi.ElectronicMailAddress
+    documentation "Email address of the respondent."
+    is optional
+  shared string FullName
+    documentation "Full name of the respondent."
+    is optional
+  shared string Whereabouts named Location
+    documentation "Location of the respondent, oten a citr, district, or school."
+    is optional
+  domain entity Survey
+    documentation "The survey associated with the response."
+    is part of identity
+  choice SurveyResponderChoice
+    documentation "Reference to either a student, parent, staff, or applicant - or none for anonymous survey."
+    is optional

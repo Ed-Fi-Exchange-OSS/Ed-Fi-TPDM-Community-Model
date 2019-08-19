@@ -1,0 +1,4 @@
+Shared String RubricLevelCode
+  documentation "The identifying code for the question, unique for the rubric."
+  min length 1
+  max length 64

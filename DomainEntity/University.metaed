@@ -1,0 +1,12 @@
+Domain Entity University based on EdFi.EducationOrganization
+    documentation "This entity represents an educational organization that includes staff and students who participate in classes and educational activity groups."
+
+    // FederalLocaleCode is intended as an extension to the abstract entity EducationOrganization (though its CEDS equivalent, Economic Research Service Rural-Urban Continuum Code, would make it part of Address), but that's not yet supported by MetaEd
+    descriptor FederalLocaleCode
+      documentation "The federal locale code associated with an education organization."
+      is optional
+
+    integer UniversityId
+        documentation "The unique identification code of the University"
+        renames identity property EducationOrganizationId
+        is queryable field

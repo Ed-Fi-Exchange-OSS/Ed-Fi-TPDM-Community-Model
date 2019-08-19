@@ -1,0 +1,14 @@
+Common AggregatedLanguage
+  documentation "The data about the language"
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  descriptor EdFi.Language
+    documentation "Data about the language of the group"
+    is part of identity
+  integer LanguageTypeNumber
+    documentation "The number of students by each language type."
+    is optional
+  percent LanguageTypePercentage
+    documentation "The percentage of students by language type."
+    is optional

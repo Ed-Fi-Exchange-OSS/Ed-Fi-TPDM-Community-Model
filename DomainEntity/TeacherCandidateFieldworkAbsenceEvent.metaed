@@ -1,0 +1,17 @@
+Domain Entity TeacherCandidateFieldworkAbsenceEvent
+  documentation "Expanded reason for the staff absence"
+  domain entity TeacherCandidate
+    documentation "The staff associated with this absence event"
+    is part of identity
+  date EventDate
+    documentation "Date for this absence event"
+    is required
+  descriptor EdFi.AbsenceEventCategory
+    documentation "The descriptor holds the code describing the type of leave taken, for example: Sick, Personal, Vacation."
+    is part of identity
+  shared string AbsenceEventReason
+    documentation "Expanded reason for the teacher candidate absence"
+    is optional
+  shared decimal HoursPerDay named HoursAbsent
+    documentation "The hours the staff was absent if not the entire working day."
+    is optional

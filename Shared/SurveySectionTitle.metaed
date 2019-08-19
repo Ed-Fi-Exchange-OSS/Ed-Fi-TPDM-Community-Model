@@ -1,0 +1,4 @@
+Shared String SurveySectionTitle
+    documentation "The title or label for the survey section."
+    min length 1
+    max length 255

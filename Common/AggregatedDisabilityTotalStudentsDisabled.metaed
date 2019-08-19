@@ -1,0 +1,11 @@
+Common AggregatedDisabilityTotalStudentsDisabled
+  documentation "Information about the total number of students with a disability."
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  integer StudentsDisabledNumber
+    documentation "The number of students who have a disability."
+    is optional
+  percent StudentsDisabledPercentage
+    documentation "Percentage of students who have a disability"
+    is optional

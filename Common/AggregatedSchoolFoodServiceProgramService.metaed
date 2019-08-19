@@ -1,0 +1,14 @@
+Common AggregatedSchoolFoodServiceProgramService
+  documentation "Identifies if the student is eligible for Free and Reduce Price Lunch"
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  descriptor EdFi.SchoolFoodServiceProgramService
+    documentation "Information about the students who are enrolled based on School Food Services Eligibility"
+    is part of identity
+  integer TypeNumber
+    documentation "The number of students eligibile for SchoolFoodServicesEligibility by category"
+    is optional
+  integer TypePercentage
+    documentation "The percentage of students who are eligible for SchoolFoodServicesEligibility by type."
+    is optional

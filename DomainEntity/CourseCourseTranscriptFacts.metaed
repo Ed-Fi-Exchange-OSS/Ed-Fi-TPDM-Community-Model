@@ -1,0 +1,20 @@
+Domain Entity CourseCourseTranscriptFacts
+  documentation "Data about the final grade earned of the group."
+  domain entity CourseStudentAcademicRecordFacts
+    documentation "The Course Student Academic Record Fact the data is associated with"
+    is part of identity
+  date FactsAsOfDate
+    documentation "The date for which the data element is relevant"
+    is part of identity
+  shared string EdFi.CourseTitle
+    documentation "Data about the final letter grade earned of the group"
+    is optional
+  common StudentsEnrolled
+    documentation "The information about the number of students enrolled"
+    is optional
+  common AggregatedFinalLetterGradeEarned
+    documentation "Data about the final letter grade earned of the group"
+    is optional collection
+  common AggregatedNumericGradeEarned
+    documentation "Data about the numeric grade received by the group"
+    is optional

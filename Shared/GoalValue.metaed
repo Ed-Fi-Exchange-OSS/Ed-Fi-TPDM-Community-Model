@@ -1,0 +1,4 @@
+Shared Decimal GoalValue
+    documentation "The target value for the goal."
+    total digits 12
+    decimal places 3

@@ -1,0 +1,4 @@
+Shared String StaffEvaluationLevel
+    documentation "The title for a level of rating or evaluation band (e.g., Excellent, Acceptable, Needs Improvement, Unacceptable)."
+    min length 1
+    max length 50

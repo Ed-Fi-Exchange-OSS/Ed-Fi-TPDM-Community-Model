@@ -1,0 +1,11 @@
+Common Recommendation
+  documentation "The information about the recommendation for the credential."
+  descriptor EdFi.CredentialField
+    documentation "The field of certification for the certificate (e.g., Mathematics, Music)."
+    is optional
+  descriptor EdFi.GradeLevel
+    documentation "The grade level(s) certified for teaching."
+    is required
+  descriptor EdFi.TeachingCredential
+    documentation "An indication of the category of a legal document giving authorization to perform teaching assignment services."
+    is required

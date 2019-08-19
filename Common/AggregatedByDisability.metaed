@@ -1,0 +1,14 @@
+Common AggregatedByDisability
+  documentation "Students in the course who have a disability by disability type"
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  descriptor EdFi.Disability
+    documentation "Data about the disability of a group."
+    is part of identity
+  integer TypeNumber
+    documentation "The number of student who have a disability by disability type"
+    is optional
+  percent Percentage
+    documentation "The percentage of students who have a disability by each specific disability type"
+    is optional

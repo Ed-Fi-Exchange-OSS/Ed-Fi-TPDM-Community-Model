@@ -1,0 +1,59 @@
+Domain Entity PerformanceMeasure
+  documentation "Information about the performance measure"
+  shared string PerformanceMeasureIdentifier
+    documentation "An assigned unique identifier for the performance measure instance."
+    is part of identity
+    is queryable field
+  descriptor PerformanceMeasureType
+    documentation "The type (e.g., walkthrough, summative) of performance measure conducted."
+    is required
+  descriptor ProgramGateway
+    documentation "Identifies the program gateway that may be associated for continuation in the program."
+    is optional collection
+  domain entity Rubric
+    documentation "Reference to the rubric."
+    is required collection
+  descriptor EdFi.Term
+    documentation "The term for the session during the school year."
+    is required
+  descriptor EdFi.AcademicSubject
+    documentation "The description of the content or subject area (e.g., arts, mathematics, reading, stenography, or a foreign language) of a performance measure."
+    is optional
+  descriptor EdFi.GradeLevel
+    documentation "The grade levels for the performance measure."
+    is optional collection
+//  domain entity Course
+//    documentation "The course offered by the education organization."
+//    is optional
+  common PersonBeingReviewed
+    documentation "Information regarding the person taking the performance measure."
+    is required
+  common Reviewer
+    documentation "The person that conducted the performance measure."
+    is optional collection
+  date ScheduleDateOfPerformanceMeasure
+    documentation "The month, day, and year on which the performance measure was to be conducted."
+    is optional
+  date ActualDateOfPerformanceMeasure
+    documentation "The month, day, and year on which the performance measure was conducted."
+    is required
+  time TimeOfPerformanceMeasure
+    documentation "An indication of the the time at which the performance measure was conducted."
+    is optional
+  shared integer EdFi.Duration named DurationOfPerformanceMeasure
+    documentation "The actual or estimated number of clock minutes during which the performance measure was conducted."
+    is optional
+  bool Announced
+    documentation "An indicator of whether the performance measure was announced or not."
+    is optional
+  bool CoteachingObserved
+    documentation "An indicator of whether co-teaching was part of the performance measure or not."
+    is optional
+  string Comments
+    documentation "Any comments about the performance measure to be captured"
+    is optional
+    max length 1024
+
+  descriptor PerformanceMeasureInstance
+    documentation "Instance of the performance measure taken by the individual."
+    is optional

@@ -1,0 +1,14 @@
+Common AggregatedHispanicLatinoEthnicity
+  documentation "Data about the Eth ethnicity of the group"
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  bool HispanicLatinoEthnicity
+    documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino."""
+    is part of identity
+  integer HispanicLatinoEthnicityNumber
+    documentation "The number of students who are hispanic/latino"
+    is optional
+  percent HispanicLatinoEthnicityPercentage
+    documentation "The percentage of students who are identified as hispanic/latino."
+    is optional

@@ -1,0 +1,11 @@
+Common AggregatedESLEnrollment
+  documentation "Data about the ESL enrollment of the group	ESL"
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  integer ESLEnrollmentNumber
+    documentation "The number of students who are ESL."
+    is optional
+  percent ESLEnrollmentPercentage
+    documentation "The percentage of students who are identified as ESL"
+    is optional

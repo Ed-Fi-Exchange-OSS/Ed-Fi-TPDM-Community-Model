@@ -1,0 +1,6 @@
+Association StaffTeacherCandidateAssociation
+  documentation "Reference to the teacher candidate associated."
+  domain entity EdFi.Staff
+    documentation "Reference to staff."
+  domain entity TeacherCandidate
+    documentation "Reference to the teacher candidate associated."

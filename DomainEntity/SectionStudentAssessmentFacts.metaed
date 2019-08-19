@@ -1,0 +1,36 @@
+Domain Entity SectionStudentAssessmentFacts
+  documentation "This domain entity collects data for aggregated level students with whom the teacher candidate is associated through field work or student teaching."
+  domain entity EdFi.Section
+    documentation "The section associated with aggregated student data"
+    is part of identity
+  enumeration EdFi.SchoolYear
+    documentation "The school year the assessment was taken"
+    is part of identity
+    role name Taken
+  date FactAsOfDate
+    documentation "The date for which the data element is relevant"
+    is part of identity
+  shared string EdFi.AssessmentTitle
+    documentation "The title of any specific assessment given to a group."
+    is optional
+  descriptor EdFi.AssessmentCategory
+    documentation "The category of an assessment based on format and content. For example: Achievement test, Advanced placement, Alternate assessment/grade-level standards, Attitudinal test, Cognitive and perceptual skills test."
+    is optional
+  descriptor EdFi.AcademicSubject
+    documentation "The academic subject associated with a CourseStudentAssessment."
+    is optional
+  descriptor EdFi.GradeLevel
+    documentation "The grade level associated with a CourseStudentAssessment."
+    is optional
+  date AdministrationDate
+    documentation "The date a specific assessment was administered to a group of students"
+    is optional
+  common StudentsEnrolled
+    documentation "The information about the number of students enrolled"
+    is optional
+  common AggregatedScoreResult
+    documentation "Data about the score from an assessment of the group"
+    is optional
+  common AggregatedPerformanceLevel
+    documentation "Data about the performance level for an assessment of a group"
+    is optional collection

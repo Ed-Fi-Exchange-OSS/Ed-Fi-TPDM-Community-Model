@@ -1,0 +1,12 @@
+Association TeacherCandidateStaffAssociation
+  documentation "This association associates teacher candidates to a staff member."
+  domain entity TeacherCandidate
+    documentation "The teacher candidate associated with the staff."
+  domain entity EdFi.Staff
+    documentation "The staff associated with the teacher candidate."
+  date BeginDate
+    documentation "The month, day, and year on which the teacher candidate is associated to the staff."
+    is required
+  date EndDate
+    documentation "The month, day, and year on which the teacher candidate stops association with the staff."
+    is optional

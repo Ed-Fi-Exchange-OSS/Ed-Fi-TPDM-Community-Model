@@ -1,0 +1,18 @@
+Interchange EdFi.StaffAssociation additions
+
+  domain entity EmploymentEvent
+  domain entity EmploymentSeparationEvent
+  domain entity OpenStaffPositionEvent
+  domain entity StaffEvaluation
+  domain entity StaffEvaluationComponent
+  domain entity StaffEvaluationComponentRating
+  domain entity StaffEvaluationElement
+  domain entity StaffEvaluationElementRating
+  domain entity StaffEvaluationRating
+  domain entity StaffFieldworkAbsenceEvent
+  domain entity StaffFieldworkExperience
+  domain entity TalentManagementGoal
+
+  association StaffFieldworkExperienceSectionAssociation
+  association StaffTeacherPreparationProviderAssociation
+  association StaffTeacherPreparationProviderProgramAssociation

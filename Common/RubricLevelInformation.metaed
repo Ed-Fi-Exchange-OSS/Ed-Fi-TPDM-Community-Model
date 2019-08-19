@@ -1,0 +1,17 @@
+Common RubricLevelInformation
+  documentation "Information about the level of the rubric at which the data is captured."
+  descriptor LevelType
+    documentation "The level (e.g., 1, 2, 3, etc.) of the rubric at which the data is captured."
+    is required
+  shared string LevelTitle
+    documentation "The title of the level of the rubric at which the data is captured."
+    is required
+  shared string LevelDescription
+    documentation "The description of the level of the rubric at which the data is captured."
+    is optional
+  shared string EdFi.Result named MinimumScore
+    documentation "The minimum score for the level of the rubic."
+    is optional
+  shared string EdFi.Result named MaximumScore
+    documentation "The maximum score for the level of the rubic."
+    is optional

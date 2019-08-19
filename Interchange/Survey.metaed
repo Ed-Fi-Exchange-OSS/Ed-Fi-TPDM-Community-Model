@@ -1,0 +1,25 @@
+Interchange Survey
+
+  documentation "?"
+
+  domain entity CourseSurveyResponseFacts
+  domain entity CourseSurveySectionResponseRatingFacts
+  domain entity CourseSurveyQuestionResponseFacts
+  domain entity EducationOrganizationSurveyResponseFacts
+  domain entity EducationOrganizationSurveySectionResponseRatingFacts
+  domain entity EducationOrganizationSurveyQuestionResponseFacts
+  domain entity SectionSurveyResponseFacts
+  domain entity SectionSurveySectionResponseRatingFacts
+  domain entity SectionSurveyQuestionResponseFacts
+  domain entity Survey
+  domain entity SurveyQuestion
+  domain entity SurveyQuestionResponse
+  domain entity SurveyResponse
+  domain entity SurveySection
+  domain entity SurveySectionResponseRating
+
+  association SurveyCourseAssociation
+  association SurveyProgramAssociation
+  association SurveySectionAssociation
+  association SurveyStaffAssociation
+  association SurveyTeacherCandidateAssociation

@@ -1,0 +1,6 @@
+Association TeacherCandidateFieldworkExperienceSectionAssociation
+  documentation "The section the teacher candidate is assigned to."
+  domain entity TeacherCandidateFieldworkExperience
+    documentation "Reference to TeacherCandidateFieldworkExperience."
+  domain entity EdFi.Section
+    documentation "The section the teacher candidate is assigned to."

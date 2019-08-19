@@ -1,0 +1,3 @@
+Shared String RubricTitle
+  documentation "The title or name of the rubric."
+  max length 255

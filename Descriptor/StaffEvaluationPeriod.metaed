@@ -1,0 +1,2 @@
+Descriptor StaffEvaluationPeriod
+    documentation "The descriptor holds the period for the staff evaluation (e.g., BOY, MOY, EOY, Summer)."

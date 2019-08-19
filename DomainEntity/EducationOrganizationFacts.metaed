@@ -1,0 +1,51 @@
+Domain Entity EducationOrganizationFacts
+
+    // TNTP
+    documentation "Selective fact(s) about the education organization used for comparative analysis."
+    date FactsAsOfDate
+        documentation "The as-of date for the fact(s) about the Education Organization."
+        is part of identity
+    enumeration EdFi.SchoolYear
+        documentation "The school year associated with the fact(s)."
+        is part of identity
+    integer NumberAdministratorsEmployed
+        documentation "Number of administrators employed by education organization."
+        is optional
+    integer NumberStudentsEnrolled
+        documentation "Enrollment count of students."
+        is optional
+    integer NumberTeachersEmployed
+        documentation "Number of teachers employed by education organization."
+        is optional
+    percent PercentStudentsFreeReducedLunch
+        documentation "The percent of students eligible for free and reduced lunches."
+        is optional
+    percent PercentStudentsLimitedEnglishProficiency
+        documentation "Percent of students in education organization with limited English proficiency."
+        is optional
+    percent PercentStudentsSpecialEducation
+        documentation "Percent of students in education organization in special education program."
+        is optional
+    domain entity EdFi.EducationOrganization
+        documentation "The Education Organization(s) associated with the facts."
+        is part of identity
+
+    // TPDP Extensions
+    percent HiringRate
+      documentation "The percent of staff hired for the education organization."
+      is optional
+    percent RetentionRate
+      documentation "The percent of staff retained for the education organization."
+      is optional
+    percent RetirementRate
+      documentation "The percent of staff retired for the education organization."
+      is optional
+    common Vacancies
+      documentation "This entity represents actual and projected vacancies for the education organization."
+      is optional collection
+    common AggregatedSalary
+      documentation "Salary information collected at the aggregate level."
+      is optional
+    shared decimal EdFi.NumberOfYears named AverageYearsInDistrictEmployed
+      documentation "The average number of years that all staff have been employed in the current district of employment."
+      is optional

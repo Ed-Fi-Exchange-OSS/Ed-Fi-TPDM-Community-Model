@@ -1,0 +1,38 @@
+Domain Entity Survey
+
+  // TNTP
+  documentation "A survey to identified or anonymous respondants."
+  shared string SurveyIdentifier
+    documentation "The unique survey identifier from the survey tool."
+    is part of identity
+  domain entity EdFi.EducationOrganization
+    documentation "The Education Organization(s) associated with the survey."
+    is optional
+  shared string SurveyTitle
+    documentation "The title of the survey."
+    is required
+  enumeration EdFi.SchoolYear
+    documentation "The school year associated with the survey."
+    is required
+  descriptor EdFi.Term
+    documentation "The Term the survey was given."
+    is optional
+  descriptor SurveyCategory
+    documentation "The Category or Type of Survey."
+    is optional
+
+  // TPDP Extensions
+  //domain entity Program
+  //  documentation "The program associated with the survey."
+  //  is optional
+  //  merge Program.EducationOrganization with EducationOrganization
+  //domain entity Course
+  //  documentation "The course associated with the survey."
+  //  is optional
+  //  merge Course.EducationOrganization with EducationOrganization
+  //domain entity Section
+  //  documentation "The section associated with the survey."
+  //  is optional
+  integer NumberAdministered
+    documentation "Number of persons to whom this survey was administered."
+    is optional

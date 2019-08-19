@@ -1,0 +1,2 @@
+Descriptor StaffEvaluationType
+    documentation "The descriptor holds the  type of the staff evaluation (e.g., observation, principal, peer, student survey, student growth)."

@@ -1,0 +1,6 @@
+Association SurveyCourseAssociation
+  documentation "The course associated with the survey."
+  domain entity Survey
+    documentation "Reference to Survey."
+  domain entity EdFi.Course
+    documentation "The course associated with the survey."

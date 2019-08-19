@@ -1,0 +1,4 @@
+Shared String PerformanceMeasureIdentifier
+  documentation "An assigned unique identifier for the performance measure instance."
+  min length 1
+  max length 64

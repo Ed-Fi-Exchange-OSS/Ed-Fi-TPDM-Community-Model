@@ -1,0 +1,4 @@
+Shared String TextChoice
+    documentation "For radio buttons, checkboxes, dropdowns, matrix of drop downs - the list of choices."
+    min length 1
+    max length 255

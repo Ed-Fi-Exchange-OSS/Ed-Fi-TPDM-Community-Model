@@ -1,0 +1,6 @@
+Association SurveyTeacherCandidateAssociation
+  documentation "The association provides information about the survey being taken and who the survey is about."
+  domain entity Survey
+    documentation "Reference to the survey."
+  domain entity TeacherCandidate
+    documentation "Reference to the teacher candidate."

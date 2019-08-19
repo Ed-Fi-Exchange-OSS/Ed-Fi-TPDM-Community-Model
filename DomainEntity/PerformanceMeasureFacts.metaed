@@ -1,0 +1,23 @@
+Domain Entity PerformanceMeasureFacts
+  documentation "This entity represents aggregated information regarding performance measure data."
+  domain entity Rubric
+    documentation "Reference to the rubric."
+    is part of identity
+    is queryable field
+  enumeration EdFi.SchoolYear
+    documentation "The identifier for the school year."
+    is part of identity
+    is queryable field
+  date FactsAsOfDate
+    documentation "The as-of-date for the aggregated observation data."
+    is part of identity
+    is queryable field
+  descriptor PerformanceMeasureType
+    documentation "The type (e.g., walkthrough, summative) of performance measure conducted."
+    is required
+  descriptor EdFi.AcademicSubject
+    documentation "The description of the content or subject area (e.g., arts, mathematics, reading, stenography, or a foreign language) of a performance measure."
+    is optional
+  descriptor EdFi.GradeLevel
+    documentation "The grade levels for the aggregated performance measure data."
+    is required collection

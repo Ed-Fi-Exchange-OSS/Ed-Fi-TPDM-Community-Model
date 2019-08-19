@@ -1,0 +1,2 @@
+Descriptor GPAType
+  documentation "The group of courses for which the GPA is provided such as, Pre-Program, Program, High School, Other, or Overall."

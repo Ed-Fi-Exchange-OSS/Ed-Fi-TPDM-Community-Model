@@ -1,0 +1,14 @@
+Common Vacancies
+  documentation "This entity represents actual and projected vacancies for the education organization."
+  descriptor ValueType
+    documentation "The type (i.e. actual or projected) of value."
+    is optional
+  descriptor EdFi.AcademicSubject
+    documentation "The description of the content or subject area (e.g., arts, mathematics, reading, stenography, or a foreign language) of a vacancy."
+    is part of identity
+  integer NumberOfVacancies
+    documentation "The number of vacancies, projected or actual, associated with an education organization."
+    is required
+  descriptor EdFi.GradeLevel
+    documentation "The grade level(s) for which the vacancy is responsible."
+    is optional collection

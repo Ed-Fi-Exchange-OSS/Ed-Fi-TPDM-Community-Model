@@ -1,0 +1,7 @@
+Domain Entity EdFi.GradebookEntry additions
+  date DueDate
+    documentation "The date that the assignment was due."
+    is optional
+  descriptor ProgramGateway
+    documentation "Identifies the program gateway an assessment may be associated with for continuation in the program"
+    is optional

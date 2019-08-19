@@ -1,0 +1,11 @@
+Common AggregatedSection504Enrollment
+  documentation "Information about the students who are enrolled in a 504 program"
+  descriptor ValueType
+    documentation "The value of the data, i.e., is the data projected, actual or other"
+    is optional
+  integer Number504Enrolled
+    documentation "The number of students who are enrolled in a 504 program"
+    is optional
+  percent Percentage504Enrolled
+    documentation "The percentage of students who are enrolled in a 504 program"
+    is optional

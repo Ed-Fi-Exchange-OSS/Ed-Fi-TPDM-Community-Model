@@ -1,0 +1,4 @@
+Shared String QuestionCode
+    documentation "The identifying code for the question, unique for the survey."
+    min length 1
+    max length 64

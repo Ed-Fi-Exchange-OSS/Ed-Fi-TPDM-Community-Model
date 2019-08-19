@@ -1,0 +1,18 @@
+Common AggregatedScoreResult
+  documentation "Data about the score from an assessment of the group"
+  descriptor EdFi.AssessmentReportingMethod
+    documentation "The method that the administrator of the assessment uses to report the performance and achievement of all Students. It may be a qualitative method such as performance level descriptors or a quantitative method such as a numerical grade or cut score. More than one type of reporting method may be used."
+    is required
+  descriptor EdFi.ResultDatatypeType
+    documentation "The datatype of the result. The results can be expressed as a number, percentile, range, level, etc."
+    is required
+    role name AverageScore
+  shared string EdFi.Result named AverageScoreResult
+    documentation "A meaningful average score or statistical expression of the performance of an group. The results can be expressed as a number, percentile, range, level, etc."
+    is required
+  integer ScoreNCount
+    documentation "The total number of data values in set of data that makes up the average assessment score for a group"
+    is optional
+  integer ScoreStandardDeviation
+    documentation "A measure used to quantify the amount of variation or dispersion of a set of data values, in this case specific to the average assessment score for a group of students"
+    is optional

@@ -1,0 +1,4 @@
+Shared String SurveyResponseIdentifier
+    documentation "The external unique identifier of the survey response."
+    min length 1
+    max length 64

@@ -1,0 +1,4 @@
+Shared String TextResponse
+    documentation "The text response(s) for the question."
+    min length 1
+    max length 1024

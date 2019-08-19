@@ -1,0 +1,10 @@
+Interchange PerformanceMeasure
+
+  documentation "?"
+
+  domain entity PerformanceMeasure
+  domain entity PerformanceMeasureFacts
+  domain entity Rubric
+  domain entity RubricLevel
+  domain entity RubricLevelResponse
+  domain entity RubricLevelResponseFacts

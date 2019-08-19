@@ -1,0 +1,4 @@
+Shared String EvaluationComponent
+    documentation "The Category of the Evaluation Component (e.g., Preparation, classroom control, delivery of instruction, etc.)."
+    min length 1
+    max length 50

@@ -1,0 +1,15 @@
+Domain Entity StaffEvaluationElementRating
+    documentation "The ratings for the individual elements of the evaluation component."
+    shared decimal StaffRating named ElementRating
+        documentation "The Element Level rating."
+        is required
+    descriptor StaffEvaluationRatingLevel
+        documentation "The rating level achieved based upon the rating or score."
+        is optional
+    domain entity StaffEvaluationElement
+        documentation "Reference to the staff evaluation element."
+        is part of identity
+    domain entity StaffEvaluationRating
+        documentation "Reference to the staff evaluation component rating."
+        is part of identity
+        merge StaffEvaluationRating.StaffEvaluation with StaffEvaluationElement.StaffEvaluationComponent.StaffEvaluation

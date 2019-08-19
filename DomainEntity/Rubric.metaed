@@ -1,0 +1,20 @@
+Domain Entity Rubric
+  documentation "This entity represents the rubric used to conduct the observation."
+  domain entity EdFi.EducationOrganization
+    documentation "The education organization, typically a LocalEducationAgency, associated with the prospect."
+    is part of identity
+    is queryable field
+  descriptor RubricType
+    documentation "The type of rubric used to conduct the observation."
+    is part of identity
+    is queryable field
+  shared string RubricTitle
+    documentation "The title or name of the rubric."
+    is part of identity
+    is queryable field
+  shared string RubricDescription
+    documentation "The description of the rubric."
+    is optional
+  integer InterRaterReliabilityScore
+    documentation "A score indicating how much homogeneity, or consensus, there is in the ratings given by judges."
+    is optional

@@ -1,0 +1,22 @@
+Domain Entity RubricLevelResponse
+  documentation "This entity represents the response to the rubric level."
+  domain entity PerformanceMeasure
+    documentation "Reference to the performance measure."
+    is part of identity
+    is queryable field
+  domain entity RubricLevel
+    documentation "Reference the rubric level."
+    is part of identity
+    is queryable field
+  shared integer NumericResponse
+    documentation "The score for the specified level of the rubric."
+    is required
+  shared string TextResponse
+    documentation "The text response(s) for the question."
+    is optional
+  bool AreaOfRefinement
+    documentation "Indicator that the rubric component is an area of refinement."
+    is optional
+  bool AreaOfReinforcement
+    documentation "Indicator that the rubric component is an area of reinforcement."
+    is optional

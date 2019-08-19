@@ -1,0 +1,16 @@
+Common RecommendingInstitution
+  documentation "Information regarding the institution that is recommending a candidate for certification."
+  shared string EdFi.NameOfInstitution named RecommendingInstutionName
+    documentation "The full, legally accepted name of the institution."
+    is required
+  date RecommendingDate
+    documentation "The month, day, and year on which a recommendation for a candidate is made."
+    is optional
+  descriptor EdFi.Country
+    documentation "The country that the recommendation for a candidate was made in."
+    is optional
+    role name RecommendingInstitution
+  descriptor EdFi.StateAbbreviation
+    documentation "The abbreviation for the name of the state (within the United States) or extra-state jurisdiction in which a recommendation was issued."
+    is optional
+    role name RecommendingInstitution

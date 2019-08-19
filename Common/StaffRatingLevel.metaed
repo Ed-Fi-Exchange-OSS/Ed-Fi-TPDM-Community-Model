@@ -1,0 +1,11 @@
+Common StaffRatingLevel
+    documentation "The descriptive level(s) of ratings (cut scores) for staff evaluation."
+    shared string StaffEvaluationLevel
+        documentation "The title for a level of rating or evaluation band (e.g., Excellent, Acceptable, Needs Improvement, Unacceptable)."
+        is part of identity
+    shared decimal StaffRating named MaxLevel
+        documentation "The maximum rating to achieve the level."
+        is required
+    shared decimal StaffRating named  MinLevel
+        documentation "The minimum rating to achieve the level."
+        is optional

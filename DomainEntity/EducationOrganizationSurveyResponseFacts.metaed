@@ -1,0 +1,17 @@
+Domain Entity EducationOrganizationSurveyResponseFacts
+  documentation "Survey response data provided at the aggregate level."
+  domain entity EdFi.EducationOrganization
+    documentation "The section(s) associated with the aggregated survey response."
+    is part of identity
+    is queryable field
+  domain entity Survey
+    documentation "Reference to the Survey."
+    is part of identity
+    is queryable field
+  enumeration EdFi.SchoolYear
+    documentation "The school year for the aggregated survey data."
+    is required
+  date FactsAsOfDate
+    documentation "The as-of-date for the aggregated survey data."
+    is part of identity
+    is queryable field
