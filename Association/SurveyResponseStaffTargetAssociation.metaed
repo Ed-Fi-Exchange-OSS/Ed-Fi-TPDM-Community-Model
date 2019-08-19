@@ -1,0 +1,6 @@
+Association SurveyResponseStaffTargetAssociation
+  documentation "The association provides information about the survey being taken and who the survey is about."
+  domain entity SurveyResponse
+    documentation "Reference to survey response."
+  domain entity EdFi.Staff
+    documentation "Reference to staff member."
