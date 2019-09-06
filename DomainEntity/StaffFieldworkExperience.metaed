@@ -10,8 +10,7 @@ Domain Entity StaffFieldworkExperience
     is queryable field
   domain entity EdFi.School
     documentation "The school the field work experience is associated with"
-    is part of identity
-    is queryable field
+    is required collection
   //domain entity Section
   //  documentation "The section the field work experience is associated with"
   //  is optional
