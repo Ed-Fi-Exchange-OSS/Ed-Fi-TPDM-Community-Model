@@ -2,7 +2,7 @@ Common GradePointAverage
   documentation "Data that provides information on a measure of average performance in a group of courses taken by an individual."
   descriptor GPAType
     documentation "The group of courses for which the GPA is provided such as, Pre-Program, Program, High School, Other, or Overall."
-    is required
+    is part of identity
   shared decimal EdFi.GPA named CumulativeGradePointAverage
     documentation "A measure of average performance in all courses taken by an individual during his or her school career as determined for record-keeping purposes. This is obtained by dividing the total grade points received by the total number of credits attempted. This usually includes grade points received and credits attempted in his or her current school as well as those transferred from schools in which the individual was previously enrolled."
     is optional

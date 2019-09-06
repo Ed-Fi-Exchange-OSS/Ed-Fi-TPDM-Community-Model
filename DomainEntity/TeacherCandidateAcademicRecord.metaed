@@ -74,4 +74,4 @@ Domain Entity TeacherCandidateAcademicRecord
     is required
   common GradePointAverage
     documentation "Data that provides information on a measure of average performance in a group of courses taken by an individual."
-    is optional
+    is optional collection
