@@ -22,7 +22,7 @@ Domain Entity SurveyQuestion
         is part of identity
     domain entity SurveySection
         documentation "Reference to the Survey Section."
-        is required
+        is optional
         merge SurveySection.Survey with Survey
 
     // TPDP Extensions
