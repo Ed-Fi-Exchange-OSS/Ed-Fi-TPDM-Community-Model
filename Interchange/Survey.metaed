@@ -16,7 +16,7 @@ Interchange Survey
   domain entity SurveyQuestionResponse
   domain entity SurveyResponse
   domain entity SurveySection
-  domain entity SurveySectionResponseRating
+  domain entity SurveySectionResponse
 
   association SurveyCourseAssociation
   association SurveyProgramAssociation
