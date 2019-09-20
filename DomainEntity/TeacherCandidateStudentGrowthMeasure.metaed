@@ -30,3 +30,6 @@ Domain Entity TeacherCandidateStudentGrowthMeasure
   integer StudentGrowthNCount
     documentation "The number of students included in the average score result."
     is optional
+  percent StandardError
+    documentation "Standard error for growth score measurement."
+    is optional
