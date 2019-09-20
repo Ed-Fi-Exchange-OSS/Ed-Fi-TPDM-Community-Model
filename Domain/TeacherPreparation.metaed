@@ -74,6 +74,7 @@ Domain TeacherPreparation
     association AnonymizedStudentEducationOrganizationAssociation
     association AnonymizedStudentSectionAssociation
     association ApplicantProspectAssociation
+    association CompleterAsStaffAssociation
     association PerformanceMeasureCourseAssociation
     association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
@@ -82,7 +83,6 @@ Domain TeacherPreparation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
-    association StaffTeacherCandidateAssociation
     association StaffTeacherPreparationProviderAssociation
     association StaffTeacherPreparationProviderProgramAssociation
     association SurveyCourseAssociation
