@@ -16,7 +16,7 @@ Domain Entity SurveyResponse
     documentation "Full name of the respondent."
     is optional
   shared string Whereabouts named Location
-    documentation "Location of the respondent, oten a citr, district, or school."
+    documentation "Location of the respondent, often a city, district, or school."
     is optional
   domain entity Survey
     documentation "The survey associated with the response."
