@@ -105,6 +105,10 @@ Domain Entity Applicant
     bool FirstGenerationStudent
       documentation "Indicator of whether individual is a first generation college student."
       is optional
+    common ApplicantCharacteristic
+      documentation "Reflects important characteristics of the applicant's home situation:
+      Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth."
+      is optional collection
     domain entity TeacherCandidate
       documentation "Reference to the teacher candidate associated."
       is optional
