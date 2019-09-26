@@ -44,6 +44,9 @@ Domain Entity AnonymizedStudent
   common EdFi.Disability
     documentation "A disability category that describes a child's impairment."
     is optional collection
+  descriptor EdFi.GradeLevel
+    documentation "The grade level for the student."
+    is optional
   bool Section504Enrollment
     documentation "Information about the students who are enrolled in a 504 program"
     is optional
