@@ -20,3 +20,8 @@ Domain Entity RubricLevelResponse
   bool AreaOfReinforcement
     documentation "Indicator that the rubric component is an area of reinforcement."
     is optional
+  string Comments
+    documentation "Any comments about the response provided at the rubric level."
+    is optional
+    min length 1
+    max length 1024
