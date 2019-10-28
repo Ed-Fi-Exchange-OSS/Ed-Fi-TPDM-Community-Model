@@ -109,6 +109,9 @@ Domain Entity Applicant
       documentation "Reflects important characteristics of the applicant's home situation:
       Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth."
       is optional collection
+    common GradePointAverage
+      documentation "Data that provides information on a measure of average performance in a group of courses taken by an individual."
+      is optional collection
     domain entity TeacherCandidate
       documentation "Reference to the teacher candidate associated."
       is optional
