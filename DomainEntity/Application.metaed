@@ -56,7 +56,7 @@ Domain Entity Application
     is optional
   domain entity Applicant
     documentation "The applicant submitting the application."
-    is required
+    is part of identity
     is queryable field
   domain entity EdFi.OpenStaffPosition
     documentation "The open staff position(s) associated with the application."
