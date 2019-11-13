@@ -6,6 +6,9 @@ Domain Entity SurveyResponse
   date ResponseDate
     documentation "Date of the survey response."
     is required
+  integer ResponseTime
+    documentation "The amount of time (in seconds) it took for the respondent to complete the survey."
+    is optional
   descriptor SurveyLevel
     documentation "Provides information about the respondents of a survey and how they can be grouped together (ex., grade level, grade band, course type, etc.)."
     is optional collection
