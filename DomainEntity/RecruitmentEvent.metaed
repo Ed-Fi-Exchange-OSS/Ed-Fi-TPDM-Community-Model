@@ -13,6 +13,9 @@ Domain Entity RecruitmentEvent
         is part of identity
 
     // TPDP Extensions
+    descriptor RecruitmentEventType
+      documentation "The type of event."
+      is required
     shared string EventLocation
       documentation "The location of the event."
       is optional
