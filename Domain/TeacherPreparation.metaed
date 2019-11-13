@@ -91,6 +91,7 @@ Domain TeacherPreparation
     association SurveyResponseTeacherCandidateTargetAssociation
     association SurveySectionAssociation
     association SurveySectionResponseEducationOrganizationTargetAssociation
+    association SurveySectionResponseTeacherCandidateTargetAssociation
     association SurveyStaffAssociation
     association SurveyTeacherCandidateAssociation
     association TeacherCandidateFieldworkExperienceSectionAssociation
