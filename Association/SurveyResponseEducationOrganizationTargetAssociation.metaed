@@ -1,0 +1,6 @@
+Association SurveyResponseEducationOrganizationTargetAssociation
+  documentation "This association provides information about the survey being taken and the education organization the survey is about."
+  domain entity SurveyResponse
+    documentation "Reference to the survey response."
+  domain entity EdFi.EducationOrganization
+    documentation "Reference to the education organization."

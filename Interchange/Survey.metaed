@@ -20,6 +20,7 @@ Interchange Survey
 
   association SurveyCourseAssociation
   association SurveyProgramAssociation
+  association SurveyResponseEducationOrganizationTargetAssociation
   association SurveyResponseStaffTargetAssociation
   association SurveyResponseTeacherCandidateTargetAssociation
   association SurveySectionAssociation
