@@ -23,5 +23,6 @@ Interchange Survey
   association SurveyResponseStaffTargetAssociation
   association SurveyResponseTeacherCandidateTargetAssociation
   association SurveySectionAssociation
+  association SurveySectionResponseEducationOrganizationTargetAssociation
   association SurveyStaffAssociation
   association SurveyTeacherCandidateAssociation
