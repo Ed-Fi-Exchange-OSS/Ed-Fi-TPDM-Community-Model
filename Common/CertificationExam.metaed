@@ -2,16 +2,25 @@ Common CertificationExam
   documentation "Certification information for an individual."
   shared string CertificationExamTitle
     documentation "The title or name of the certification."
-    is required
+    is part of identity
   descriptor CertificationExamType
     documentation "The type of certification exam that was taken."
     is optional
-  integer CertificationExamOverallScore
-    documentation "The overall score that was received on the certification exam."
-    is required
+  descriptor CertificationExamStatus
+    documentation "The status of the exam."
+    is optional
   date CertificationExamDate
     documentation "The date the certification exam was administered."
     is required
+  integer AttemptNumber
+    documentation "The attempt number for this exam."
+    is optional
+  common CertificationExamScore
+    documentation "A score for a section of a certification exam."
+    is optional collection
+  integer CertificationExamOverallScore
+    documentation "The overall score that was received on the certification exam."
+    is optional
   bool CertificationExamPassFail
     documentation "Indicates if the certification exam was passed by the teacher candidate."
     is optional
