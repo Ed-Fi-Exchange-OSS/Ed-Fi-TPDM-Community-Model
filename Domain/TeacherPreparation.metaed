@@ -57,7 +57,7 @@ Domain TeacherPreparation
     domain entity SurveyQuestionResponse
     domain entity SurveyResponse
     domain entity SurveySection
-    domain entity SurveySectionResponseRating
+    domain entity SurveySectionResponse
     domain entity TeacherCandidate
     domain entity TeacherCandidateAcademicRecord
     domain entity TeacherCandidateFieldworkAbsenceEvent
@@ -74,6 +74,7 @@ Domain TeacherPreparation
     association AnonymizedStudentEducationOrganizationAssociation
     association AnonymizedStudentSectionAssociation
     association ApplicantProspectAssociation
+    association CompleterAsStaffAssociation
     association PerformanceMeasureCourseAssociation
     association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
@@ -82,14 +83,17 @@ Domain TeacherPreparation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
-    association StaffTeacherCandidateAssociation
     association StaffTeacherPreparationProviderAssociation
     association StaffTeacherPreparationProviderProgramAssociation
     association SurveyCourseAssociation
     association SurveyProgramAssociation
+    association SurveyResponseEducationOrganizationTargetAssociation
     association SurveyResponseStaffTargetAssociation
     association SurveyResponseTeacherCandidateTargetAssociation
     association SurveySectionAssociation
+    association SurveySectionResponseEducationOrganizationTargetAssociation
+    association SurveySectionResponseStaffTargetAssociation
+    association SurveySectionResponseTeacherCandidateTargetAssociation
     association SurveyStaffAssociation
     association SurveyTeacherCandidateAssociation
     association TeacherCandidateFieldworkExperienceSectionAssociation

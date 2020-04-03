@@ -12,6 +12,9 @@ Domain Entity Application
     documentation "The month, day, and year the application was submitted."
     is required
     is queryable field
+  descriptor EdFi.Term
+    documentation "The intended term of enrollment for which the application is being submitted."
+    is optional collection
   descriptor ApplicationStatus
     documentation "Indicates the current status of the application (e.g., received, phone screen, interview, awaiting decision, etc.)."
     is required
@@ -53,7 +56,7 @@ Domain Entity Application
     is optional
   domain entity Applicant
     documentation "The applicant submitting the application."
-    is required
+    is part of identity
     is queryable field
   domain entity EdFi.OpenStaffPosition
     documentation "The open staff position(s) associated with the application."

@@ -10,16 +10,15 @@ Domain Entity TeacherCandidateFieldworkExperience
     is queryable field
   domain entity EdFi.School
     documentation "The school the teacher candidate is assigned to."
-    is part of identity
-    is queryable field
+    is required collection
   //domain entity Section
   //  documentation "The section the teacher candidate is assigned to."
   //  is optional
   descriptor FieldworkType
     documentation "The type of fieldwork being executed by a teacher candidate."
     is required
-  shared decimal EdFi.HoursPerWeek
-    documentation "The number of hours per week for fieldwork."
+  shared decimal HoursCompleted
+    documentation "The number of hours completed during the fieldwork experience."
     is optional
   date BeginDate
     documentation "The month, day, and year on which the teacher candidate first starts fieldwork."

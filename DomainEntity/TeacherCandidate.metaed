@@ -41,7 +41,7 @@ Domain Entity TeacherCandidate
       is optional
   bool HispanicLatinoEthnicity
       documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino."""
-      is required
+      is optional
       is queryable field
   descriptor EdFi.OldEthnicity
       documentation "Previous definition of Ethnicity combining Hispanic/Latino and race:

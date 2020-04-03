@@ -16,12 +16,16 @@ Interchange Survey
   domain entity SurveyQuestionResponse
   domain entity SurveyResponse
   domain entity SurveySection
-  domain entity SurveySectionResponseRating
+  domain entity SurveySectionResponse
 
   association SurveyCourseAssociation
   association SurveyProgramAssociation
+  association SurveyResponseEducationOrganizationTargetAssociation
   association SurveyResponseStaffTargetAssociation
   association SurveyResponseTeacherCandidateTargetAssociation
   association SurveySectionAssociation
+  association SurveySectionResponseEducationOrganizationTargetAssociation
+  association SurveySectionResponseStaffTargetAssociation
+  association SurveySectionResponseTeacherCandidateTargetAssociation
   association SurveyStaffAssociation
   association SurveyTeacherCandidateAssociation

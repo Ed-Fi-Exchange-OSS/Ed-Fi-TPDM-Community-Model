@@ -1,0 +1,13 @@
+Common CertificationExamScore
+  documentation "A score for a section of a certification exam"
+  string Name
+    documentation "The name of the certification exam."
+    is part of identity
+    min length 1
+    max length 255
+  date Date
+    documentation "The date the exam was administered."
+    is part of identity
+  integer Score
+    documentation "The score of the exam."
+    is required

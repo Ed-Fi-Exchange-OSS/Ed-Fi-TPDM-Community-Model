@@ -8,15 +8,14 @@ Domain Entity TeacherPreparationProviderProgram
       documentation "A unique number or alphanumeric code assigned to a program by a school, school system, a state, or other agency or entity."
       is optional
       is queryable field
-    shared string EdFi.ProgramName
-      documentation "The formal name of the Program of instruction, training, services, or benefits available through federal, state, or local agencies."
+    shared string TeacherPreparationProgramName named ProgramName
+      documentation "The name of the Teacher Preparation Program."
       is part of identity
       is queryable field
     descriptor EdFi.ProgramType
       documentation "The type of program."
       is part of identity
       is queryable field
-
     descriptor EdFi.GradeLevel
       documentation "The grade levels served at the TPP Program."
       is optional collection

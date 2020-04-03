@@ -46,8 +46,8 @@ Domain Entity PerformanceMeasure
   bool Announced
     documentation "An indicator of whether the performance measure was announced or not."
     is optional
-  bool CoteachingObserved
-    documentation "An indicator of whether co-teaching was part of the performance measure or not."
+  descriptor CoteachingStyleObserved
+    documentation "A type of co-teaching observed as part of the performance measure."
     is optional
   string Comments
     documentation "Any comments about the performance measure to be captured"
