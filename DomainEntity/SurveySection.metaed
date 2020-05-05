@@ -1,8 +1,0 @@
-Domain Entity SurveySection
-    documentation "The section(s) of questions for the survey."
-	   domain entity Survey
-      documentation "Reference to the Survey."
-      is part of identity
-    shared string SurveySectionTitle
-      documentation "The title or label for the survey section."
-      is part of identity

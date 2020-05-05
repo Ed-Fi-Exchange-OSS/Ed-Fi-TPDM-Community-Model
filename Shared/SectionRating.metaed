@@ -1,5 +1,0 @@
-Shared Decimal SectionRating
-    documentation "The type for survey section ratings."
-    total digits 9
-    decimal places 3
-    min value 0

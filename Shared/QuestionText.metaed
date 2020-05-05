@@ -1,4 +1,0 @@
-Shared String QuestionText
-    documentation "The text of the question."
-    min length 1
-    max length 512

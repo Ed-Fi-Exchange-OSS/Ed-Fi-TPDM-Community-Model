@@ -1,6 +1,7 @@
 Association SurveyResponseTeacherCandidateTargetAssociation
   documentation "The association provides information about the survey being taken and who the survey is about."
-  domain entity SurveyResponse
-    documentation "Reference to the survey response."
+  //commented out until EdFi.SurveyResponse becomes available, per Steven Arnold (TPDMX-142)
+  //domain entity SurveyResponse
+  //  documentation "Reference to the survey response."
   domain entity TeacherCandidate
     documentation "Reference to the teacher candidate."

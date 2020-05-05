@@ -14,16 +14,12 @@ Domain TeacherPreparation
     domain entity CourseStudentAcademicRecordFacts
     domain entity CourseStudentAssessmentFacts
     domain entity CourseStudentFacts
-    domain entity CourseSurveyQuestionResponseFacts
-    domain entity CourseSurveyResponseFacts
-    domain entity CourseSurveySectionResponseRatingFacts
     domain entity Credential
     domain entity EducationOrganizationCourseTranscriptFacts
     domain entity EducationOrganizationFacts
     domain entity EducationOrganizationStudentAcademicRecordFacts
     domain entity EducationOrganizationStudentAssessmentFacts
     domain entity EducationOrganizationStudentFacts
-    domain entity EducationOrganizationSurveyQuestionResponseFacts
     domain entity EducationOrganizationSurveyResponseFacts
     domain entity EducationOrganizationSurveySectionResponseRatingFacts
     domain entity GradebookEntry
@@ -43,21 +39,13 @@ Domain TeacherPreparation
     domain entity SectionStudentAcademicRecordFacts
     domain entity SectionStudentAssessmentFacts
     domain entity SectionStudentFacts
-    domain entity SectionSurveyQuestionResponseFacts
     domain entity SectionSurveyResponseFacts
-    domain entity SectionSurveySectionResponseRatingFacts
     domain entity Staff
     domain entity StaffFieldworkAbsenceEvent
     domain entity StaffFieldworkExperience
     domain entity StaffProfessionalDevelopmentEventAttendance
     domain entity StaffStudentGrowthMeasure
     domain entity StudentGradebookEntry
-    domain entity Survey
-    domain entity SurveyQuestion
-    domain entity SurveyQuestionResponse
-    domain entity SurveyResponse
-    domain entity SurveySection
-    domain entity SurveySectionResponse
     domain entity TeacherCandidate
     domain entity TeacherCandidateAcademicRecord
     domain entity TeacherCandidateFieldworkAbsenceEvent
@@ -85,17 +73,8 @@ Domain TeacherPreparation
     association StaffStudentGrowthMeasureSectionAssociation
     association StaffTeacherPreparationProviderAssociation
     association StaffTeacherPreparationProviderProgramAssociation
-    association SurveyCourseAssociation
-    association SurveyProgramAssociation
-    association SurveyResponseEducationOrganizationTargetAssociation
-    association SurveyResponseStaffTargetAssociation
     association SurveyResponseTeacherCandidateTargetAssociation
-    association SurveySectionAssociation
-    association SurveySectionResponseEducationOrganizationTargetAssociation
-    association SurveySectionResponseStaffTargetAssociation
     association SurveySectionResponseTeacherCandidateTargetAssociation
-    association SurveyStaffAssociation
-    association SurveyTeacherCandidateAssociation
     association TeacherCandidateFieldworkExperienceSectionAssociation
     association TeacherCandidateStaffAssociation
     association TeacherCandidateStudentGrowthMeasureCourseAssociation
