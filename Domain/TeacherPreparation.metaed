@@ -73,8 +73,10 @@ Domain TeacherPreparation
     association StaffStudentGrowthMeasureSectionAssociation
     association StaffTeacherPreparationProviderAssociation
     association StaffTeacherPreparationProviderProgramAssociation
-    association SurveyResponseTeacherCandidateTargetAssociation
-    association SurveySectionResponseTeacherCandidateTargetAssociation
+    //commented out per TPDMDEV-175
+    // association SurveyResponseTeacherCandidateTargetAssociation
+    // commented out per TPDMDEV-175
+    //association SurveySectionResponseTeacherCandidateTargetAssociation
     association TeacherCandidateFieldworkExperienceSectionAssociation
     association TeacherCandidateStaffAssociation
     association TeacherCandidateStudentGrowthMeasureCourseAssociation

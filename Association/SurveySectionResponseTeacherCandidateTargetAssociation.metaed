@@ -1,7 +1,0 @@
-Association SurveySectionResponseTeacherCandidateTargetAssociation
-  documentation "This association provides information about the survey section and the teacher candidate the survey section is about."
-  //commented out until EdFi.SurveySectionResponse becomes available, per Steven Arnold (TPDMX-142)
-  //domain entity SurveySectionResponse
-  //  documentation "Reference to the survey section response."
-  domain entity TeacherCandidate
-    documentation "Reference to the teacher candidate."
