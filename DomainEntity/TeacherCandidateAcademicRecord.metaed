@@ -72,6 +72,6 @@ Domain Entity TeacherCandidateAcademicRecord
   descriptor TPPDegreeType
     documentation "The degree type that a teacher candidate accomplishes."
     is required
-  common GradePointAverage
+  common EdFi.GradePointAverage
     documentation "Data that provides information on a measure of average performance in a group of courses taken by an individual."
     is optional collection
