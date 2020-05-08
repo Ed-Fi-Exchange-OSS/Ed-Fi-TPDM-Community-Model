@@ -2,7 +2,7 @@ Domain Entity EdFi.OpenStaffPosition additions
     enumeration EdFi.SchoolYear
         documentation "The identifier for the school year for which the OpenStaffPosition is seeking to fill."
         is optional
-    shared decimal FullTimeEquivalency
+    shared decimal EdFi.FullTimeEquivalency
         documentation "The ratio between the hours of work expected in a position and the hours of work normally expected in a full-time position in the same setting."
         is optional
     descriptor OpenStaffPositionReason
