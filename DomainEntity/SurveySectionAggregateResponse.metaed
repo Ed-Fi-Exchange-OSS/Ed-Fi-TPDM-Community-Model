@@ -1,0 +1,14 @@
+// DIFF - not a part of the Survey domain created for core v3.2.0-c.
+Domain Entity SurveySectionAggregateResponse
+    documentation ""
+    domain entity EvaluationElementRating
+        documentation "Reference to the person's Evalution Element Rating."
+        is part of identity
+        // Should have an explicit merge defined. Due to MetaEd bug, merge is implicit. See MetaEd-1132.
+        // merge EvaluationElementRating.EvaluationElement.EvaluationElementTitle with SurveySection.EvaluationElement.EvaluationElementTitle
+    domain entity EdFi.SurveySection
+        documentation "Reference to the associated SurveySection."
+        is part of identity
+    shared decimal ScoreValue
+        documentation "The score value for the aggregate survey section response."
+        is required

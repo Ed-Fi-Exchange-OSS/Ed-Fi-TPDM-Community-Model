@@ -1,0 +1,5 @@
+Shared Decimal StandardError
+    // DIFF - made shared decimal documentation more generic.
+    documentation "The standard error for a performance evaluation metric."
+    total digits 6
+    decimal places 3

@@ -1,3 +1,0 @@
-Shared String RubricDescription
-  documentation "The description of the rubric."
-  max length 255

@@ -1,3 +1,0 @@
-Shared String LevelDescription
-  documentation "The description of the level of the rubric at which the data is captured."
-  max length 255

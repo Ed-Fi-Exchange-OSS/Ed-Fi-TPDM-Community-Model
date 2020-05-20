@@ -1,5 +1,0 @@
-Shared Decimal StaffRating
-    documentation "The type for staff ratings typically 0-100 or 0-10 or 0-1."
-    total digits 6
-    decimal places 3
-    min value 0

@@ -1,0 +1,16 @@
+Domain Entity QuantitativeMeasureScore
+    documentation ""
+    domain entity EvaluationElementRating
+        documentation "Reference to the person's Evalution Element Rating."
+        is part of identity
+        // DIFF - required due to ambiguous merge paths
+        merge EvaluationElementRating.EvaluationElement.EvaluationElementTitle with QuantitativeMeasure.EvaluationElement.EvaluationElementTitle
+    domain entity QuantitativeMeasure
+        documentation "Reference to the Quantitative Measure."
+        is part of identity
+    shared decimal ScoreValue
+        documentation "The score value for the quantitive measure."
+        is required
+    shared decimal StandardError
+        documentation "The standard error for the quantitative measure."
+        is optional

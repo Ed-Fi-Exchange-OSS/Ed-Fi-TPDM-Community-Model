@@ -1,2 +1,2 @@
 Descriptor ProgramGateway
-  documentation "The descriptor holds the program gateway that is associated with continuation in a program."
+  documentation "Identifies the program gateway that may be associated for continuation in the program."

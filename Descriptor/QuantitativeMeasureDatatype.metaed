@@ -1,0 +1,3 @@
+// DIFF - lower case t in Datatype (matches ResultDatatypeType descriptor format)
+Descriptor QuantitativeMeasureDatatype
+    documentation "The datatype of the result. The results can be expressed as a number, percentile, range, level, etc."

@@ -1,0 +1,3 @@
+// DIFF - changed 'Domain' to 'Objective' based on model review decision.
+Descriptor ObjectiveRatingLevel
+    documentation "The rating level achieved based upon the rating or score."

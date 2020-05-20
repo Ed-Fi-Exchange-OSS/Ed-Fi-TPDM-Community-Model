@@ -1,6 +1,0 @@
-Association PerformanceMeasureCourseAssociation
-  documentation "The course offered by the education organization."
-  domain entity PerformanceMeasure
-    documentation "Associated performance measure."
-  domain entity EdFi.Course
-    documentation "Associated course."
