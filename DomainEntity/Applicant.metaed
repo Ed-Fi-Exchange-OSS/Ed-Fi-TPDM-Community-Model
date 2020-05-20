@@ -115,3 +115,6 @@ Domain Entity Applicant
     domain entity TeacherCandidate
       documentation "Reference to the teacher candidate associated."
       is optional
+  domain entity EdFi.Person
+      documentation "Relates the applicant to a generic person."
+      is optional

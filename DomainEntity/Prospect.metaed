@@ -99,3 +99,6 @@ Domain Entity Prospect
     domain entity TeacherCandidate
       documentation "Reference to the teacher candidate associated."
       is optional
+  domain entity EdFi.Person
+      documentation "Relates the prospect to a generic person."
+      is optional

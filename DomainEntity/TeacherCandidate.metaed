@@ -130,3 +130,6 @@ Domain Entity TeacherCandidate
   //domain entity Staff
   //  documentation "The staff associated."
   //  is optional
+  domain entity EdFi.Person
+      documentation "Relates the teacher candidate to a generic person."
+      is optional
