@@ -16,6 +16,3 @@ Domain Entity RubricDimension
     integer DimensionOrder
         documentation "The order for the rubric dimension."
         is optional
-    descriptor EvaluationType
-        documentation "The type of the evaluation  (e.g., observation, principal, peer, student survey, student growth)."
-        is optional

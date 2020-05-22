@@ -17,6 +17,9 @@ Domain Entity EvaluationElement
         documentation "The maximum summary numerical rating or score for the evaluation element."
         is optional
         role name Max
+    descriptor EvaluationType
+        documentation "The type of the evaluation (e.g., observation, principal, peer, student survey, student growth)."
+        is optional
     common RatingLevel
         documentation "The descriptive level(s) of ratings (cut scores) for evaluation element."
         is optional collection
