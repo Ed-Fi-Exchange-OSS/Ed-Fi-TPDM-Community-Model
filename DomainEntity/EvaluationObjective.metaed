@@ -6,7 +6,7 @@ Domain Entity EvaluationObjective
     shared string EvaluationObjectiveTitle
         documentation "The name or title of the evaluation Objective."
         is part of identity
-    shared integer SortOrder
+    integer SortOrder
         documentation "The sort order of this Evaluation Objective."
         is optional
     shared decimal Rating
