@@ -1,12 +1,11 @@
 Domain Entity Evaluation
-    documentation ""
+    documentation "An evaluation instrument appled to evaluate an educator.  The evaluation could be internally developed, or could be an industry recognized instrument such as TTESS or Marzano."
     domain entity PerformanceEvaluation
         documentation "Reference to the person's Performance Evalution."
         is part of identity
     shared string EvaluationTitle
         documentation "The name or title of the evaluation."
         is part of identity
-    // DIFF - swapped order to be before MaxRating
     shared decimal Rating
         documentation "The minimum summary numerical rating or score for the evaluation. If omitted, assumed to be 0.0."
         is optional

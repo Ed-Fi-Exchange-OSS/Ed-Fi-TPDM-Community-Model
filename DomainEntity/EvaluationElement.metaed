@@ -1,17 +1,14 @@
 Domain Entity EvaluationElement
-    documentation ""
-    // DIFF - 'Domain' replaced with 'Objective' per model review.
+    documentation "The lowest-level Elements or criterion of performance being evaluated by rubric, quantitative measure, or aggregate survey response."
     domain entity EvaluationObjective
         documentation "The Evaluation Objective applied for the person."
         is part of identity
     shared string EvaluationElementTitle
         documentation "The name or title of the evaluation element."
         is part of identity
-    // DIFF - made a shared string. expecting this to be a part of core Ed-Fi for v3.2.0-c release
-    shared integer SortOrder
+    integer SortOrder
         documentation "The sort order of this Evaluation Element."
         is optional
-    // DIFF - moved min to be above max
     shared decimal Rating
         documentation "The minimum summary numerical rating or score for the evaluation element. If omitted, assumed to be 0.0."
         is optional

@@ -1,6 +1,5 @@
-    // DIFF - 'Domain' replaced with 'Objective' per model review.
 Domain Entity EvaluationObjective
-    documentation ""
+    documentation "A subcomponent of an Evaluation, a specific educator Objective or domain of performance that is being evaluated.  "
     domain entity Evaluation
         documentation "The Evaluation applied for the person."
         is part of identity
@@ -10,7 +9,6 @@ Domain Entity EvaluationObjective
     shared integer SortOrder
         documentation "The sort order of this Evaluation Objective."
         is optional
-    // DIFF - moved up to be in front of MaxRating
     shared decimal Rating
         documentation "The minimum summary numerical rating or score for the evaluation Objective. If omitted, assumed to be 0.0."
         is optional

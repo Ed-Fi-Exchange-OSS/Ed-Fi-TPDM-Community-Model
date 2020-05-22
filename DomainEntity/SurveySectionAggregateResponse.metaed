@@ -1,6 +1,5 @@
-// DIFF - not a part of the Survey domain created for core v3.2.0-c.
 Domain Entity SurveySectionAggregateResponse
-    documentation ""
+    documentation "The aggregate or average score across the surveying population for a survey section being used for performance evaluation."
     domain entity EvaluationElementRating
         documentation "Reference to the person's Evalution Element Rating."
         is part of identity

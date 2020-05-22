@@ -1,5 +1,4 @@
 Shared String EvaluationObjectiveTitle
-    // DIFF - updated 'Domain' to 'Objective' per model review.
     documentation "The name or title of the Evaluation Objective."
     min length 1
     max length 50

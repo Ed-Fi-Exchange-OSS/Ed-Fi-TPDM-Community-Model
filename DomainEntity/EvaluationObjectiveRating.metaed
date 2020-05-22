@@ -1,10 +1,8 @@
-// DIFF - 'Domain' replaced with 'Objective' per model review.
 Domain Entity EvaluationObjectiveRating
-    documentation ""
+    documentation "The rating for the component Evaluation Objective for an individual educator."
     domain entity EvaluationRating
         documentation "Reference to the person's Evalution Rating."
         is part of identity
-        // DIFF - required due to ambiguous merge paths
         merge EvaluationRating.Evaluation.EvaluationTitle with EvaluationObjective.Evaluation.EvaluationTitle
     domain entity EvaluationObjective
         documentation "The Evaluation Domain applied for the person."
@@ -16,7 +14,6 @@ Domain Entity EvaluationObjectiveRating
     descriptor ObjectiveRatingLevel
         documentation "The rating level achieved based upon the rating or score."
         is optional
-    // DIFF - changed to shared string
     shared string Comments
         documentation "Any comments about the performance evaluation to be captured."
         is optional

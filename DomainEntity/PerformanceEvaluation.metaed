@@ -1,6 +1,5 @@
 Domain Entity PerformanceEvaluation
-    documentation ""
-    // DIFF - name changed from 'Measure' to 'Evaluation'.
+    documentation "A performance evaluation of an educator, typically regularly scheduled and uniformly applied, comporsed of one or more Evaluations."
     shared string EvaluationTitle
         documentation "An assigned unique identifier for the performance evaluation."
         is part of identity

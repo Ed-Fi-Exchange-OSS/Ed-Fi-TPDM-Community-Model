@@ -1,9 +1,8 @@
 Domain Entity QuantitativeMeasureScore
-    documentation ""
+    documentation "The score or value for a Quantitative Measure achieved by an individual educator."
     domain entity EvaluationElementRating
         documentation "Reference to the person's Evalution Element Rating."
         is part of identity
-        // DIFF - required due to ambiguous merge paths
         merge EvaluationElementRating.EvaluationElement.EvaluationElementTitle with QuantitativeMeasure.EvaluationElement.EvaluationElementTitle
     domain entity QuantitativeMeasure
         documentation "Reference to the Quantitative Measure."

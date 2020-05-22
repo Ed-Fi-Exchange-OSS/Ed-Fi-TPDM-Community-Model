@@ -1,6 +1,3 @@
-// DIFF - added EvaluationElement as an extension - not a part of the core Survey model.
-// DIFF - core version includes Survey reference as part of identity.
-// DIFF - core version SurveySectionTitle has different documentation.
 Domain Entity EdFi.SurveySection additions
     domain entity EvaluationElement
         documentation "The Evaluation Element associated with the quantitative measure."

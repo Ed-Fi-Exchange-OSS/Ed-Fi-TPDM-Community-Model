@@ -1,5 +1,4 @@
 Common Reviewer
-    // DIFF - changed 'that' to 'who'
     documentation "The person who conducted the performance measure."
     shared string EdFi.FirstName
         documentation "A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change."
@@ -10,7 +9,6 @@ Common Reviewer
     common ReceivedTraining
         documentation "An indication that the person administering the performance evauation has or has not received training on conducting performance measures."
         is optional
-    // DIFF - updated namespace to EdFi. because Person was pulled into core model.
     domain entity EdFi.Person
         documentation "The person associated with the performance measure."
         is optional

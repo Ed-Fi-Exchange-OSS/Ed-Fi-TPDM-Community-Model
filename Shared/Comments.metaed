@@ -1,5 +1,4 @@
 Shared String Comments
-    // DIFF - made documentation for shared string more generic.
     documentation "Any comments to be captured."
     min length 1
     max length 1024

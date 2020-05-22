@@ -1,10 +1,8 @@
 Domain Entity EvaluationElementRating
-    documentation ""
-    // DIFF - 'Domain' replaced with 'Objective' per model review
+    documentation "The lowest-level rating for an Evaluation Element for an individual educator."
     domain entity EvaluationObjectiveRating
         documentation "Reference to the person's Evalution Objective Rating."
         is part of identity
-        // DIFF - required due to ambiguous merge paths
         merge EvaluationObjectiveRating.EvaluationRating.Evaluation.EvaluationTitle with EvaluationElement.EvaluationObjective.Evaluation.EvaluationTitle
     domain entity EvaluationElement
         documentation "The Evaluation Element applied for the person."
@@ -17,7 +15,6 @@ Domain Entity EvaluationElementRating
         documentation "The rating level achieved based upon the rating or score."
         is optional
     shared string Comments named AreaOfRefinement
-        // DIFF - fixed typo on 'to'
         documentation "Area(s) identified for person to refine or improve as part of the evaluation."
         is optional
     shared string Comments named AreaOfReinforcement

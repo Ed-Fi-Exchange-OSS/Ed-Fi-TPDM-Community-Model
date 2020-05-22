@@ -1,5 +1,5 @@
 Domain Entity Goal
-    documentation ""
+    documentation "Goal for performance improvement assigned to an educator associated with an Evaluation Element."
     domain entity EdFi.Person
         documentation "The person to whom the goal is assigned."
         is part of identity
@@ -9,14 +9,12 @@ Domain Entity Goal
     date AssignmentDate
         documentation "The month, day, and year on which the goal was assigned."
         is part of identity
-    // DIFF - moved down below identity elements
     domain entity EvaluationElement
         documentation "The Evaluation Element associated with the goal."
         is optional
     descriptor GoalType
         documentation "The type of the goal (e.g., management, instruction)."
         is optional
-    // DIFF - based on EdFi core shared string Description with role name
     shared string EdFi.Description
         documentation "The description of the goal."
         is optional

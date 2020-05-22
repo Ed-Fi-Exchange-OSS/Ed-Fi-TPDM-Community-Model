@@ -3,7 +3,6 @@ Common CurrentPosition
     shared string EdFi.NameOfInstitution
         documentation "The formal name of the education organization."
         is required
-    // DIFF - brought into core as part of Survey domain. Updated namespace reference.
     shared string EdFi.Whereabouts named Location
         documentation "The location, typically City and State, for the institution."
         is required

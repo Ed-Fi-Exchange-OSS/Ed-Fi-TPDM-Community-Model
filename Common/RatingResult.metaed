@@ -1,10 +1,8 @@
 Common RatingResult
-    documentation ""
-    // DIFF - confirm part of identity and not just required.
+    documentation "One or more ratings or score for a level or topic of the evaluation."
     shared string RatingResultTitle
         documentation "The title of Rating Result."
         is part of identity
-    // DIFF - confirm part of identity and not just required.
     shared decimal Rating
         documentation "The numerical summary rating or score for the evaluation."
         is part of identity

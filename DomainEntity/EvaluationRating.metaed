@@ -1,9 +1,8 @@
 Domain Entity EvaluationRating
-    documentation ""
+    documentation "The summary weighting for the Evaluation instrument for an individual educator."
     domain entity PerformanceEvaluationRating
         documentation "Reference to the person's Performance Evalution Rating."
         is part of identity
-        // DIFF - required due to ambiguous merge paths
         merge PerformanceEvaluationRating.PerformanceEvaluation.PerformanceEvaluationType with Evaluation.PerformanceEvaluation.PerformanceEvaluationType
     domain entity Evaluation
         documentation "The Evaluation applied for the person."
