@@ -14,20 +14,7 @@ Domain TalentManagement
     domain entity RecruitmentEvent
     domain entity Staff
     domain entity StaffAbsenceEvent
-    domain entity StaffEvaluation
-    domain entity StaffEvaluationComponent
-    domain entity StaffEvaluationComponentRating
-    domain entity StaffEvaluationElement
-    domain entity StaffEvaluationElementRating
-    domain entity StaffEvaluationRating
     domain entity StaffLeave
-    domain entity Survey
-    domain entity SurveyQuestion
-    domain entity SurveyQuestionResponse
-    domain entity SurveyResponse
-    domain entity SurveySection
-    domain entity SurveySectionResponse
-    domain entity TalentManagementGoal
 
     association ApplicantProspectAssociation
     association StaffApplicantAssociation
