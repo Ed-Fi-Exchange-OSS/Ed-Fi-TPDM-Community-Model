@@ -10,11 +10,15 @@ Domain TeacherPreparation
     domain entity Application
     domain entity ApplicationEvent
     domain entity Assessment
+    domain entity Certification
+    domain entity CertificationExam
+    domain entity CertificationExamResult
     domain entity CourseCourseTranscriptFacts
     domain entity CourseStudentAcademicRecordFacts
     domain entity CourseStudentAssessmentFacts
     domain entity CourseStudentFacts
     domain entity Credential
+    domain entity CredentialEvent
     domain entity EducationOrganizationCourseTranscriptFacts
     domain entity EducationOrganizationFacts
     domain entity EducationOrganizationStudentAcademicRecordFacts

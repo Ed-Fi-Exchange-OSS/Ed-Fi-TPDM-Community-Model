@@ -1,4 +1,0 @@
-Shared String RevocationReason
-  documentation "Expanded reason for the revocation of credential."
-  min length 1
-  max length 40

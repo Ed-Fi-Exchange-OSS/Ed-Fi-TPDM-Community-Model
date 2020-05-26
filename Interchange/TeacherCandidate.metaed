@@ -9,6 +9,10 @@ Interchange TeacherCandidate
   domain entity TeacherCandidateCourseTranscript
   domain entity TeacherCandidateFieldworkAbsenceEvent
   domain entity TeacherCandidateFieldworkExperience
+  domain entity Certification
+  domain entity CertificationExam
+  domain entity CertificationExamResult
+  domain entity CredentialEvent
 
   association CompleterAsStaffAssociation
   association TeacherCandidateFieldworkExperienceSectionAssociation
