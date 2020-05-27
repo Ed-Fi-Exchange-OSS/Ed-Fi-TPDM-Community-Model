@@ -13,19 +13,10 @@ Domain TeacherPreparation
     domain entity Certification
     domain entity CertificationExam
     domain entity CertificationExamResult
-    domain entity CourseCourseTranscriptFacts
-    domain entity CourseStudentAcademicRecordFacts
-    domain entity CourseStudentAssessmentFacts
-    domain entity CourseStudentFacts
     domain entity Credential
     domain entity CredentialEvent
-    domain entity EducationOrganizationCourseTranscriptFacts
     domain entity EducationOrganizationFacts
-    domain entity EducationOrganizationStudentAcademicRecordFacts
-    domain entity EducationOrganizationStudentAssessmentFacts
     domain entity EducationOrganizationStudentFacts
-    domain entity EducationOrganizationSurveyResponseFacts
-    domain entity EducationOrganizationSurveySectionResponseRatingFacts
     domain entity GradebookEntry
     domain entity OpenStaffPosition
     domain entity ProfessionalDevelopmentEvent
@@ -33,11 +24,6 @@ Domain TeacherPreparation
     domain entity ProspectProfessionalDevelopmentEventAttendance
     domain entity RecruitmentEvent
     domain entity School
-    domain entity SectionCourseTranscriptFacts
-    domain entity SectionStudentAcademicRecordFacts
-    domain entity SectionStudentAssessmentFacts
-    domain entity SectionStudentFacts
-    domain entity SectionSurveyResponseFacts
     domain entity Staff
     domain entity StaffFieldworkAbsenceEvent
     domain entity StaffFieldworkExperience
