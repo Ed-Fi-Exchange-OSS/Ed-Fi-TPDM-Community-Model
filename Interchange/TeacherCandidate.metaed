@@ -13,6 +13,7 @@ Interchange TeacherCandidate
   domain entity CertificationExam
   domain entity CertificationExamResult
   domain entity CredentialEvent
+  domain entity EdFi.Person
 
   association CompleterAsStaffAssociation
   association TeacherCandidateFieldworkExperienceSectionAssociation
