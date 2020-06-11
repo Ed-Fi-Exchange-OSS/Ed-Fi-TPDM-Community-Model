@@ -20,3 +20,6 @@ Interchange TeacherCandidate
   association TeacherCandidateStaffAssociation
   association TeacherCandidateTeacherPreparationProviderAssociation
   association TeacherCandidateTeacherPreparationProviderProgramAssociation
+  association EdFi.StudentSchoolAssociation
+  association EdFi.StudentEducationOrganizationAssociation
+  association EdFi.StudentEducationOrganizationResponsibilityAssociation
