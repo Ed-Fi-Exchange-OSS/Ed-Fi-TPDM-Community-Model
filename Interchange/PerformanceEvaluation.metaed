@@ -1,6 +1,7 @@
 Interchange PerformanceEvaluation
     documentation ""
     domain entity Evaluation
+    domain entity EvaluationRating
     domain entity EvaluationElement
     domain entity EvaluationElementRating
     domain entity EvaluationObjective
