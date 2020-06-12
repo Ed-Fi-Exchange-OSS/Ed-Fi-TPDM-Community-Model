@@ -13,9 +13,13 @@ Interchange TeacherCandidate
   domain entity CertificationExam
   domain entity CertificationExamResult
   domain entity CredentialEvent
+  domain entity EdFi.Person
 
   association CompleterAsStaffAssociation
   association TeacherCandidateFieldworkExperienceSectionAssociation
   association TeacherCandidateStaffAssociation
   association TeacherCandidateTeacherPreparationProviderAssociation
   association TeacherCandidateTeacherPreparationProviderProgramAssociation
+  association EdFi.StudentSchoolAssociation
+  association EdFi.StudentEducationOrganizationAssociation
+  association EdFi.StudentEducationOrganizationResponsibilityAssociation
