@@ -7,8 +7,7 @@ Interchange TeacherCandidate
   domain entity TeacherCandidate
   domain entity TeacherCandidateAcademicRecord
   domain entity TeacherCandidateCourseTranscript
-  domain entity TeacherCandidateFieldworkAbsenceEvent
-  domain entity TeacherCandidateFieldworkExperience
+  domain entity FieldworkExperience
   domain entity Certification
   domain entity CertificationExam
   domain entity CertificationExamResult
@@ -16,7 +15,7 @@ Interchange TeacherCandidate
   domain entity EdFi.Person
 
   association CompleterAsStaffAssociation
-  association TeacherCandidateFieldworkExperienceSectionAssociation
+  association FieldworkExperienceSectionAssociation
   association TeacherCandidateStaffAssociation
   association TeacherCandidateTeacherPreparationProviderAssociation
   association TeacherCandidateTeacherPreparationProviderProgramAssociation

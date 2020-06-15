@@ -4,12 +4,12 @@ Interchange EdFi.StaffAssociation additions
   domain entity EmploymentSeparationEvent
   domain entity OpenStaffPositionEvent
   domain entity StaffFieldworkAbsenceEvent
-  domain entity StaffFieldworkExperience
+  domain entity FieldworkExperience
   domain entity Certification
   domain entity CertificationExam
   domain entity CertificationExamResult
   domain entity CredentialEvent
 
-  association StaffFieldworkExperienceSectionAssociation
+  association FieldworkExperienceSectionAssociation
   association StaffTeacherPreparationProviderAssociation
   association StaffTeacherPreparationProviderProgramAssociation
