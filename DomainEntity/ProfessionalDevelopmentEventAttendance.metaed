@@ -1,7 +1,7 @@
-Domain Entity StaffProfessionalDevelopmentEventAttendance
+Domain Entity ProfessionalDevelopmentEventAttendance
   documentation "This event entity represents the recording of whether a staff is in attendance for professional development."
-  domain entity EdFi.Staff
-    documentation "The staff associated with the professional development attendance event."
+  domain entity EdFi.Person
+    documentation "The person associated with the professional development attendance event."
     is part of identity
   domain entity ProfessionalDevelopmentEvent
     documentation "The professional development event the attendance event is associated to."
