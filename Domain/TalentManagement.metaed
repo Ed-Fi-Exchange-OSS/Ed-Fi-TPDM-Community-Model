@@ -5,7 +5,6 @@ Domain TalentManagement
     domain entity Applicant
     domain entity Application
     domain entity ApplicationEvent
-    domain entity EducationOrganizationFacts
     domain entity EmploymentEvent
     domain entity EmploymentSeparationEvent
     domain entity OpenStaffPosition

@@ -15,8 +15,6 @@ Domain TeacherPreparation
     domain entity CertificationExamResult
     domain entity Credential
     domain entity CredentialEvent
-    domain entity EducationOrganizationFacts
-    domain entity EducationOrganizationStudentFacts
     domain entity GradebookEntry
     domain entity OpenStaffPosition
     domain entity ProfessionalDevelopmentEvent
@@ -25,7 +23,6 @@ Domain TeacherPreparation
     domain entity RecruitmentEvent
     domain entity School
     domain entity Staff
-    domain entity StaffFieldworkAbsenceEvent
     domain entity StaffFieldworkExperience
     domain entity StaffProfessionalDevelopmentEventAttendance
     domain entity StaffStudentGrowthMeasure

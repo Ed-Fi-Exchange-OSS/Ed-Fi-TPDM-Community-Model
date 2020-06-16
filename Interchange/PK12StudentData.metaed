@@ -6,7 +6,6 @@ Interchange PK12StudentData
     domain entity AnonymizedStudentAcademicRecord
     domain entity AnonymizedStudentAssessment
     domain entity AnonymizedStudentCourseTranscript
-    domain entity EducationOrganizationStudentFacts
     domain entity StaffStudentGrowthMeasure
     domain entity TeacherCandidateStudentGrowthMeasure
 
