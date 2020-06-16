@@ -26,14 +26,12 @@ Domain TeacherPreparation
     domain entity School
     domain entity Staff
     domain entity StaffFieldworkAbsenceEvent
-    domain entity StaffFieldworkExperience
+    domain entity FieldworkExperience
     domain entity StaffProfessionalDevelopmentEventAttendance
     domain entity StaffStudentGrowthMeasure
     domain entity StudentGradebookEntry
     domain entity TeacherCandidate
     domain entity TeacherCandidateAcademicRecord
-    domain entity TeacherCandidateFieldworkAbsenceEvent
-    domain entity TeacherCandidateFieldworkExperience
     domain entity TeacherCandidateProfessionalDevelopmentEventAttendance
     domain entity TeacherCandidateStudentGrowthMeasure
     domain entity TeacherPreparationProvider
@@ -61,7 +59,7 @@ Domain TeacherPreparation
     association CompleterAsStaffAssociation
     association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
-    association StaffFieldworkExperienceSectionAssociation
+    association FieldworkExperienceSectionAssociation
     association StaffProspectAssociation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
@@ -72,7 +70,6 @@ Domain TeacherPreparation
     // association SurveyResponseTeacherCandidateTargetAssociation
     // commented out per TPDMDEV-175
     //association SurveySectionResponseTeacherCandidateTargetAssociation
-    association TeacherCandidateFieldworkExperienceSectionAssociation
     association TeacherCandidateStaffAssociation
     association TeacherCandidateStudentGrowthMeasureCourseAssociation
     association TeacherCandidateStudentGrowthMeasureEducationOrganizationAssociation
