@@ -1,6 +1,4 @@
 Domain Entity Applicant
-
-    // TNTP
     documentation "A person who makes a formal application for an OpenStaffPosition."
     shared string ApplicantIdentifier
         documentation "Identifier assigned to a person making formal application for an open staff position."
@@ -66,9 +64,6 @@ Domain Entity Applicant
     shared string EdFi.IdentificationCode named LoginId
         documentation "The login ID for the user; used for security access control interface."
         is optional
-    domain entity EdFi.Credential
-        documentation "The legal document or authorization giving authorization to perform teaching assignment services."
-        is optional collection
     bool HighlyQualifiedTeacher
         documentation "An indication of whether a teacher is classified as highly qualified for his/her assignment according to state definition. This attribute indicates the teacher is highly qualified for ALL Sections being taught."
         is optional
@@ -82,11 +77,7 @@ Domain Entity Applicant
     common TeacherPreparationProgram
         documentation "The Teacher Preparation Program(s) completed by the teacher."
         is optional collection
-//	domain entity Prospect
-//        documentation "Reference to previously identified prospect."
-//        is optional
 
-    // TPDP Extensions
     descriptor Gender
       documentation "The gender with which a person associates."
       is optional
