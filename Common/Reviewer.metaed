@@ -12,3 +12,4 @@ Common Reviewer
     domain entity EdFi.Person
         documentation "The person associated with the performance measure."
         is optional
+        role name Reviewer
