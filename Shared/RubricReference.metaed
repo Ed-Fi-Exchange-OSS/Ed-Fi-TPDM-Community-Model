@@ -1,4 +1,0 @@
-Shared String RubricReference
-    documentation "The reference to rubric title or identifier."
-    min length 1
-    max length 255

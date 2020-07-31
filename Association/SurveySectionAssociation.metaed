@@ -1,6 +1,0 @@
-Association SurveySectionAssociation
-  documentation "The section associated with the survey."
-  domain entity Survey
-    documentation "Reference to Survey."
-  domain entity EdFi.Section
-    documentation "The section associated with the survey."

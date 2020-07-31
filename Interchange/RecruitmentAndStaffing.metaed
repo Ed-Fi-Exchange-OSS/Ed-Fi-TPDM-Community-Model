@@ -8,6 +8,7 @@ Interchange RecruitmentAndStaffing
   domain entity EdFi.Credential
   domain entity Prospect
   domain entity RecruitmentEvent
+  domain entity EdFi.Person
 
   association ApplicantProspectAssociation
   association StaffApplicantAssociation

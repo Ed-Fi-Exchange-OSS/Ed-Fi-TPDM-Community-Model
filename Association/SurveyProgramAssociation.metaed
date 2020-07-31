@@ -1,6 +1,0 @@
-Association SurveyProgramAssociation
-  documentation "The program associated with the survey."
-  domain entity Survey
-    documentation "Reference to Survey."
-  domain entity EdFi.Program
-    documentation "The program associated with the survey."

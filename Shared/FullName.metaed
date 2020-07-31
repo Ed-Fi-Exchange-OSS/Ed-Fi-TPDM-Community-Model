@@ -1,3 +1,0 @@
-Shared String FullName
-    documentation "Full name of a person."
-    max length 80
