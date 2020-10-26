@@ -4,10 +4,12 @@ Domain Entity EdFi.School additions
   descriptor FederalLocaleCode
     documentation "The federal locale code associated with an education organization."
     is optional
-
-  descriptor SchoolStatus
-    documentation "The status of school e.g. priority or focus."
+  domain entity EdFi.PostSecondaryInstitution
+    documentation "The post secondary institution of which this school/prep provider is a component of."
     is optional
   bool ImprovingSchool
     documentation "An indication of whether a school is identified as an improving school."
+    is optional
+  descriptor AccreditationStatus
+    documentation "Accreditation Status for a Education Preparation Provider."
     is optional
