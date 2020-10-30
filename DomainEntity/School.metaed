@@ -5,7 +5,7 @@ Domain Entity EdFi.School additions
     documentation "The federal locale code associated with an education organization."
     is optional
   domain entity EdFi.PostSecondaryInstitution
-    documentation "The post secondary institution of which this school/prep provider is a component of."
+    documentation "The postsecondary institution or university associated as an organization component for the School, if applicable"
     is optional
   bool ImprovingSchool
     documentation "An indication of whether a school is identified as an improving school."
