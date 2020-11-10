@@ -28,7 +28,7 @@ Domain TeacherPreparation
     domain entity TeacherCandidate
     domain entity TeacherCandidateAcademicRecord
     domain entity TeacherCandidateStudentGrowthMeasure
-    domain entity TeacherPreparationProvider
+    //domain entity TeacherPreparationProvider
     domain entity TeacherPreparationProviderProgram
     domain entity University
     domain entity Evaluation
@@ -58,15 +58,10 @@ Domain TeacherPreparation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
-    association StaffTeacherPreparationProviderAssociation
     association StaffTeacherPreparationProviderProgramAssociation
-    //commented out per TPDMDEV-175
-    // association SurveyResponseTeacherCandidateTargetAssociation
-    // commented out per TPDMDEV-175
-    //association SurveySectionResponseTeacherCandidateTargetAssociation
+
     association TeacherCandidateStaffAssociation
     association TeacherCandidateStudentGrowthMeasureCourseAssociation
     association TeacherCandidateStudentGrowthMeasureEducationOrganizationAssociation
     association TeacherCandidateStudentGrowthMeasureSectionAssociation
-    association TeacherCandidateTeacherPreparationProviderAssociation
     association TeacherCandidateTeacherPreparationProviderProgramAssociation

@@ -17,7 +17,6 @@ Interchange TeacherCandidate
   association CompleterAsStaffAssociation
   association FieldworkExperienceSectionAssociation
   association TeacherCandidateStaffAssociation
-  association TeacherCandidateTeacherPreparationProviderAssociation
   association TeacherCandidateTeacherPreparationProviderProgramAssociation
   association EdFi.StudentSchoolAssociation
   association EdFi.StudentEducationOrganizationAssociation

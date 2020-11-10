@@ -10,5 +10,4 @@ Interchange EdFi.StaffAssociation additions
   domain entity CredentialEvent
 
   association FieldworkExperienceSectionAssociation
-  association StaffTeacherPreparationProviderAssociation
   association StaffTeacherPreparationProviderProgramAssociation
