@@ -2,7 +2,7 @@ Association StaffTeacherPreparationProviderProgramAssociation
   documentation "This association indicates the Staff associated with a teacher preparation provider program."
   domain entity EdFi.Staff
     documentation "The Staff associated with the Program."
-  domain entity TeacherPreparationProviderProgram
+  domain entity EducatorPreparationProgram
     documentation "The Program associated to the Staff."
   date BeginDate
     documentation "Start date for the association of staff to this program."

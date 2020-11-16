@@ -1,0 +1,2 @@
+Descriptor EducatorPreparationProgramType
+  documentation "The descriptor holds the type of educator prep program (e.g., college, alternative, TFA, etc.)."

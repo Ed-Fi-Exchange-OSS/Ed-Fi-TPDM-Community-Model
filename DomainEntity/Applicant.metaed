@@ -54,9 +54,6 @@ Domain Entity Applicant
     common BackgroundCheck
         documentation "Applicant background check history and disposition."
         is optional collection
-    common TeacherPreparationProgram
-        documentation "The Teacher Preparation Program(s) completed by the teacher."
-        is optional collection
     descriptor Gender
       documentation "The gender with which a person associates."
       is optional
