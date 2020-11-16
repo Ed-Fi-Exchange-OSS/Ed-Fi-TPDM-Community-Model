@@ -29,7 +29,7 @@ Domain TeacherPreparation
     domain entity TeacherCandidateAcademicRecord
     domain entity TeacherCandidateStudentGrowthMeasure
     //domain entity TeacherPreparationProvider
-    domain entity TeacherPreparationProviderProgram
+    domain entity EducatorPreparationProgram
     domain entity University
     domain entity Evaluation
     domain entity EvaluationElement

@@ -14,9 +14,6 @@ Domain Entity EdFi.Staff additions
   common Seniority
     documentation "Entries of job experience contributing to computations of seniority."
     is optional collection
-  common TeacherPreparationProgram
-    documentation "The Teacher Preparation Program(s) completed by the teacher."
-    is optional collection
   bool Tenured
     documentation "Indicator of whether the staff member is tenured."
     is optional

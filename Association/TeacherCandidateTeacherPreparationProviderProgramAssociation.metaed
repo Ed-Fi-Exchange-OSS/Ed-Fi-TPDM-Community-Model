@@ -1,8 +1,8 @@
 Association TeacherCandidateTeacherPreparationProviderProgramAssociation
-  documentation "Information about the association between the Teacher Candidate and the TeacherPreparationProviderProgram"
+  documentation "Information about the association between the Teacher Candidate and the EducatorPreparationProgram"
   domain entity TeacherCandidate
     documentation "TeacherCandidate for the association."
-  domain entity TeacherPreparationProviderProgram
+  domain entity EducatorPreparationProgram
     documentation "The Program associated to the Staff."
   date BeginDate
     documentation "The begin date for the association."
