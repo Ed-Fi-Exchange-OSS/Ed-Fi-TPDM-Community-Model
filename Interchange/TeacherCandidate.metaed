@@ -15,7 +15,6 @@ Interchange TeacherCandidate
   domain entity EdFi.Person
 
   association CompleterAsStaffAssociation
-  association FieldworkExperienceSectionAssociation
   association TeacherCandidateStaffAssociation
   association TeacherCandidateTeacherPreparationProviderProgramAssociation
   association EdFi.StudentSchoolAssociation
