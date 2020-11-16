@@ -1,7 +1,10 @@
 Domain Entity EdFi.SurveyResponse additions
-    domain entity TeacherCandidate
-        documentation "The teacher candidate responding to a survey."
-        is optional
-    domain entity Applicant
-        documentation "The applicant responding to a survey."
+    // domain entity TeacherCandidate
+    //     documentation "The teacher candidate responding to a survey."
+    //     is optional
+    // domain entity Applicant
+    //     documentation "The applicant responding to a survey."
+    //     is optional
+    domain entity EdFi.Person
+        documentation "Relates the survey response to a generic person."
         is optional
