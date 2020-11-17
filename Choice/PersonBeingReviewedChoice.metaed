@@ -1,8 +1,5 @@
 Choice PersonBeingReviewedChoice
   documentation "Reference to either a prospect, staff or teacher candidate."
-	domain entity Prospect
-      documentation "The reference to the prospect."
-      is required
 	domain entity EdFi.Staff
       documentation "The staff associated with the performance measure."
       is required

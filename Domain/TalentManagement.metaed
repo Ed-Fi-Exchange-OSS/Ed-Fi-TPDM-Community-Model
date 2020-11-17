@@ -9,12 +9,11 @@ Domain TalentManagement
     domain entity EmploymentSeparationEvent
     domain entity OpenStaffPosition
     domain entity OpenStaffPositionEvent
-    domain entity Prospect
+    domain entity RecruitmentEventAttendance
     domain entity RecruitmentEvent
     domain entity Staff
     domain entity StaffAbsenceEvent
     domain entity StaffLeave
 
-    association ApplicantProspectAssociation
     association StaffApplicantAssociation
     //association StaffEducationOrganizationEmploymentAssociation

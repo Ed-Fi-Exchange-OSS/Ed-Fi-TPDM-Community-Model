@@ -19,3 +19,6 @@ Domain Entity RecruitmentEvent
     shared string EventLocation
       documentation "The location of the event."
       is optional
+    domain entity EdFi.EducationOrganization
+      documentation "Relates the recruiting event to an EducationOrganization."
+      is part of identity
