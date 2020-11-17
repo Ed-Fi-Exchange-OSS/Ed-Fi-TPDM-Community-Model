@@ -52,12 +52,10 @@ Domain TeacherPreparation
     association CompleterAsStaffAssociation
     association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
-    association FieldworkExperienceSectionAssociation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
     association StaffTeacherPreparationProviderProgramAssociation
-
     association TeacherCandidateStaffAssociation
     association TeacherCandidateStudentGrowthMeasureCourseAssociation
     association TeacherCandidateStudentGrowthMeasureEducationOrganizationAssociation
