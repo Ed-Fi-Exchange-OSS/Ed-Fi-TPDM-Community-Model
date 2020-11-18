@@ -47,7 +47,7 @@ Domain Entity RecruitmentEventAttendance
         documentation "The general racial category which most clearly reflects the individual's recognition of his or her community or with which the individual most identifies. The way this data element is listed, it must allow for multiple entries so that each individual can specify all appropriate races."
         is optional collection
         is queryable field
-    descriptor RecruitmentEventType
+    domain entity RecruitmentEvent
         documentation "Reference to event associated with the recruitment process."
         is part of identity
         is queryable field
