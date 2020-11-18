@@ -1,4 +1,4 @@
-Common ProspectQualifications
+Common RecruitmentEventAttendeeQualifications
   documentation "The qualifications of a prospective mentor teacher."
   bool Eligible
     documentation "An indication of whether the prospect is eligible for the position."

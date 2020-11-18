@@ -18,7 +18,7 @@ Domain TeacherPreparation
     domain entity GradebookEntry
     domain entity OpenStaffPosition
     domain entity ProfessionalDevelopmentEvent
-    domain entity Prospect
+    domain entity RecruitmentEventAttendance
     domain entity RecruitmentEvent
     domain entity School
     domain entity Staff
@@ -49,11 +49,9 @@ Domain TeacherPreparation
     association AnonymizedStudentCourseAssociation
     association AnonymizedStudentEducationOrganizationAssociation
     association AnonymizedStudentSectionAssociation
-    association ApplicantProspectAssociation
     association CompleterAsStaffAssociation
     association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
-    association StaffProspectAssociation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
