@@ -25,12 +25,9 @@ Domain TeacherPreparation
     domain entity ProfessionalDevelopmentEventAttendance
     domain entity StaffStudentGrowthMeasure
     domain entity StudentGradebookEntry
-    domain entity TeacherCandidate
-    domain entity TeacherCandidateAcademicRecord
-    domain entity TeacherCandidateStudentGrowthMeasure
+    domain entity Candidate
     //domain entity TeacherPreparationProvider
     domain entity EducatorPreparationProgram
-    domain entity University
     domain entity Evaluation
     domain entity EvaluationElement
     domain entity EvaluationElementRating
@@ -49,15 +46,11 @@ Domain TeacherPreparation
     association AnonymizedStudentCourseAssociation
     association AnonymizedStudentEducationOrganizationAssociation
     association AnonymizedStudentSectionAssociation
-    association CompleterAsStaffAssociation
     association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
     association StaffEducatorPreparationProgramAssociation
-    association TeacherCandidateStaffAssociation
-    association TeacherCandidateStudentGrowthMeasureCourseAssociation
-    association TeacherCandidateStudentGrowthMeasureEducationOrganizationAssociation
-    association TeacherCandidateStudentGrowthMeasureSectionAssociation
-    association TeacherCandidateTeacherPreparationProviderProgramAssociation
+    association CandidateRelationshipToStaffAssociation
+    association CandidateEducatorPreparationProgramAssociation
