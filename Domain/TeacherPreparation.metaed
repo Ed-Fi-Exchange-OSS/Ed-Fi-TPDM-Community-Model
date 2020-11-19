@@ -55,7 +55,7 @@ Domain TeacherPreparation
     association StaffStudentGrowthMeasureCourseAssociation
     association StaffStudentGrowthMeasureEducationOrganizationAssociation
     association StaffStudentGrowthMeasureSectionAssociation
-    association StaffTeacherPreparationProviderProgramAssociation
+    association StaffEducatorPreparationProgramAssociation
     association TeacherCandidateStaffAssociation
     association TeacherCandidateStudentGrowthMeasureCourseAssociation
     association TeacherCandidateStudentGrowthMeasureEducationOrganizationAssociation
