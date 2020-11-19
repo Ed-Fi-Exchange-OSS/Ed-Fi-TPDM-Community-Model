@@ -1,15 +1,8 @@
 Domain Entity EdFi.Staff additions
-
-  // TNTP
   descriptor EdFi.AcademicSubject
     documentation "The academic subject(s) in which the staff is deemed to be ""highly qualified""."
     is optional collection
     role name HighlyQualifiedAcademicSubject
-//  domain entity Applicant
-//    documentation "Reference to applicant(s) represented by this staff member."
-//    is optional collection
-
-  // TPDP Extensions
   descriptor Gender
     documentation "The gender with which a person associates."
     is optional
@@ -22,12 +15,3 @@ Domain Entity EdFi.Staff additions
   domain entity EdFi.OpenStaffPosition
     documentation "Reference to the open staff position filled by the staff."
     is optional
-  bool TenureTrack
-    documentation "An indication that the staff is on track for tenure."
-    is optional
-//  domain entity Prospect
-//    documentation "Reference to previously identified prospect."
-//    is optional
-//  domain entity TeacherCandidate
-//    documentation "Reference to the teacher candidate associated."
-//    is optional
