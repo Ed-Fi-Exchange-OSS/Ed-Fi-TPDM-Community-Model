@@ -1,5 +1,5 @@
 Domain Entity Candidate
-  documentation "This entity represents an individual for whom instruction and/or services in a Teacher Preparation Program are provided under the jurisdiction of a Teacher Preparation Provider.  A teacher candidate is a person who has been enrolled in a teacher preparation program."
+  documentation "A candidate is a person is enrolled in a educator preparation program and is a candidate to become an educator."
   shared string CandidateIdentifier
       documentation "A unique alphanumeric code assigned to a candidate."
       is part of identity
