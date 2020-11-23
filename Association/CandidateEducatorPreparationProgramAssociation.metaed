@@ -13,6 +13,10 @@ Association CandidateEducatorPreparationProgramAssociation
   descriptor EdFi.ReasonExited
     documentation "Reason exited for the association."
     is optional
+  common CandidateIndicator
+    documentation "Indicator(s) or metric(s) computed for the candidate in the EPP."
+    is optional
+    //role name CandidateInEPPIndicator shorten to CandidateInEPPIndicator
   descriptor EPPProgramPathway
     documentation "A code for describing the program pathway, for example: Residency, Internship, Traditional"
     is optional

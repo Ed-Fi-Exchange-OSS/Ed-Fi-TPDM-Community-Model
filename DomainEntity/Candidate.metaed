@@ -112,7 +112,7 @@ Domain Entity Candidate
     documentation "Details of the degree."
     is required collection
   domain entity EdFi.Person
-      documentation "Relates the teacher candidate to a generic person."
+      documentation "Relates the candidate to a generic person."
       is optional
   domain entity Application
       documentation "The EPP application submitted by the accepted Candidate."

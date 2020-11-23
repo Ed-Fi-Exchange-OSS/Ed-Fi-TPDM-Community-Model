@@ -8,8 +8,8 @@ Association CandidateRelationshipToStaffAssociation
     documentation "Defines the staff relationship to the candidate (e.g., supervising principal, mentor, coordinating teacher, etc. )"
     is optional
   date BeginDate
-    documentation "The month, day, and year on which the teacher candidate is associated to the staff."
+    documentation "The month, day, and year on which the candidate is associated to the staff."
     is required
   date EndDate
-    documentation "The month, day, and year on which the teacher candidate stops association with the staff."
+    documentation "The month, day, and year on which the candidate stops association with the staff."
     is optional
