@@ -1,0 +1,28 @@
+Association CandidateEducatorPreparationProgramAssociation
+  documentation "Information about the association between the Teacher Candidate and the EducatorPreparationProgram"
+  domain entity Candidate
+    documentation "Candidate for the association."
+  domain entity EducatorPreparationProgram
+    documentation "The Program associated to the Candidate."
+  date BeginDate
+    documentation "The begin date for the association."
+    is part of identity
+  date EndDate
+    documentation "The end date for the association."
+    is optional
+  descriptor EdFi.ReasonExited
+    documentation "Reason exited for the association."
+    is optional
+  common CandidateIndicator
+    documentation "Indicator(s) or metric(s) computed for the candidate in the EPP."
+    is optional
+    //role name CandidateInEPPIndicator shorten to CandidateInEPPIndicator
+  descriptor EPPProgramPathway
+    documentation "A code for describing the program pathway, for example: Residency, Internship, Traditional"
+    is optional
+  shared string Specialization named MajorSpecialization
+      documentation "The major area for a degree or area of specialization for a certificate."
+      is optional
+  shared string Specialization named MinorSpecialization
+      documentation "The major area for a degree or area of specialization for a certificate."
+      is optional

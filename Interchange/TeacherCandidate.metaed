@@ -4,9 +4,9 @@ Interchange TeacherCandidate
 
   domain entity EdFi.Credential
   domain entity EdFi.Student
-  domain entity TeacherCandidate
-  domain entity TeacherCandidateAcademicRecord
-  domain entity TeacherCandidateCourseTranscript
+  domain entity Candidate
+  domain entity EdFi.StudentAcademicRecord
+  domain entity EdFi.CourseTranscript
   domain entity FieldworkExperience
   domain entity Certification
   domain entity CertificationExam
@@ -14,9 +14,8 @@ Interchange TeacherCandidate
   domain entity CredentialEvent
   domain entity EdFi.Person
 
-  association CompleterAsStaffAssociation
-  association TeacherCandidateStaffAssociation
-  association TeacherCandidateTeacherPreparationProviderProgramAssociation
+  association CandidateRelationshipToStaffAssociation
+  association CandidateEducatorPreparationProgramAssociation
   association EdFi.StudentSchoolAssociation
   association EdFi.StudentEducationOrganizationAssociation
   association EdFi.StudentEducationOrganizationResponsibilityAssociation

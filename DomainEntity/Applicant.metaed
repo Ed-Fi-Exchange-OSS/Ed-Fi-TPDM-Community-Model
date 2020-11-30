@@ -73,9 +73,6 @@ Domain Entity Applicant
       documentation "Reflects important characteristics of the applicant's home situation:
       Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth."
       is optional collection
-    domain entity TeacherCandidate
-      documentation "Reference to the teacher candidate associated."
-      is optional
   domain entity EdFi.Person
       documentation "Relates the applicant to a generic person."
       is optional

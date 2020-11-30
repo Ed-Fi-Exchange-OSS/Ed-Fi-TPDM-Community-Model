@@ -1,0 +1,15 @@
+Association CandidateRelationshipToStaffAssociation
+  documentation "This describes a relationship between a (current) candidate and a staff person, typically at a K12 partnering district in the role of a mentor teacher, coordinating teacher, supervising principal, etc. It could also describe the relationship between a (current) candidate and a university staff member, i.e., field placement supervisor, advisor, etc. This is a relationship between two different people"
+  domain entity Candidate
+    documentation "Provides the unique identifier for the (current) candidate who has a relationship with a K12 and/or university staff person."
+  domain entity EdFi.Staff
+    documentation "Provides the unique identifier for the staff person who is serving in a specific role with the (current) candidate."
+  descriptor StaffToCandidateRelationship
+    documentation "Defines the staff relationship to the candidate (e.g., supervising principal, mentor, coordinating teacher, etc. )"
+    is optional
+  date BeginDate
+    documentation "The month, day, and year on which the candidate is associated to the staff."
+    is required
+  date EndDate
+    documentation "The month, day, and year on which the candidate stops association with the staff."
+    is optional

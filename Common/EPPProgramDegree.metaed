@@ -1,11 +1,11 @@
-Common TPPProgramDegree
+Common EPPProgramDegree
   documentation "Details of the degree."
   descriptor EdFi.AcademicSubject
     documentation "The description of the content or subject area (e.g., arts, mathematics, reading, stenography, or a foreign language) of a degree."
     is part of identity
-  descriptor TPPDegreeType
-    documentation "A code for describing the degree type that a teacher candidate accomplishes."
+  descriptor EPPDegreeType
+    documentation "A code for describing the degree type that a candidate accomplishes."
     is part of identity
   descriptor EdFi.GradeLevel
-    documentation "The grade level associated with the degree plan for the teacher candidate."
+    documentation "The grade level associated with the degree plan for the candidate."
     is part of identity
