@@ -2,7 +2,7 @@ Domain Entity EdFi.Staff additions
   descriptor EdFi.AcademicSubject
     documentation "The academic subject(s) in which the staff is deemed to be ""highly qualified""."
     is optional collection
-    role name HighlyQualifiedAcademicSubject
+    role name HighlyQualified
   descriptor Gender
     documentation "The gender with which a person associates."
     is optional
