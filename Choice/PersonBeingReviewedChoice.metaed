@@ -1,8 +1,0 @@
-Choice PersonBeingReviewedChoice
-  documentation "Reference to either a staff or candidate."
-	domain entity EdFi.Staff
-      documentation "The staff associated with the performance measure."
-      is required
-	domain entity Candidate
-      documentation "The candidate associated with the performance measure."
-      is required
