@@ -9,4 +9,3 @@ Interchange RecruitmentAndStaffing
   domain entity RecruitmentEventAttendance
   domain entity RecruitmentEvent
   domain entity EdFi.Person
-  association StaffApplicantAssociation

@@ -1,7 +1,3 @@
 Interchange EdFi.EducationOrganization additions
 
-  //domain entity TeacherPreparationProvider
   domain entity EducatorPreparationProgram
-
-  //domain entity Department
-  //domain entity University
