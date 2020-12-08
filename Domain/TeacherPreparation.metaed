@@ -2,10 +2,6 @@ Domain TeacherPreparation
 
     documentation "?"
 
-    domain entity AnonymizedStudent
-    domain entity AnonymizedStudentAcademicRecord
-    domain entity AnonymizedStudentAssessment
-    domain entity AnonymizedStudentCourseTranscript
     domain entity Applicant
     domain entity Application
     domain entity ApplicationEvent
@@ -23,10 +19,8 @@ Domain TeacherPreparation
     domain entity School
     domain entity Staff
     domain entity ProfessionalDevelopmentEventAttendance
-    domain entity StaffStudentGrowthMeasure
     domain entity StudentGradebookEntry
     domain entity Candidate
-    //domain entity TeacherPreparationProvider
     domain entity EducatorPreparationProgram
     domain entity Evaluation
     domain entity EvaluationElement
@@ -41,16 +35,7 @@ Domain TeacherPreparation
     domain entity RubricDimension
     domain entity SurveySectionAggregateResponse
 
-    association AnonymizedStudentAssessmentCourseAssociation
-    association AnonymizedStudentAssessmentSectionAssociation
-    association AnonymizedStudentCourseAssociation
-    association AnonymizedStudentEducationOrganizationAssociation
-    association AnonymizedStudentSectionAssociation
-    association StaffApplicantAssociation
     association EdFi.StaffEducationOrganizationAssignmentAssociation
-    association StaffStudentGrowthMeasureCourseAssociation
-    association StaffStudentGrowthMeasureEducationOrganizationAssociation
-    association StaffStudentGrowthMeasureSectionAssociation
     association StaffEducatorPreparationProgramAssociation
     association CandidateRelationshipToStaffAssociation
     association CandidateEducatorPreparationProgramAssociation
