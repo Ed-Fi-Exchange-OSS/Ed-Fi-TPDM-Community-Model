@@ -1,12 +1,8 @@
-Domain Entity Applicant
-    documentation "A person who makes a formal application for an OpenStaffPosition."
-    shared string ApplicantIdentifier
-        documentation "Identifier assigned to a person making formal application for an open staff position."
+Domain Entity ApplicantProfile
+    documentation "The profile of the person making an application"
+    shared string ApplicantProfileIdentifier
+        documentation "Identifier assigned to a person making formal application for entrance into a program or an open staff position."
         is part of identity
-        is queryable field
-    common EdFi.StaffIdentificationCode
-        documentation "A unique number or alphanumeric code assigned to an applicant by a school, school system, a state, or other agency or entity."
-        is optional collection
         is queryable field
     inline common EdFi.Name
         documentation "Full legal name of the person."
@@ -48,9 +44,6 @@ Domain Entity Applicant
     common EdFi.Language
         documentation "The language(s) the individual uses to communicate."
         is optional collection
-    shared string EdFi.IdentificationCode named LoginId
-        documentation "The login ID for the user; used for security access control interface."
-        is optional
     common BackgroundCheck
         documentation "Applicant background check history and disposition."
         is optional collection
@@ -59,9 +52,6 @@ Domain Entity Applicant
       is optional
     common EdFi.Disability
       documentation "The disability condition(s) that best describes an individual's impairment."
-      is optional collection
-    common Aid
-      documentation "This entity represents the financial aid a person is awarded."
       is optional collection
     bool EconomicDisadvantaged
       documentation "An indication of inadequate financial condition of an individual's family, as determined by family income, number of family members/dependents, participation in public assistance programs, and/or other characteristics considered relevant by federal, state, and local policy."
@@ -73,6 +63,27 @@ Domain Entity Applicant
       documentation "Reflects important characteristics of the applicant's home situation:
       Displaced Homemaker, Immigrant, Migratory, Military Parent, Pregnant Teen, Single Parent, and Unaccompanied Youth."
       is optional collection
-  domain entity EdFi.Person
-      documentation "Relates the applicant to a generic person."
+    descriptor EdFi.LevelOfEducation
+      documentation "The extent of formal instruction an individual has received (e.g., the highest grade in school completed or its equivalent or the highest degree received)."
       is optional
+      role name HighestCompleted
+    shared decimal EdFi.NumberOfYears named YearsOfPriorProfessionalExperience
+      documentation "The total number of years that an individual has previously held a similar professional position in one or more education institutions."
+      is optional
+    shared decimal EdFi.NumberOfYears named YearsOfPriorTeachingExperience
+      documentation "The total number of years that an individual has previously held a teaching position in one or more education institutions."
+      is optional
+    bool HighlyQualifiedTeacher
+      documentation "An indication of whether a teacher is classified as highly qualified for his/her assignment according to state definition. This attribute indicates the teacher is highly qualified for ALL Sections being taught."
+      is optional
+    descriptor EdFi.AcademicSubject
+      documentation "The academic subject(s) in which the staff is deemed to be ""highly qualified""."
+      is optional collection
+      role name HighlyQualified
+    common EdFi.GradePointAverage
+      documentation "Data that provides information on a measure of average performance in a group of courses taken by an individual."
+      is optional collection
+    shared string EducatorPreparationProgramName
+      documentation "The Teacher Preparation Program(s) completed by the teacher."
+      is optional collection
+    

@@ -1,4 +1,4 @@
-Shared String ApplicantIdentifier
+Shared String ApplicantProfileIdentifier
   documentation "Identifier assigned to a person making formal application for an open staff position."
   min length 1
   max length 32
