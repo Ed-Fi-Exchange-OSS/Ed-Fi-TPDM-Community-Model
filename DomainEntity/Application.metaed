@@ -9,7 +9,7 @@ Domain Entity Application
     is part of identity
     is queryable field
   domain entity ApplicantProfile
-    documentation "The applicant submitting the application."
+    documentation "The profile of the applicant submitting the application."
     is part of identity
     is queryable field
   date ApplicationDate
@@ -63,7 +63,7 @@ Domain Entity Application
     is optional collection
   domain entity EdFi.OpenStaffPosition
     documentation "The open staff position(s) associated with the application."
-    is optional collection
+    is optional
     is queryable field
   domain entity RecruitmentEventAttendance
     documentation "The recuitment event(s) associated with the Application."

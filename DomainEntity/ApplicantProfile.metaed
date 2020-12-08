@@ -78,8 +78,12 @@ Domain Entity ApplicantProfile
       is optional
     descriptor EdFi.AcademicSubject
       documentation "The academic subject(s) in which the staff is deemed to be ""highly qualified""."
-      is optional
+      is optional collection
       role name HighlyQualified
     common EdFi.GradePointAverage
       documentation "Data that provides information on a measure of average performance in a group of courses taken by an individual."
       is optional collection
+    shared string EducatorPreparationProgramName
+      documentation "The Teacher Preparation Program(s) completed by the teacher."
+      is optional collection
+    
