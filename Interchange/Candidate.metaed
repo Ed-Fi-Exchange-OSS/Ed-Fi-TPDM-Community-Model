@@ -1,0 +1,21 @@
+Interchange Candidate
+
+  documentation "This interchange defines teacher candidates and contains all their identifying information."
+
+  domain entity EdFi.Credential
+  domain entity EdFi.Student
+  domain entity Candidate
+  domain entity EdFi.StudentAcademicRecord
+  domain entity EdFi.CourseTranscript
+  domain entity FieldworkExperience
+  domain entity Certification
+  domain entity CertificationExam
+  domain entity CertificationExamResult
+  domain entity CredentialEvent
+  domain entity EdFi.Person
+
+  association CandidateRelationshipToStaffAssociation
+  association CandidateEducatorPreparationProgramAssociation
+  association EdFi.StudentSchoolAssociation
+  association EdFi.StudentEducationOrganizationAssociation
+  association EdFi.StudentEducationOrganizationResponsibilityAssociation

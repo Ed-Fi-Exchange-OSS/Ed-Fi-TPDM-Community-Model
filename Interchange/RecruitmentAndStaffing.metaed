@@ -2,7 +2,7 @@ Interchange RecruitmentAndStaffing
 
   documentation "?"
 
-  domain entity Applicant
+  domain entity ApplicantProfile
   domain entity Application
   domain entity ApplicationEvent
   domain entity EdFi.Credential
