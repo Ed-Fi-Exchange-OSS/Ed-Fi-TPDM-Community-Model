@@ -1,0 +1,14 @@
+Domain TalentManagement
+
+    documentation "?"
+
+    domain entity ApplicantProfile
+    domain entity Application
+    domain entity ApplicationEvent
+    domain entity OpenStaffPosition
+    domain entity OpenStaffPositionEvent
+    domain entity RecruitmentEventAttendance
+    domain entity RecruitmentEvent
+    domain entity Staff
+    domain entity StaffAbsenceEvent
+    domain entity StaffLeave
