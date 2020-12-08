@@ -1,5 +1,5 @@
 Domain Entity Application
-  documentation "An application for employment or contract."
+  documentation "An application for employment or acceptance."
   shared string ApplicationIdentifier
     documentation "Identifier assigned to the application for a candidate or open staff position."
     is part of identity
@@ -62,7 +62,7 @@ Domain Entity Application
     documentation "A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc."
     is optional collection
   domain entity EdFi.OpenStaffPosition
-    documentation "The open staff position(s) associated with the application."
+    documentation "The open staff position associated with the application."
     is optional
     is queryable field
   domain entity RecruitmentEventAttendance
