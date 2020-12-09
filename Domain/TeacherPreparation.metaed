@@ -2,7 +2,7 @@ Domain TeacherPreparation
 
     documentation "?"
 
-    domain entity Applicant
+    domain entity ApplicantProfile
     domain entity Application
     domain entity ApplicationEvent
     domain entity Assessment
@@ -11,6 +11,7 @@ Domain TeacherPreparation
     domain entity CertificationExamResult
     domain entity Credential
     domain entity CredentialEvent
+    domain entity FieldworkExperience
     domain entity GradebookEntry
     domain entity OpenStaffPosition
     domain entity ProfessionalDevelopmentEvent
@@ -39,3 +40,4 @@ Domain TeacherPreparation
     association StaffEducatorPreparationProgramAssociation
     association CandidateRelationshipToStaffAssociation
     association CandidateEducatorPreparationProgramAssociation
+    association FieldworkExperienceSectionAssociation

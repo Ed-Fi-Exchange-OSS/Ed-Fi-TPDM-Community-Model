@@ -19,3 +19,4 @@ Interchange Candidate
   association EdFi.StudentSchoolAssociation
   association EdFi.StudentEducationOrganizationAssociation
   association EdFi.StudentEducationOrganizationResponsibilityAssociation
+  association FieldworkExperienceSectionAssociation

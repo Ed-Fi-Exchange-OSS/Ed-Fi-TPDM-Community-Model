@@ -10,9 +10,6 @@ Domain Entity FieldworkExperience
     domain entity EdFi.School
         documentation "The school the fieldwork experience is conducted in"
         is optional
-    domain entity EdFi.Section
-        documentation "The section the fieldwork experience is associated with"
-        is optional
     domain entity EducatorPreparationProgram
         documentation "The EducatorPreparationProgram the fieldwork experience is associated with"
         is optional
