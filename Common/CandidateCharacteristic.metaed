@@ -1,0 +1,14 @@
+Common CandidateCharacteristic
+    documentation "Reflects important charactersitics of the candidate (e.g, immigrant, first generation graduate, economically disadvantaged)"
+    descriptor CandidateCharacteristic
+        documentation "The characteristic designated for the candidate."
+        is part of identity
+    date BeginDate
+        documentation "The date the characteristic was designated."
+        is optional
+    date EndDate
+        documentation "The date the characteristic was removed."
+        is optional
+    shared string EdFi.DesignatedBy
+        documentation "The person, organization, or department that designated the characteristic."
+        is optional

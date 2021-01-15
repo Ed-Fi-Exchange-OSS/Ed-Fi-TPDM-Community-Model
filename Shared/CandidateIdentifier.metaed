@@ -1,0 +1,4 @@
+Shared String CandidateIdentifier
+    documentation "A unique alphanumeric code assigned to a teacher candidate."
+    min length 1
+    max length 32

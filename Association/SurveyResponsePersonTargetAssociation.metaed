@@ -1,0 +1,6 @@
+Association SurveyResponsePersonTargetAssociation
+  documentation "The association provides information about the survey being taken and who the survey is about."
+  domain entity EdFi.SurveyResponse
+    documentation "Reference to the survey response."
+  domain entity EdFi.Person
+    documentation "Reference to the target of the survey."

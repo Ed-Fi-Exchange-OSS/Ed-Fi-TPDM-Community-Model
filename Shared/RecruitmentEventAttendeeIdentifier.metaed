@@ -1,0 +1,4 @@
+Shared String RecruitmentEventAttendeeIdentifier
+    documentation "The identifier for the attendee to a recuitment event."
+    min length 1
+    max length 32

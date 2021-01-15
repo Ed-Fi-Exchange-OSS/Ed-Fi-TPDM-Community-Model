@@ -8,8 +8,11 @@ Domain Entity FieldworkExperience
         documentation "The student associated with the fieldwork experience."
         is part of identity
     domain entity EdFi.School
-        documentation "The school the field work experience is associated with"
-        is required collection
+        documentation "The school the fieldwork experience is conducted in"
+        is optional
+    domain entity EducatorPreparationProgram
+        documentation "The EducatorPreparationProgram the fieldwork experience is associated with"
+        is optional
     descriptor FieldworkType
         documentation "The type of fieldwork being executed by a staff."
         is required

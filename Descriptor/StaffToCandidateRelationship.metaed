@@ -1,0 +1,2 @@
+Descriptor StaffToCandidateRelationship
+    documentation "Defines the staff relationship to the candidate (e.g., supervising principal, mentor, coordinating teacher, etc. )"

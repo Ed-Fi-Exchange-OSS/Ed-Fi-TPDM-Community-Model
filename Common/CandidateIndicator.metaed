@@ -1,0 +1,17 @@
+Common CandidateIndicator
+    documentation "An indicator or metric computed for the student (e.g., at risk) to influence more effective education or direct specific interventions."
+    shared string EdFi.IndicatorName named IndicatorGroup
+        documentation "The name for a group of indicators."
+        is optional
+    shared string EdFi.IndicatorName
+        documentation "The name of the indicator or metric."
+        is part of identity
+    shared string EdFi.Indicator
+        documentation "The value of the indicator or metric."
+        is required
+    shared string EdFi.DesignatedBy
+        documentation "The person, organization, or department that designated the program association."
+        is optional
+    common EdFi.Period
+        documentation "The time periods for which the indicator was effective."
+        is optional collection

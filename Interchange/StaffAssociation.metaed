@@ -1,7 +1,5 @@
 Interchange EdFi.StaffAssociation additions
 
-  domain entity EmploymentEvent
-  domain entity EmploymentSeparationEvent
   domain entity OpenStaffPositionEvent
   domain entity FieldworkExperience
   domain entity Certification
@@ -9,6 +7,5 @@ Interchange EdFi.StaffAssociation additions
   domain entity CertificationExamResult
   domain entity CredentialEvent
 
+  association StaffEducatorPreparationProgramAssociation
   association FieldworkExperienceSectionAssociation
-  association StaffTeacherPreparationProviderAssociation
-  association StaffTeacherPreparationProviderProgramAssociation
