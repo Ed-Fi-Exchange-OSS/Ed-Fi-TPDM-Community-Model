@@ -6,6 +6,8 @@ Domain Entity EvaluationObjective
     shared string EvaluationObjectiveTitle
         documentation "The name or title of the evaluation Objective."
         is part of identity
+    shared string EvaluationDescription named EvaluationObjectiveDescription
+        documentation "The long description of the Evaluation Objective."
     integer SortOrder
         documentation "The sort order of this Evaluation Objective."
         is optional

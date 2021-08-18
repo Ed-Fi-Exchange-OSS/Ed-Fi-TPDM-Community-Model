@@ -4,6 +4,8 @@ Domain Entity PerformanceEvaluation
         documentation "An assigned unique identifier for the performance evaluation."
         is part of identity
         role name Performance
+    shared string EvaluationDescription named PerformanceEvaluationDescription
+        documentation "The long description of the Performance Evaluation."
     descriptor EdFi.Term
         documentation "The term for the session during the school year."
         is part of identity

@@ -1,0 +1,3 @@
+Shared String EvaluationDescription
+    documentation "The long description of the Evaluation."
+    max length 255

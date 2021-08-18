@@ -1,0 +1,4 @@
+Shared String Feedback
+    documentation "Any feedback to be captured."
+    min length 1
+    max length 2048

@@ -6,6 +6,8 @@ Domain Entity Evaluation
     shared string EvaluationTitle
         documentation "The name or title of the evaluation."
         is part of identity
+    shared string EvaluationDescription
+        documentation "The long description of the Evaluation."
     shared decimal Rating
         documentation "The minimum summary numerical rating or score for the evaluation. If omitted, assumed to be 0.0."
         is optional
