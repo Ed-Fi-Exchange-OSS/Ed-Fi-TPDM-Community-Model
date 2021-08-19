@@ -15,13 +15,24 @@ Association CandidateEducatorPreparationProgramAssociation
     is optional
   common CandidateIndicator
     documentation "Indicator(s) or metric(s) computed for the candidate in the EPP."
-    is optional
+    is optional collection
   descriptor EPPProgramPathway
     documentation "A code for describing the program pathway, for example: Residency, Internship, Traditional"
     is optional
   shared string Specialization named MajorSpecialization
+      deprecated "This element has been replaced with DegreeSpecialization.MajorSpecialization. Expect this element to be removed in a future release"
       documentation "The major area for a degree or area of specialization for a certificate."
       is optional
   shared string Specialization named MinorSpecialization
+      deprecated "This element has been replaced with DegreeSpecialization.MinorSpecialization. Expect this element to be removed in a future release"
       documentation "The major area for a degree or area of specialization for a certificate."
+      is optional
+  common DegreeSpecialization
+      documentation "Information around the area(s) of specialization for an individual."
+      is optional collection
+  common EdFi.CohortYear
+      documentation "The type and year of a cohort (e.g., 9th grade) the student belongs to as determined by the year that student entered a specific grade."
+      is optional collection
+  domain entity Application
+      documentation "The EPP application submitted by the accepted Candidate."
       is optional
