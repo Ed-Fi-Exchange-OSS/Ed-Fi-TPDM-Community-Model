@@ -72,6 +72,7 @@ Domain Entity Candidate
       documentation "Indicates a state health or weather related event that displaces a group of students, and may require additional funding, educational, or social services."
       is optional
   common EdFi.CohortYear
+      deprecated "This element can lead to confusion when a Candidate is enrolled in multiple programs and has been moved to CandidateEducatorPreparationProgramAssociation, expect removal in an future release"
       documentation "The type and year of a cohort (e.g., 9th grade) the student belongs to as determined by the year that student entered a specific grade."
       is optional collection
   common CandidateIndicator
@@ -84,10 +85,13 @@ Domain Entity Candidate
     documentation "The gender with which a person associates."
     is optional
     is queryable field
-  currency TuitionCost
+  decimal TuitionCost
     documentation "The tuition for a person's participation in a program, service. or course."
     is optional
+    total digits 19
+    decimal places 4
   common Aid
+    deprecated "This element has been promoted to a top level entity, see /tpdm/aid/ expect removal in an future release"
     documentation "This entity represents the financial aid a person is awarded."
     is optional collection
   common BackgroundCheck
@@ -100,9 +104,11 @@ Domain Entity Candidate
     documentation "The career previous for an individual."
     is optional
   bool ProgramComplete
+    deprecated "This element can lead to confusion when a Candidate is enrolled in multiple programs, A candidate is determined to be program complete when an appropriate ReasonExited descriptor is selected on the CandidateEducatorPreparationProgramAssociation. Expect removal in an future release"
     documentation "An indication of whether a candidate has completed the educator preparation program."
     is optional
   common DegreeSpecialization
+    deprecated "This element can lead to confusion when a Candidate is enrolled in multiple programs and has been moved to CandidateEducatorPreparationProgramAssociation, expect removal in an future release"
     documentation "Information around the area(s) of specialization for an individual."
     is optional collection
   bool FirstGenerationStudent
@@ -110,7 +116,7 @@ Domain Entity Candidate
     is optional
   common EPPProgramDegree
     documentation "Details of the degree."
-    is required collection
+    is optional collection
   domain entity EdFi.Person
       documentation "Relates the candidate to a generic person."
       is optional
