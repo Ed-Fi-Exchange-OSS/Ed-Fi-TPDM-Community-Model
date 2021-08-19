@@ -20,6 +20,7 @@ Domain Entity EducatorPreparationProgram
       documentation "The grade levels served at the EPP Program."
       is optional collection
     descriptor EducatorPreparationProgramType
+      deprecated "EducatorPreparationProgramType has so far been unused in TPDM implementations, and is slated for removal in a future release, If there is use for this field, submit a tracker ticket to alert Ed-Fi staff."
       documentation "The descriptor holds the type of educator prep program (e.g., college, alternative, TFA, etc.)."
       is optional
     descriptor AccreditationStatus
