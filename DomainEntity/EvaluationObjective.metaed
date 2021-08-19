@@ -8,6 +8,7 @@ Domain Entity EvaluationObjective
         is part of identity
     shared string EvaluationDescription named EvaluationObjectiveDescription
         documentation "The long description of the Evaluation Objective."
+        is optional
     integer SortOrder
         documentation "The sort order of this Evaluation Objective."
         is optional
