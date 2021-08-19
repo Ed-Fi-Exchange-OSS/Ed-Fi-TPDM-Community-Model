@@ -23,6 +23,6 @@ Domain Entity EvaluationElementRating
     shared string Comments
         documentation "Any comments about the performance evaluation to be captured."
         is optional
-    shared string Comments named Feedback
+    shared string Feedback
         documentation "Feedback provided to the evaluated person."
         is optional
