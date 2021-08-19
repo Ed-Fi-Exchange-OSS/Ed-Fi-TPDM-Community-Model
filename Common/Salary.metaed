@@ -9,6 +9,8 @@ Common Salary
   descriptor SalaryType
     documentation "The type of salary that a staff member is receiving."
     is optional
-  currency SalaryAmount
+  decimal SalaryAmount
     documentation "The salary of a staff member."
     is optional
+    total digits 19
+    decimal places 4
