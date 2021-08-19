@@ -18,9 +18,9 @@ Domain Entity Aid
     is part of identity
   decimal AidAmount
     documentation "The amount of financial aid awarded to a person for the term/year."
+    is optional
     total digits 19
     decimal places 4
-    is optional
   bool PellGrantRecipient
     documentation "Indicates a person who receives Pell Grant aid."
     is optional
