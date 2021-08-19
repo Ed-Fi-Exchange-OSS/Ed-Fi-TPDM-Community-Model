@@ -35,6 +35,7 @@ Domain TeacherPreparation
     domain entity QuantitativeMeasureScore
     domain entity RubricDimension
     domain entity SurveySectionAggregateResponse
+    domain entity FinancialAid
 
     association EdFi.StaffEducationOrganizationAssignmentAssociation
     association StaffEducatorPreparationProgramAssociation

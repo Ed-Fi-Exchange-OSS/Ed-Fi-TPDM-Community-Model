@@ -13,6 +13,7 @@ Interchange Candidate
   domain entity CertificationExamResult
   domain entity CredentialEvent
   domain entity EdFi.Person
+  domain entity FinancialAid
 
   association CandidateRelationshipToStaffAssociation
   association CandidateEducatorPreparationProgramAssociation
