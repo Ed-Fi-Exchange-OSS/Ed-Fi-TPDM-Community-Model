@@ -121,5 +121,6 @@ Domain Entity Candidate
       documentation "Relates the candidate to a generic person."
       is optional
   domain entity Application
+      deprecated "This element can lead to confusion when a Candidate is enrolled in multiple programs and has been moved to CandidateEducatorPreparationProgramAssociation, expect removal in an future release"
       documentation "The EPP application submitted by the accepted Candidate."
       is optional

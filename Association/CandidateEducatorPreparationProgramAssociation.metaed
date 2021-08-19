@@ -33,3 +33,6 @@ Association CandidateEducatorPreparationProgramAssociation
   common EdFi.CohortYear
       documentation "The type and year of a cohort (e.g., 9th grade) the student belongs to as determined by the year that student entered a specific grade."
       is optional collection
+  domain entity Application
+      documentation "The EPP application submitted by the accepted Candidate."
+      is optional
