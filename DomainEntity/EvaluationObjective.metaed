@@ -1,5 +1,5 @@
 Domain Entity EvaluationObjective
-    documentation "A subcomponent of an Evaluation, a specific educator Objective or domain of performance that is being evaluated.  "
+    documentation "A subcomponent of an Evaluation, a specific educator Objective or domain of performance that is being evaluated."
     domain entity Evaluation
         documentation "The Evaluation applied for the person."
         is part of identity

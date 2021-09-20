@@ -25,5 +25,5 @@ Domain Entity Evaluation
         is optional collection
         role name Evaluation
     integer InterRaterReliabilityScore
-        documentation "A score indicating how much homogeneity, or consensus, there is in the ratings given by judges."
+        documentation "A score indicating how much homogeneity, or consensus, there is in the ratings given by judges. Most commonly a percentage scale (1-100)"
         is optional

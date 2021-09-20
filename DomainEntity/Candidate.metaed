@@ -1,29 +1,23 @@
 Domain Entity Candidate
-  documentation "A candidate is a person is enrolled in a educator preparation program and is a candidate to become an educator."
+  documentation "A candidate is both a person enrolled in a educator preparation program and a candidate to become an educator."
   shared string CandidateIdentifier
       documentation "A unique alphanumeric code assigned to a candidate."
       is part of identity
-      is queryable field
   common CandidateIdentificationCode
       documentation "A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a candidate."
       is optional collection
-      is queryable field
   inline common EdFi.Name
       documentation "Full legal name of the person."
       is required
-      is queryable field
   common EdFi.OtherName
       documentation "Other names (e.g., alias, nickname, previous legal name) associated with a person."
       is optional collection
-      is queryable field
   descriptor EdFi.Sex
       documentation "A person's gender."
       is required
-      is queryable field
   inline common EdFi.BirthData
       documentation "The set of elements that capture relevant data regarding a person's birth, including birth date and place of birth."
       is required
-      is queryable field
   common EdFi.Address
       documentation "The set of elements that describes an address, including the street address, city, state, and ZIP code."
       is optional collection
@@ -42,14 +36,12 @@ Domain Entity Candidate
   bool HispanicLatinoEthnicity
       documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino."""
       is optional
-      is queryable field
   descriptor EdFi.OldEthnicity
       documentation "Previous definition of Ethnicity combining Hispanic/Latino and race: 1 - American Indian or Alaskan Native 2 - Asian or Pacific Islander 3 - Black, not of Hispanic origin 4 - Hispanic 5 - White, not of Hispanic origin."
       is optional
   descriptor EdFi.Race
       documentation "The general racial category which most clearly reflects the individual's recognition of his or her community or with which the individual most identifies. The data model allows for multiple entries so that each individual can specify all appropriate races."
       is optional collection
-      is queryable field
   inline common EdFi.Citizenship
       documentation "Contains information relative to citizenship status and its associated probationary documentation."
       is optional
@@ -84,7 +76,6 @@ Domain Entity Candidate
   descriptor Gender
     documentation "The gender with which a person associates."
     is optional
-    is queryable field
   decimal TuitionCost
     documentation "The tuition for a person's participation in a program, service. or course."
     is optional
