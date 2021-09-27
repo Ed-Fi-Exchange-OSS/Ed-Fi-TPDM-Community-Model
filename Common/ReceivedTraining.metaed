@@ -4,5 +4,5 @@ Common ReceivedTraining
     documentation "The date on which the person administering the performance meausre received training on how to conduct performance measures."
     is optional
   integer InterRaterReliabilityScore
-    documentation "A score indicating how much homogeneity, or consensus, there is in the ratings given by judges."
+    documentation "A score indicating how much homogeneity, or consensus, there is in the ratings given by judges. Most commonly a percentage scale (1-100)"
     is optional

@@ -3,19 +3,15 @@ Domain Entity EducatorPreparationProgram
     domain entity EdFi.EducationOrganization
       documentation "Relates the program to an EducationOrganization."
       is part of identity
-      is queryable field
     shared string EdFi.ProgramId
       documentation "A unique number or alphanumeric code assigned to a program by a school, school system, a state, or other agency or entity."
       is optional
-      is queryable field
     shared string EducatorPreparationProgramName named ProgramName
       documentation "The name of the Educator Preparation Program."
       is part of identity
-      is queryable field
     descriptor EdFi.ProgramType
       documentation "The type of program."
       is part of identity
-      is queryable field
     descriptor EdFi.GradeLevel
       documentation "The grade levels served at the EPP Program."
       is optional collection
@@ -24,5 +20,5 @@ Domain Entity EducatorPreparationProgram
       documentation "The descriptor holds the type of educator prep program (e.g., college, alternative, TFA, etc.)."
       is optional
     descriptor AccreditationStatus
-      documentation "The current accreditation status of the Educator Preparation Program (e.g., active, pending, revoked,...)."
+      documentation "The current accreditation status of the Educator Preparation Program."
       is optional
