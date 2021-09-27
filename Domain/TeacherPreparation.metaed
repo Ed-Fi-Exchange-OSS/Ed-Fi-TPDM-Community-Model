@@ -1,6 +1,10 @@
 Domain TeacherPreparation
 
-    documentation "?"
+documentation "The TeacherPreparation domain defines a set of entities most commonly used in Teacher and Edcator preparation, incuding:
+ *Candidates
+ *EducatorPreparationPrograms
+ *Performance Evaluations
+ *Financial Aid"
 
     domain entity ApplicantProfile
     domain entity Application

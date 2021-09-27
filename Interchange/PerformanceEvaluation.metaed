@@ -1,5 +1,5 @@
 Interchange PerformanceEvaluation
-    documentation ""
+    documentation "This interchange defines performance evaluations and contains all their identifying information"
     domain entity Evaluation
     domain entity EvaluationRating
     domain entity EvaluationElement

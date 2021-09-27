@@ -15,10 +15,10 @@ Domain Entity EvaluationElementRating
         documentation "The rating level achieved based upon the rating or score."
         is optional
     shared string Comments named AreaOfRefinement
-        documentation "Area(s) identified for person to refine or improve as part of the evaluation."
+        documentation "Area identified for person to refine or improve as part of the evaluation."
         is optional
     shared string Comments named AreaOfReinforcement
-        documentation "Area(s) identified for reinforcement or positive feedback as part of the evaluation."
+        documentation "Area identified for reinforcement or positive feedback as part of the evaluation."
         is optional
     shared string Comments
         documentation "Any comments about the performance evaluation to be captured."

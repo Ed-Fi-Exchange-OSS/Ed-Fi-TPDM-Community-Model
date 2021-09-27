@@ -33,7 +33,7 @@ Domain Entity PerformanceEvaluationRating
         documentation "The person(s) that conducted the performance evaluation."
         is optional collection
     date ScheduleDate
-        documentation "The month, day, and year on which the performance evaluation was to be conducted."
+        documentation "The month, day, and year on which the performance evaluation was scheduled."
         is optional
     time ActualTime
         documentation "An indication of the the time at which the performance evaluation was conducted."
