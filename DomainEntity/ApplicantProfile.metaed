@@ -3,19 +3,15 @@ Domain Entity ApplicantProfile
     shared string ApplicantProfileIdentifier
         documentation "Identifier assigned to a person making formal application for entrance into a program or an open staff position."
         is part of identity
-        is queryable field
     inline common EdFi.Name
         documentation "Full legal name of the person."
         is required
-        is queryable field
     descriptor EdFi.Sex
         documentation "A person's gender."
         is optional
-        is queryable field
     date BirthDate
         documentation "The month, day, and year on which an individual was born."
         is optional
-        is queryable field
     common EdFi.Address
         documentation "The set of elements that describes an address, including the street address, city, state, and ZIP code."
         is optional collection
@@ -25,19 +21,15 @@ Domain Entity ApplicantProfile
     common EdFi.Telephone
         documentation "The 10-digit telephone number, including the area code, for the person."
         is optional collection
-        is queryable field
     common EdFi.ElectronicMail
         documentation "The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the individual or organization belongs."
         is optional collection
-        is queryable field
     bool HispanicLatinoEthnicity
         documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino""."
         is optional
-        is queryable field
     descriptor EdFi.Race
         documentation "The general racial category which most clearly reflects the individual's recognition of his or her community or with which the individual most identifies. The way this data element is listed, it must allow for multiple entries so that each individual can specify all appropriate races."
         is optional collection
-        is queryable field
     inline common EdFi.Citizenship
         documentation "Contains information relative to citizenship status and its associated probationary documentation."
         is optional
@@ -86,4 +78,3 @@ Domain Entity ApplicantProfile
     shared string EducatorPreparationProgramName
       documentation "The Teacher Preparation Program(s) completed by the teacher."
       is optional collection
-    

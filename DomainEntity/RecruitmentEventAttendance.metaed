@@ -3,7 +3,6 @@ Domain Entity RecruitmentEventAttendance
     shared string RecruitmentEventAttendeeIdentifier
         documentation "The identifier for the attendee to a recuitment event."
         is part of identity
-        is queryable field
     bool Applied
         documentation "Indicator of whether the prospect applied for a position."
         is optional
@@ -16,21 +15,18 @@ Domain Entity RecruitmentEventAttendance
     shared string EdFi.ElectronicMailAddress
         documentation "The numbers, letters, and symbols used to identify an electronic mail (e-mail) user within the network to which the individual or organization belongs."
         is required
-        is queryable field
     descriptor Gender
       documentation "The gender with which a person associates."
       is optional
     bool HispanicLatinoEthnicity
         documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino""."
         is optional
-        is queryable field
     bool Met
         documentation "Indicator whether the person was met by a representative of the education organization."
         is optional
     inline common EdFi.Name
         documentation "Full legal name of the person."
         is required
-        is queryable field
     shared string Notes
         documentation "Additional notes about the prospect."
         is optional
@@ -46,11 +42,9 @@ Domain Entity RecruitmentEventAttendance
     descriptor EdFi.Race
         documentation "The general racial category which most clearly reflects the individual's recognition of his or her community or with which the individual most identifies. The way this data element is listed, it must allow for multiple entries so that each individual can specify all appropriate races."
         is optional collection
-        is queryable field
     domain entity RecruitmentEvent
         documentation "Reference to event associated with the recruitment process."
         is part of identity
-        is queryable field
     bool Referral
         documentation "Indicator of whether the prospect was a referral."
         is optional
@@ -60,7 +54,6 @@ Domain Entity RecruitmentEventAttendance
     descriptor EdFi.Sex
         documentation "A person's gender."
         is optional
-        is queryable field
     shared string SocialMediaNetworkName
         documentation "The social media network name (e.g., LinkedIn, Twitter, etc.) associated with the SocialMediaUserName."
         is optional
@@ -70,7 +63,6 @@ Domain Entity RecruitmentEventAttendance
     common EdFi.Telephone
         documentation "The 10-digit telephone number, including the area code, for the person."
         is optional collection
-        is queryable field
     common Touchpoint
         documentation "Content associated with different touchpoints with the prospect."
         is optional collection
