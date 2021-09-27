@@ -3,7 +3,6 @@ Domain Entity FieldworkExperience
     shared string FieldworkIdentifier
         documentation "The unique identifier for the fieldwork experience"
         is part of identity
-        is queryable field
     domain entity EdFi.Student
         documentation "The student associated with the fieldwork experience."
         is part of identity
