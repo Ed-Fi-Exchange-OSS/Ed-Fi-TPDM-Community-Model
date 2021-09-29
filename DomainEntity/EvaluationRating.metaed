@@ -7,7 +7,7 @@ Domain Entity EvaluationRating
     domain entity Evaluation
         documentation "The Evaluation applied for the person."
         is part of identity
-    date EvaluationDate
+    datetime EvaluationDate
         documentation "The date for the person's evaluation."
         is part of identity
     common Reviewer
@@ -24,3 +24,6 @@ Domain Entity EvaluationRating
         documentation "The section associated with a classroom evaluation."
         is optional
         merge Section.CourseOffering.Session.SchoolYear with Evaluation.PerformanceEvaluation.SchoolYear
+    descriptor EvaluationRatingStatus
+        documentation "The Status of the poerformance evaluation."
+        is optional
