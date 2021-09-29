@@ -12,6 +12,9 @@ Domain Entity Goal
     domain entity EvaluationElement
         documentation "The Evaluation Element associated with the goal."
         is optional
+    domain entity EvaluationObjective
+        documentation "The Evaluation Objective associated with the goal."
+        is optional
     descriptor GoalType
         documentation "The type of the goal (e.g., management, instruction)."
         is optional
@@ -31,3 +34,7 @@ Domain Entity Goal
     shared string Comments
         documentation "Any comments about the goal or its completion to be captured."
         is optional
+    domain entity Goal
+        documentation "The parent goal with which this goal is associated (for hierarchical goals or action steps)"
+        is optional
+        role name Parent
