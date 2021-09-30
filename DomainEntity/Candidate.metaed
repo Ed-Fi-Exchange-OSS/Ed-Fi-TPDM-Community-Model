@@ -13,7 +13,7 @@ Domain Entity Candidate
       documentation "Other names (e.g., alias, nickname, previous legal name) associated with a person."
       is optional collection
   descriptor EdFi.Sex
-      documentation "A person's gender."
+      documentation "The sex of the candidate."
       is required
   inline common EdFi.BirthData
       documentation "The set of elements that capture relevant data regarding a person's birth, including birth date and place of birth."
@@ -74,7 +74,7 @@ Domain Entity Candidate
       documentation "The login ID for the user; used for security access control interface."
       is optional
   descriptor Gender
-    documentation "The gender with which a person associates."
+    documentation "The gender of the candidate."
     is optional
   decimal TuitionCost
     documentation "The tuition for a person's participation in a program, service. or course."
