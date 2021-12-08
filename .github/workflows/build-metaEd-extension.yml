@@ -8,11 +8,14 @@ jobs:
     steps:
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
+        with:
+          path: Ed-Fi-TPDM-Community-Model
       - name: Checkout Ed-Fi Model
         uses: actions/checkout@v2
-        with:
+        with: 
           repository: Ed-Fi-Alliance-OSS/Ed-Fi-Standard
           ref: v3.3.1-b
+          path: Ed-Fi-Stand
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
