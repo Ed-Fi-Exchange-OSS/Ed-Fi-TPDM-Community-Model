@@ -17,9 +17,5 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '12.4.0'
-      - name: create_dir
-        uses: Amadevus/pwsh-script@v2.0.1
-        with:
-          script: 'dir .'
-      - run: echo "${{ steps.create_dir.outputs.result }}"
-
+      - name: create folder
+        run: ls -la .
