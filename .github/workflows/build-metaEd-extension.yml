@@ -18,4 +18,5 @@ jobs:
         with:
           node-version: '12.4.0'
       - name: create folder
-        run: ls .
+        run: ls ../
+        #run: mkdir ./MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
