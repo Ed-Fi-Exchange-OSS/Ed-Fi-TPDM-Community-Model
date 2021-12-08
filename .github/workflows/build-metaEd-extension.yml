@@ -21,10 +21,7 @@ jobs:
         uses: Amadevus/pwsh-script@v2.0.1
         with:
           script: |
-              $metaEdExtensionName = "TPDM"
-              if (-not [string]::IsNullOrWhiteSpace($metaEdExtensionName)) {
-              $extensionDeployPath = ".\MetaEdDeploy\Ed-Fi-ODS-Implementation\Application\EdFi.Ods.Extensions.$metaEdExtensionName\"
-              New-Item -ItemType Directory -Force -Path $extensionDeployPath
-              }
+            dir .
+
       - run: echo "${{ steps.my-script.outputs.result }}"
 
