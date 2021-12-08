@@ -6,20 +6,39 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Checkout MetaEdJs
+        uses: actions/checkout@v2
+        with:
+          repository: Ed-Fi-Alliance/MetaEd-js
+          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+          path: MetaEd-js
+          
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
         with:
           path: Ed-Fi-TPDM-Community-Model
+          
       - name: Checkout Ed-Fi Model
         uses: actions/checkout@v2
         with: 
           repository: Ed-Fi-Alliance-OSS/Ed-Fi-Standard
           ref: v3.3.1-b
-          path: Ed-Fi-Stand
+          path: Ed-Fi-Standard
+          
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: '12.4.0'
+          
+      - name: Enable strict SSL (now using NODE_EXTRA_CA_CERTS environment variable)
+        run: npm config set strict-ssl true --global & yarn config set strict-ssl true --global
+        
+      - name: yarn bootstrap
+        run: yarn bootstrap -- -- --ignore-scripts
+      
+      - name: install phantomjs-prebuilt
+        run: node MetaEd-js\node_modules\phantomjs-prebuilt\install.js
+        
       - name: create folder
         run: Get-ChildItem -Path ../../ -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
         #run: mkdir ./MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
