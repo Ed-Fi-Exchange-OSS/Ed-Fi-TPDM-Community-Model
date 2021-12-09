@@ -6,8 +6,6 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - run: echo "gw = ${{ github.workspace }}"
-        working-directory: MetaEd-js
       - name: Git long filename support
         run: git config --system core.longpaths true
       - name: Checkout MetaEdJs
@@ -17,6 +15,9 @@ jobs:
           token: ${{ secrets.MG_PAT }} 
           path: MetaEd-js
           ref: v2.6.0
+      
+      - run: echo "gw = ${{ github.workspace }}"
+        working-directory: MetaEd-js
           
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
