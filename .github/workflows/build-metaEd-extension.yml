@@ -14,6 +14,7 @@ jobs:
           repository: Ed-Fi-Closed/MetaEd-js
           token: ${{ secrets.MG_PAT }} 
           path: MetaEd-js
+          ref: v2.6.0
           
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
@@ -37,6 +38,7 @@ jobs:
         
       - name: yarn bootstrap
         run: yarn bootstrap -- -- --ignore-scripts
+        working-directory: MetaEd-js
       
       - name: install phantomjs-prebuilt
         run: node MetaEd-js\node_modules\phantomjs-prebuilt\install.js
