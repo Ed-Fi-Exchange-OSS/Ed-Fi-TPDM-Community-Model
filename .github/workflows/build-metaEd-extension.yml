@@ -36,14 +36,19 @@ jobs:
       - name: Enable strict SSL (now using NODE_EXTRA_CA_CERTS environment variable)
         run: npm config set strict-ssl true --global & yarn config set strict-ssl true --global
         
-      - name: yarn bootstrap
-        run: yarn bootstrap -- -- --ignore-scripts
+      - name: Setup Yarn
+        uses: actions/setup-node@v2
+        with:
+          cache: 'yarn'
+          
+      - name: yarn bootstrap 
+        run: yarn add bootstrap
         working-directory: MetaEd-js
       
       - name: install phantomjs-prebuilt
         run: node node_modules/phantomjs-prebuilt/install.js
         working-directory: MetaEd-js
-      
+     
       - name: yarn build
         run: yarn build
         working-directory: MetaEd-js
@@ -53,5 +58,5 @@ jobs:
         working-directory: MetaEd-js
 
       - name: metaed:deploy
-        run: npm run metaed:deploy -- --source ../MetaEdCoreSource --source ../MetaEdExtensionSource --target ../MetaEdDeploy --defaultPluginTechVersion 5.3.0 
+        run: npm run metaed:deploy -- --source $GITHUB_WORKSPACE/MetaEdCoreSource --source $GITHUB_WORKSPACE/MetaEdExtensionSource --target $GITHUB_WORKSPACE/MetaEdDeploy --defaultPluginTechVersion 5.3.0 
         working-directory: MetaEd-js
