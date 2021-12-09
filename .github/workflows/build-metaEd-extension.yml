@@ -19,14 +19,14 @@ jobs:
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
         with:
-          path: Ed-Fi-TPDM-Community-Model
+          path: MetaEdExtensionSource
           
       - name: Checkout Ed-Fi Model
         uses: actions/checkout@v2
         with: 
           repository: Ed-Fi-Alliance-OSS/Ed-Fi-Standard
           ref: v3.3.1-b
-          path: Ed-Fi-Standard
+          path: MetaEdCoreSource
           
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -48,6 +48,10 @@ jobs:
         run: yarn build
         working-directory: MetaEd-js
         
-      - name: create folder
+      - name: create Deploy Folder
         run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
+        working-directory: MetaEd-js
+
+      - name: metaed:deploy
+        run: npm run metaed:deploy -- --source ../MetaEdCoreSource --source ../MetaEdExtensionSource --target ../MetaEdDeploy --defaultPluginTechVersion 5.3.0 
         working-directory: MetaEd-js
