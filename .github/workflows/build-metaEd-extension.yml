@@ -6,7 +6,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - run: echo "$GITHUB_WORKSPACE/MetaEdCoreSource"
+      - run: echo "${{ env.GITHUB_WORKSPACE }}/MetaEdCoreSource"
       - name: Git long filename support
         run: git config --system core.longpaths true
       - name: Checkout MetaEdJs
