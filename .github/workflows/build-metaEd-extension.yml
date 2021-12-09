@@ -43,7 +43,7 @@ jobs:
           cache-dependency-path: MetaEd-js
           
       - name: yarn bootstrap 
-        run: yarn add bootstrap
+        run: yarn add bootstrap --ignore-workspace-root-check
         working-directory: MetaEd-js
       
       - name: install phantomjs-prebuilt
