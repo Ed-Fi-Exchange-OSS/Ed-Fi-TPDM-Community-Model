@@ -41,7 +41,7 @@ jobs:
         working-directory: MetaEd-js
       
       - name: install phantomjs-prebuilt
-        run: node MetaEd-js/node_modules/phantomjs-prebuilt/install.js
+        run: node node_modules/phantomjs-prebuilt/install.js
         working-directory: MetaEd-js
       
       - name: yarn build
