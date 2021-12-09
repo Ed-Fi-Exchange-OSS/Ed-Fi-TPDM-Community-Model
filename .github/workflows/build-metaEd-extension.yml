@@ -41,8 +41,13 @@ jobs:
         working-directory: MetaEd-js
       
       - name: install phantomjs-prebuilt
-        run: node MetaEd-js\node_modules\phantomjs-prebuilt\install.js
+        run: node MetaEd-js/node_modules/phantomjs-prebuilt/install.js
+        working-directory: MetaEd-js
+      
+      - name: yarn build
+        run: yarn build
+        working-directory: MetaEd-js
         
       - name: create folder
-        run: Get-ChildItem -Path ../../ -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-        #run: mkdir ./MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
+        run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
+        working-directory: MetaEd-js
