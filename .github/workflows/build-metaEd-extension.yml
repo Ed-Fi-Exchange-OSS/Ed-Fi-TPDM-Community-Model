@@ -9,7 +9,7 @@ jobs:
       - name: Checkout MetaEdJs
         uses: actions/checkout@v2
         with:
-          repository: Ed-Fi-Alliance/MetaEd-js
+          repository: Ed-Fi-Closed/MetaEd-js
           token: ${{ secrets.MG_PAT }} 
           path: MetaEd-js
           
