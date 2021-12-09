@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: Ed-Fi-Alliance/MetaEd-js
-          token: ${{ secrets.GH_PAT }} # `GH_PAT` is a secret that contains your PAT
+          token: ${{ secrets.MG_PAT }} 
           path: MetaEd-js
           
       - name: Checkout TPDM Community Model
