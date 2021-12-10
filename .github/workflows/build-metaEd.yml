@@ -44,7 +44,7 @@ jobs:
         working-directory: MetaEd-js
         
       - name: Create ZIP file
-        run: zip MetaEd-js.zip MetaEd-js/*
+        run: Compress-Archive -Path MetaEd-js -DestinationPath MetaEd-js.zip
 
       - uses: actions/upload-artifact@v2
         with:
