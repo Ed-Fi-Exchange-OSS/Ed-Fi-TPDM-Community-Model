@@ -13,7 +13,7 @@ jobs:
           workflow: build-metaEd.yml
           
       - name: Extract MetaEd-js files
-        run: Expand-Archive MetaEd-js.zip -DestinationPath MetaEd-js
+        run: Expand-Archive MetaEd-js/MetaEd-js.zip -DestinationPath MetaEd-js
         
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
