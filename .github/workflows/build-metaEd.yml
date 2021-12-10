@@ -43,7 +43,10 @@ jobs:
         run: yarn build
         working-directory: MetaEd-js
         
+      - name: Create ZIP file
+        run: zip MetaEd-js.zip MetaEd-js/*
+
       - uses: actions/upload-artifact@v2
         with:
           name: MetaEd-js
-          path: MetaEd-js
+          path: MetaEd-js.zip
