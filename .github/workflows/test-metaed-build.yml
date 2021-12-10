@@ -10,7 +10,7 @@ jobs:
       - name: Download MetaEd-js
         uses: dawidd6/action-download-artifact@v2
         with:
-          workflow-run-id: TPDM MetaEd build
+          workflow: build-metaEd.yml
           
       - name: Extract MetaEd-js files
         run: Expand-Archive MetaEd-js.zip -DestinationPath MetaEd-js
