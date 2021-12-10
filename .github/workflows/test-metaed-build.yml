@@ -30,6 +30,7 @@ jobs:
         run: |
             npm config set registry https://www.myget.org/F/ed-fi/npm/
             npm install metaed-js
+            Get-ChildItem -Path . -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
         
       - name: create Deploy Folder
         run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
