@@ -37,3 +37,4 @@ jobs:
          
       - name: metaed:deploy
         run: npm run metaed:deploy -- --source ${{ github.workspace }}\MetaEdCoreSource --source ${{ github.workspace }}\MetaEdExtensionSource --target ${{ github.workspace }}\MetaEdDeploy --defaultPluginTechVersion 5.3.0 
+        working-directory: node_modules\metaed-js
