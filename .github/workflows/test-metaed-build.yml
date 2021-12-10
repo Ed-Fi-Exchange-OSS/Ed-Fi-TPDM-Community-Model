@@ -6,15 +6,23 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
     
       - name: Download MetaEd-js
         uses: dawidd6/action-download-artifact@v2
         with:
           workflow: build-metaEd.yml
           
-      - name: Extract MetaEd-js files
+      - name: Extract MetaEd-js files 
         run: Expand-Archive MetaEd-js/MetaEd-js.zip -DestinationPath MetaEd-js
-        
+      
+      - name: Install MetaEd-js
+        run: yarn install 
+        working-directory: MetaEd-js/MetaEd-js
+
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
         with:
@@ -26,12 +34,7 @@ jobs:
           repository: Ed-Fi-Alliance-OSS/Ed-Fi-Standard
           ref: v3.3.1-b
           path: MetaEdCoreSource
-          
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14.x'
-       
+                
       - name: create Deploy Folder
         run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
          
