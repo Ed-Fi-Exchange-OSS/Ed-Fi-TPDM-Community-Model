@@ -19,8 +19,8 @@ jobs:
       - name: Extract MetaEd-js files 
         run: Expand-Archive MetaEd-js/MetaEd-js.zip -DestinationPath MetaEd-js
       
-      - name: Install MetaEd-js
-        run: yarn install 
+      - name: copy packages to modules
+        run: Get-ChildItem packages | Copy-Item -Destination node_modules -Recurse
         working-directory: MetaEd-js/MetaEd-js
 
       - name: Checkout TPDM Community Model
