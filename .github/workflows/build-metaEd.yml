@@ -25,11 +25,11 @@ jobs:
       - name: Enable strict SSL (now using NODE_EXTRA_CA_CERTS environment variable)
         run: npm config set strict-ssl true --global & yarn config set strict-ssl true --global
         
-      - name: Setup Yarn
-        uses: actions/setup-node@v2
-        with:
-          cache: 'yarn'
-          cache-dependency-path: MetaEd-js
+      - name: install global npm packages
+        run: |
+          npm install -g yarn
+          npm uninstall -g phantomjs phantomjs-prebuilt
+        working-directory: MetaEd-js
           
       - name: yarn bootstrap 
         run: yarn bootstrap -- -- --ignore-scripts
