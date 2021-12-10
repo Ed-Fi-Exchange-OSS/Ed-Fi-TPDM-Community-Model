@@ -1,14 +1,19 @@
-name: Test MetaEd build
+name: Test MetaEd deploy
 
 on: [push, workflow_dispatch]
 
 jobs:
   build:
     runs-on: windows-latest
-    steps:
-      - name: Git long filename support
-        run: git config --system core.longpaths true
-   
+    
+      - name: Download MetaEd-js
+        uses: actions/download-artifact@v2
+        with:
+          name: MetaEd-js
+          
+      - name: Extract MetaEd-js files
+        run: Expand-Archive MetaEd-js.zip -DestinationPath MetaEd-js
+        
       - name: Checkout TPDM Community Model
         uses: actions/checkout@v2      
         with:
@@ -24,17 +29,11 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '12.4.0'
+          node-version: '14.x'
        
-      - name: install MetaEd-js
-        run: |
-            npm config set registry https://www.myget.org/F/ed-fi/npm/
-            npm install metaed-js
-            Get-ChildItem -Path . -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-        
       - name: create Deploy Folder
         run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
          
       - name: metaed:deploy
         run: npm run metaed:deploy -- --source ${{ github.workspace }}\MetaEdCoreSource --source ${{ github.workspace }}\MetaEdExtensionSource --target ${{ github.workspace }}\MetaEdDeploy --defaultPluginTechVersion 5.3.0 
-        working-directory: node_modules\metaed-js
+        working-directory: MetaEd-js
