@@ -1,6 +1,6 @@
-name: TPDM MetaEd build
+name: Test MetaEd build
 
-on: [push, workflow_dispatch]
+on: [workflow_dispatch]
 
 jobs:
   build:
