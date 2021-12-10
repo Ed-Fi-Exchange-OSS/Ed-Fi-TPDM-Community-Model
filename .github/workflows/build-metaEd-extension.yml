@@ -57,8 +57,7 @@ jobs:
         
       - name: create Deploy Folder
         run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
-        working-directory: MetaEd-js
 
       - name: metaed:deploy
-        run: npm run metaed:deploy -- --source ${{ github.workspace }}/../MetaEdCoreSource --source ${{ github.workspace }}/../MetaEdExtensionSource --target ${{ github.workspace }}/../MetaEdDeploy --defaultPluginTechVersion 5.3.0 
+        run: npm run metaed:deploy -- --source ${{ github.workspace }}/MetaEdCoreSource --source ${{ github.workspace }}/MetaEdExtensionSource --target ${{ github.workspace }}/MetaEdDeploy --defaultPluginTechVersion 5.3.0 
         working-directory: MetaEd-js
