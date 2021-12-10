@@ -36,7 +36,7 @@ jobs:
         run: mkdir MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM
          
       - name: list folders
-        run: Get-ChildItem -Recurse -Directory
+        run: Get-ChildItem -Path . -Recurse -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
       
       - name: metaed:deploy
         run: npm run metaed:deploy -- --source ${{ github.workspace }}\MetaEdCoreSource --source ${{ github.workspace }}\MetaEdExtensionSource --target ${{ github.workspace }}\MetaEdDeploy --defaultPluginTechVersion 5.3.0 
