@@ -1,4 +1,4 @@
-Common CandidateCharacteristic
+Common andidateCharacteristic
     documentation "Reflects important charactersitics of the candidate (e.g, immigrant, first generation graduate, economically disadvantaged)"
     descriptor CandidateCharacteristic
         documentation "The characteristic designated for the candidate."
