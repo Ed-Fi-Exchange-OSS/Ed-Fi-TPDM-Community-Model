@@ -1,0 +1,52 @@
+name: TPDM MetaEd build
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - name: Git long filename support
+        run: git config --system core.longpaths true
+        
+      - name: Checkout MetaEdJs
+        uses: actions/checkout@v2
+        with:
+          repository: Ed-Fi-Closed/MetaEd-js
+          token: ${{ secrets.MG_PAT }} 
+          path: MetaEd-js
+          ref: v2.6.0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.x'
+          
+      - name: Enable strict SSL (now using NODE_EXTRA_CA_CERTS environment variable)
+        run: npm config set strict-ssl true --global & yarn config set strict-ssl true --global
+        
+      - name: install global npm packages
+        run: |
+          npm install -g yarn
+          npm uninstall -g phantomjs phantomjs-prebuilt
+        working-directory: MetaEd-js
+          
+      - name: yarn bootstrap 
+        run: yarn bootstrap -- -- --ignore-scripts
+        working-directory: MetaEd-js
+      
+      - name: install phantomjs-prebuilt
+        run: node node_modules/phantomjs-prebuilt/install.js
+        working-directory: MetaEd-js
+     
+      - name: yarn build
+        run: yarn build
+        working-directory: MetaEd-js
+        
+      - name: Create ZIP file
+        run: Compress-Archive -Path MetaEd-js -DestinationPath MetaEd-js.zip
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: MetaEd-js
+          path: MetaEd-js.zip
