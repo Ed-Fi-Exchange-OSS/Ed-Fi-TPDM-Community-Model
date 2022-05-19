@@ -1,0 +1,9 @@
+name: Run Unicode Bidirectional Character Scan
+on:  
+  push:    
+    branches:      
+     - '**'
+
+jobs:   
+  ed-fi-repository-scanner:    
+    uses: ed-fi-alliance-oss/ed-fi-actions/.github/workflows/repository-scanner.yml@latest
