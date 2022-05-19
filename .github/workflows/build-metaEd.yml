@@ -3,6 +3,9 @@ name: TPDM MetaEd build
 on: [push, workflow_dispatch]
 
 jobs:
+  ed-fi-repository-scanner:    
+    uses: ed-fi-alliance-oss/ed-fi-actions/.github/workflows/repository-scanner.yml@latest
+    
   build:
     runs-on: windows-latest
     steps:
@@ -10,7 +13,7 @@ jobs:
         run: git config --system core.longpaths true
         
       - name: Checkout MetaEdJs
-        uses: actions/checkout@v2
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
           repository: Ed-Fi-Closed/MetaEd-js
           token: ${{ secrets.MG_PAT }} 
@@ -18,7 +21,7 @@ jobs:
           ref: v2.6.0
       
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@1f8c6b94b26d0feae1e387ca63ccbdc44d27b561
         with:
           node-version: '14.x'
           
@@ -46,7 +49,7 @@ jobs:
       - name: Create ZIP file
         run: Compress-Archive -Path MetaEd-js -DestinationPath MetaEd-js.zip
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@e448a9b857ee2131e752b06002bf0e093c65e571
         with:
           name: MetaEd-js
           path: MetaEd-js.zip
