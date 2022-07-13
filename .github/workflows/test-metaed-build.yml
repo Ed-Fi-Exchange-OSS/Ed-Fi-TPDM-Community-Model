@@ -7,12 +7,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@1f8c6b94b26d0feae1e387ca63ccbdc44d27b561
         with:
           node-version: '14.x'
     
       - name: Download MetaEd-js
-        uses: dawidd6/action-download-artifact@v2
+        uses: dawidd6/action-download-artifact@1cf11afe3f1874cee82a8d5a2b45c0fd63f0fa22
         with:
           workflow: build-metaEd.yml
           
@@ -24,12 +24,12 @@ jobs:
         working-directory: MetaEd-js/MetaEd-js
 
       - name: Checkout TPDM Community Model
-        uses: actions/checkout@v2      
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
           path: MetaEdExtensionSource
           
       - name: Checkout Ed-Fi Model
-        uses: actions/checkout@v2
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with: 
           repository: Ed-Fi-Alliance/Ed-Fi-Model
           ref: DS-3.3.1-b-ME-2.0.2
