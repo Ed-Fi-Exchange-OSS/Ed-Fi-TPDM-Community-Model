@@ -7,7 +7,7 @@ on:
 env:
   data_model_version: "4.0.0-a"
   data_model_name: "4.0a"
-  ods_api_version: "6.0"
+  technology_version: "6.0.0"
   tpdm_version: "1.1.0"
 jobs:  
   ed-fi-repository-scanner:    
@@ -39,14 +39,14 @@ jobs:
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
                                       "pluginConfigDirectories"=$emptyList;
-                                      "defaultPluginTechVersion"="%TechnologyVersion%";
+                                      "defaultPluginTechVersion"="${{ env.technology_version }}";
                                       "allianceMode"=$true;                            
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
-          $FilePath = 'MetaEdConfig-API-${{ env.ods_api_version }}-DS-${{ env.data_model_version }}.json'
+          $FilePath = 'MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
           
       - name: build model
         run: |
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          node ./index.js  --config ./MetaEdConfig-API-${{ env.ods_api_version }}-DS-${{ env.data_model_version }}.json
+          node ./index.js  --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
