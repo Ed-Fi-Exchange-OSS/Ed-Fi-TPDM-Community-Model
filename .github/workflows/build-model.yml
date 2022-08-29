@@ -1,0 +1,52 @@
+name: build TPDM model
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  data_model_version: "4.0.0-a"
+  data_model_name: "4.0a"
+  ods_api_version: 6.0
+  tpdm_version: 1.1.0
+jobs:  
+  ed-fi-repository-scanner:    
+    uses: ed-fi-alliance-oss/ed-fi-actions/.github/workflows/repository-scanner.yml@latest
+    
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+      
+      - name: Create MetaEd config 
+        run: |
+          $FolderName = "${{ github.workspace }}\MetaEdOutput"
+          if (-not (Test-Path $FolderName)) {
+              New-Item $FolderName -ItemType Directory
+          }
+          $MetaEdConfigBase = @{}
+          $emptyList = New-Object System.Collections.ArrayList
+          $projectPaths = New-Object System.Collections.ArrayList
+          $projectPaths.Add("${{ github.workspace }}\Ed-Fi-Model")
+          $projectPaths.Add("${{ github.workspace }}\MetaEdExtensionSource")
+          $projectList = New-Object System.Collections.ArrayList
+          $projectList.Add(@{"namespaceName"="EdFi";"projectName"="Ed-Fi";"projectVersion"="${{ env.data_model_version }}";"projectExtension"="";"description"="The Ed-Fi Data Model ${{ env.data_model_name }}";})
+          $projectList.Add(@{"namespaceName"="TPDM";"projectName"="TPDM";"projectVersion"="${{ env.tpdm_version }}";"projectExtension"="EXTENSION";"description"="TPDM-Community";})
+          $metaEdConfiguration = @{
+                                      "artifactDirectory"="${{ github.workspace }}\MetaEdDeploy";
+                                      "deployDirectory"="";
+                                      "pluginTechVersion"=@{};
+                                      "projects"=$projectList;
+                                      "projectPaths"=$projectPaths;
+                                      "pluginConfigDirectories"=$emptyList;
+                                      "defaultPluginTechVersion"="%TechnologyVersion%";
+                                      "allianceMode"=$true;                            
+                                  }
+          $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
+          $FilePath = 'MetaEdConfig-API-${{ env.ods_api_version }}-DS-${{ env.data_model_version }}.json'
+          $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
+          
+      - name: build model
+        run: |
+          ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
+          node ./index.js  --config ./MetaEdConfig-API-${{ env.ods_api_version }}-DS-${{ env.data_model_version }}.json
