@@ -21,12 +21,12 @@ jobs:
       - name: Ed-Fi Model
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
-          repository: https://github.com/Ed-Fi-Alliance/Ed-Fi-Model
+          repository: Ed-Fi-Alliance/Ed-Fi-Model
       
       - name: MetaEd-js
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
-          repository: https://github.com/Ed-Fi-Closed/MetaEd-js
+          repository: Ed-Fi-Closed/MetaEd-js
 
       - name: Create MetaEd config 
         run: |
