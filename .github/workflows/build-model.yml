@@ -71,6 +71,7 @@ jobs:
         run: |
           Get-ChildItem -Path ./ -Filter index.js -Recurse -ErrorAction SilentlyContinue -Force
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          npm config set registry https://www.myget.org/F/ed-fi/npm/
+          yarn install
+          #npm config set registry https://www.myget.org/F/ed-fi/npm/
           node ./build/index.js  --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd
