@@ -69,7 +69,7 @@ jobs:
           
       - name: build model
         run: |
-          cat MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+          cat MetaEd/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
           ls -Directory
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
           node ./MetaEd/index.js  --config ./MetaEd/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
