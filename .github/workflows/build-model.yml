@@ -16,6 +16,9 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Git long filename support
+        run: git config --system core.longpaths true
+    
       - name: checkout TPM-Community-Model
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
@@ -60,7 +63,7 @@ jobs:
                                       "allianceMode"=$true;                            
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
-          $FilePath = 'MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
+          $FilePath = '.MetaEd/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
           
       - name: build model
@@ -68,4 +71,4 @@ jobs:
           cat MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
           ls -Directory
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          node ./index.js  --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+          node ./MetaEd/index.js  --config ./MetaEd/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
