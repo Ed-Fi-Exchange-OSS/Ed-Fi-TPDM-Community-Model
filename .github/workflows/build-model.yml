@@ -72,6 +72,6 @@ jobs:
       - name: build model
         run: |
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          ./nvm-select-version.ps1 -version ${{ env.node_version }}
+          ./nvm-select-version -version ${{ env.node_version }}
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd/build
