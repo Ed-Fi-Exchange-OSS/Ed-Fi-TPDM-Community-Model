@@ -33,7 +33,7 @@ jobs:
         with:
           repository: Ed-Fi-Closed/MetaEd-js
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
-          clean: false
+          path: MetaEd
           
       - name: Create MetaEd config 
         run: |
