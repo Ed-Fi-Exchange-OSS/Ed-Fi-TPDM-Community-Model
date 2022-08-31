@@ -16,15 +16,19 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+      - name: checkout TPM-Community-Model
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+        with:
+          path: MetaEdExtensionSource
       
-      - name: Ed-Fi Model
+      - name: checkout Ed-Fi Model
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
           repository: Ed-Fi-Alliance/Ed-Fi-Model
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
+          path: Ed-Fi-Model
       
-      - name: MetaEd-js
+      - name: checkout MetaEd-js
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
           repository: Ed-Fi-Closed/MetaEd-js
