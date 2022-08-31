@@ -9,6 +9,8 @@ env:
   data_model_name: "4.0a"
   technology_version: "6.0.0"
   tpdm_version: "1.1.0"
+  node_version: "16.13.1"
+  
 jobs:  
   ed-fi-repository-scanner:    
     uses: ed-fi-alliance-oss/ed-fi-actions/.github/workflows/repository-scanner.yml@latest
@@ -70,6 +72,6 @@ jobs:
       - name: build model
         run: |
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          dir ./build/
-          node ./packages/generator-metaed-plugin/generators/app/index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
-        working-directory: MetaEd
+          ./nvm-select-version.ps1 -version ${{ env.node_version }}
+          node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+        working-directory: MetaEd/build
