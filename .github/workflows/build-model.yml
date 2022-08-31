@@ -69,7 +69,7 @@ jobs:
           
       - name: build model
         run: |
-          Get-ChildItem -Path V:\Myfolder -Filter index.js -Recurse -ErrorAction SilentlyContinue -Force
+          Get-ChildItem -Path ./ -Filter index.js -Recurse -ErrorAction SilentlyContinue -Force
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
           node ./index.js  --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd
