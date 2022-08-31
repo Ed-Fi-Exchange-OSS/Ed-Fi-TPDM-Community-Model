@@ -72,8 +72,7 @@ jobs:
       - name: build model
         shell: pwsh
         run: |
-          dir
-          ##./nvm-select-version.ps1 -version ${{ env.node_version }}
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+          dir ${{ github.workspace }}\MetaEdDeploy
         working-directory: MetaEd/build
