@@ -51,9 +51,13 @@ jobs:
    
       - name: Create MetaEd config 
         run: |
-          $FolderName = "${{ github.workspace }}\MetaEdOutput"
-          if (-not (Test-Path $FolderName)) {
-              New-Item $FolderName -ItemType Directory
+          $OutputFolder = "${{ github.workspace }}\MetaEdOutput"
+          if (-not (Test-Path $OutputFolder)) {
+              New-Item $OutputFolder -ItemType Directory
+          }
+          $DeployFolder = "${{ github.workspace }}\MetaEdOutput"
+          if (-not (Test-Path $DeployFolder)) {
+              New-Item $DeployFolder -ItemType Directory
           }
           $MetaEdConfigBase = @{}
           $emptyList = New-Object System.Collections.ArrayList
@@ -64,8 +68,8 @@ jobs:
           $projectList.Add(@{"namespaceName"="EdFi";"projectName"="Ed-Fi";"projectVersion"="${{ env.data_model_version }}";"projectExtension"="";"description"="The Ed-Fi Data Model ${{ env.data_model_name }}";})
           $projectList.Add(@{"namespaceName"="TPDM";"projectName"="TPDM";"projectVersion"="${{ env.tpdm_version }}";"projectExtension"="EXTENSION";"description"="TPDM-Community";})
           $metaEdConfiguration = @{
-                                      "artifactDirectory"="${{ github.workspace }}\MetaEdDeploy";
-                                      "deployDirectory"="${{ github.workspace }}\EdFi.Ods.Extensions.TPDM";
+                                      "artifactDirectory"="$OutputFolder";
+                                      "deployDirectory"="$DeployFolder";
                                       "pluginTechVersion"=@{};
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
@@ -74,6 +78,7 @@ jobs:
                                       "allianceMode"=$true;                            
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
+          Write-Host $metaEdConfiguration
           $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
           
@@ -82,6 +87,11 @@ jobs:
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd/build
+        
+      - name: deploy model
+        run: | 
+          node ./index.js --config ../../../../MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+        working-directory: MetaEd/build/node_modules/@edfi/metaed-odsapi-deploy/dist
         
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
