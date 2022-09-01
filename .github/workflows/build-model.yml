@@ -3,15 +3,6 @@ name: build TPDM model
 on:
   push:
   workflow_dispatch:
-    inputs:
-      debug_enabled:
-        description: 'Run the build with tmate debugging enabled (https://github.com/marketplace/actions/debugging-with-tmate)'     
-        type: choice
-        required: true
-        default: 'false'
-        options:
-        - 'false'
-        - 'true'
 
 env:
   data_model_version: "4.0.0-a"
@@ -98,9 +89,5 @@ jobs:
         uses: actions/upload-artifact@e448a9b857ee2131e752b06002bf0e093c65e571
         with:
           name: Extensions.TPDM.Community.${{ env.tpdm_version }}.${{ env.technology_version }}
-          path: MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM/Artifacts/
-      
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        if: always()
-        timeout-minutes: 15
+          path: MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM/
+
