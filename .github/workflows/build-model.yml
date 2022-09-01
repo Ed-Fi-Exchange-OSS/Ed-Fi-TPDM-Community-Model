@@ -20,6 +20,17 @@ jobs:
     steps:
       - name: Git long filename support
         run: git config --system core.longpaths true
+        
+      - name: checkout MetaEd-js
+        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+        with:
+          repository: Ed-Fi-Closed/MetaEd-js
+          token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
+          path: MetaEd
+          
+      - name: list metaed files
+        run: |
+          dir ${{ github.workspace }}\MetaEd -Recurse -Directory
     
       - name: checkout TPM-Community-Model
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
@@ -32,14 +43,7 @@ jobs:
           repository: Ed-Fi-Alliance/Ed-Fi-Model
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
           path: Ed-Fi-Model
-      
-      - name: checkout MetaEd-js
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
-        with:
-          repository: Ed-Fi-Closed/MetaEd-js
-          token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
-          path: MetaEd
-          
+   
       - name: Create MetaEd config 
         run: |
           $FolderName = "${{ github.workspace }}\MetaEdOutput"
@@ -74,7 +78,4 @@ jobs:
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd/build
         
-      - name: list metaed files
-        run: |
-          dir ${{ github.workspace }}\MetaEd -Recurse
         
