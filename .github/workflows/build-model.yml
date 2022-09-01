@@ -69,11 +69,12 @@ jobs:
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
           
       - name: build model
-        shell: pwsh
         run: |
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          cat ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
-          mkdir ${{ github.workspace }}\EdFi.Ods.Extensions.TPDM
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
-          dir ${{ github.workspace }}\EdFi.Ods.Extensions.TPDM -Recurse
         working-directory: MetaEd/build
+        
+      - name: list metaed files
+        run: |
+          dir ${{ github.workspace }}\MetaEd -Recurse
+        
