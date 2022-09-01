@@ -91,8 +91,15 @@ jobs:
       - name: deploy model
         run: | 
           node ./index.js --config ../../../../MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+          exit 0 #ignore error on non-existing TPDM extension when deploying
         working-directory: MetaEd/build/node_modules/@edfi/metaed-odsapi-deploy/dist
         
+      - name: Upload artifact
+        uses: actions/upload-artifact@e448a9b857ee2131e752b06002bf0e093c65e571
+        with:
+          name: Extensions.TPDM.Community.${{ env.tpdm_version }}.${{ env.technology_version }}
+          path: MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM/Artifacts/
+      
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
         if: always()
