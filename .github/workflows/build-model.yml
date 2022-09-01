@@ -56,7 +56,7 @@ jobs:
           $projectList.Add(@{"namespaceName"="TPDM";"projectName"="TPDM";"projectVersion"="${{ env.tpdm_version }}";"projectExtension"="EXTENSION";"description"="TPDM-Community";})
           $metaEdConfiguration = @{
                                       "artifactDirectory"="${{ github.workspace }}\MetaEdDeploy";
-                                      "deployDirectory"="";
+                                      "deployDirectory"="${{ github.workspace }}\EdFi.Ods.Extensions.TPDM";
                                       "pluginTechVersion"=@{};
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
@@ -66,7 +66,6 @@ jobs:
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
           $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
-          cat $FilePath
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
           
       - name: build model
