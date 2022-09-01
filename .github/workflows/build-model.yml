@@ -66,7 +66,7 @@ jobs:
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
           $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
-          Write-Host $FilePath
+          cat $FilePath
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
           
       - name: build model
