@@ -1,6 +1,7 @@
 name: build TPDM model
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       debug_enabled:
