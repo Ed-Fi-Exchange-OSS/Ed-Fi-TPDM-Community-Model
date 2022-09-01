@@ -87,13 +87,12 @@ jobs:
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd/build
-        
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-        timeout-minutes: 15
-        
+              
       - name: deploy model
         run: | 
           node ./index.js --config ../../../../MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd/build/node_modules/@edfi/metaed-odsapi-deploy/dist
         
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+        timeout-minutes: 15
