@@ -72,7 +72,7 @@ jobs:
         shell: pwsh
         run: |
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
+          cat ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
-          dir ${{ github.workspace }}\MetaEdDeploy\TPDM -Recurse
-          cat README.md
+          dir ${{ github.workspace }}\EdFi.Ods.Extensions.TPDM -Recurse
         working-directory: MetaEd/build
