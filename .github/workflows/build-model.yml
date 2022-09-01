@@ -75,4 +75,5 @@ jobs:
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
           node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
           dir ${{ github.workspace }}\MetaEdDeploy\TPDM -Recurse
+          cat README.md
         working-directory: MetaEd/build
