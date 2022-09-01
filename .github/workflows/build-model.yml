@@ -30,7 +30,11 @@ jobs:
           
       - name: list metaed files
         run: |
-          dir ${{ github.workspace }}\MetaEd -Recurse -Directory
+          dir ${{ github.workspace }}\MetaEd\build -Recurse
+      
+      - name: cat index.js
+        run: |
+          cat ${{ github.workspace }}\MetaEd\build\index.js
     
       - name: checkout TPM-Community-Model
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
