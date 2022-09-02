@@ -3,6 +3,7 @@ name: build TPDM model
 on:
   push:
   workflow_dispatch:
+  pull_request:
 
 env:
   data_model_version: "4.0.0-a"
