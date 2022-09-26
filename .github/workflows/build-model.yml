@@ -16,13 +16,17 @@ on:
       tpdm_version:
         type: string
         required: true
+      metaed_version:
+        type: string
+        required: true
   pull_request:
 
 env:
-  data_model_version: "v3.3.1-b"
+  data_model_version: "3.3.1-b"
   data_model_name: "3.3-b"
   technology_version: "5.3"
   tpdm_version: "1.1.0"
+  metaed_version: "2.0.2"
   node_version: "16.13.1"
   
 jobs:  
@@ -39,6 +43,7 @@ jobs:
             echo "data_model_name=${{ github.event.inputs.data_model_name }}" >> $env:GITHUB_ENV
             echo "technology_version=${{ github.event.inputs.technology_version }}" >> $env:GITHUB_ENV
             echo "tpdm_version=${{ github.event.inputs.tpdm_version }}" >> $env:GITHUB_ENV
+            echo "metaed_version=${{ github.event.inputs.metaed_version }}" >> $env:GITHUB_ENV
           } 
     
       - name: Git long filename support
@@ -61,6 +66,7 @@ jobs:
         with:
           repository: Ed-Fi-Alliance/Ed-Fi-Model
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
+          ref: DS-${{ env.data_model_version }}-ME-${{ env.metaed_version }}
           path: Ed-Fi-Model
    
       - name: Create MetaEd config 
