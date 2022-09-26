@@ -3,6 +3,19 @@ name: build TPDM model
 on:
   push:
   workflow_dispatch:
+    inputs:
+      data_model_version:
+        type: string
+        required: true
+      data_model_name:
+        type: string
+        required: true
+      technology_version:
+        type: string
+        required: true
+      tpdm_version:
+        type: string
+        required: true
   pull_request:
 
 env:
@@ -19,6 +32,15 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
+      - name: Set env variables 
+        run: |
+          if ("${{ github.event_name }}" -eq "workflow_dispatch") {
+            echo "data_model_version=${{ github.event.inputs.data_model_version }}" >> $env:GITHUB_ENV
+            echo "data_model_name=${{ github.event.inputs.data_model_name }}" >> $env:GITHUB_ENV
+            echo "technology_version=${{ github.event.inputs.technology_version }}" >> $env:GITHUB_ENV
+            echo "tpdm_version=${{ github.event.inputs.tpdm_version }}" >> $env:GITHUB_ENV
+          } 
+    
       - name: Git long filename support
         run: git config --system core.longpaths true
        
