@@ -1,4 +1,4 @@
-name: build TPDM model
+name: Build Educator Preparation Model
 
 on:
   push:
@@ -6,32 +6,26 @@ on:
     inputs:
       data_model_version:
         type: string
-        required: true
-      data_model_name:
+        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 4.0.0.-a"
+      ODS_version:
         type: string
-        required: true
-      technology_version:
-        type: string
-        required: true
+        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 6.0"
       tpdm_version:
         type: string
-        required: true
-      metaed_version:
+        description: "tpdm_version: The TPDM version being built. Default: 1.1.0"
+      ed_fi_model_ref:
         type: string
-        required: true
+        description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-4.0.0-a-ME-3.0.3"
   pull_request:
 
 env:
-  data_model_version: "3.3.1-b"
-  data_model_name: "3.3-b"
-  technology_version: "5.3"
+  data_model_version: "4.0.0-a"
+  ODS_version: "6.0"
   tpdm_version: "1.1.0"
-  metaed_version: "2.0.2"
+  ed_fi_model_ref: "DS-4.0.0-a-ME-3.0.3"
   node_version: "16.13.1"
   
 jobs:  
-  ed-fi-repository-scanner:    
-    uses: ed-fi-alliance-oss/ed-fi-actions/.github/workflows/repository-scanner.yml@latest
     
   build:
     runs-on: windows-latest
@@ -40,10 +34,9 @@ jobs:
         run: |
           if ("${{ github.event_name }}" -eq "workflow_dispatch") {
             echo "data_model_version=${{ github.event.inputs.data_model_version }}" >> $env:GITHUB_ENV
-            echo "data_model_name=${{ github.event.inputs.data_model_name }}" >> $env:GITHUB_ENV
-            echo "technology_version=${{ github.event.inputs.technology_version }}" >> $env:GITHUB_ENV
+            echo "ODS_version=${{ github.event.inputs.ODS_version }}" >> $env:GITHUB_ENV
             echo "tpdm_version=${{ github.event.inputs.tpdm_version }}" >> $env:GITHUB_ENV
-            echo "metaed_version=${{ github.event.inputs.metaed_version }}" >> $env:GITHUB_ENV
+            echo "ed_fi_model_ref=${{ github.event.inputs.ed_fi_model_ref }}" >> $env:GITHUB_ENV
           } 
     
       - name: Git long filename support
@@ -66,7 +59,7 @@ jobs:
         with:
           repository: Ed-Fi-Alliance/Ed-Fi-Model
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
-          ref: DS-${{ env.data_model_version }}-ME-${{ env.metaed_version }}
+          ref: DS-${{ env.ed_fi_model_ref }}
           path: Ed-Fi-Model
    
       - name: Create MetaEd config 
@@ -85,7 +78,7 @@ jobs:
           $projectPaths.Add("${{ github.workspace }}\Ed-Fi-Model")
           $projectPaths.Add("${{ github.workspace }}\MetaEdExtensionSource")
           $projectList = New-Object System.Collections.ArrayList
-          $projectList.Add(@{"namespaceName"="EdFi";"projectName"="Ed-Fi";"projectVersion"="${{ env.data_model_version }}";"projectExtension"="";"description"="The Ed-Fi Data Model ${{ env.data_model_name }}";})
+          $projectList.Add(@{"namespaceName"="EdFi";"projectName"="Ed-Fi";"projectVersion"="${{ env.data_model_version }}";"projectExtension"="";"description"="The Ed-Fi Data Model ${{ env.data_model_version }}";})
           $projectList.Add(@{"namespaceName"="TPDM";"projectName"="TPDM";"projectVersion"="${{ env.tpdm_version }}";"projectExtension"="EXTENSION";"description"="TPDM-Community";})
           $metaEdConfiguration = @{
                                       "artifactDirectory"="$OutputFolder";
@@ -94,29 +87,29 @@ jobs:
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
                                       "pluginConfigDirectories"=$emptyList;
-                                      "defaultPluginTechVersion"="${{ env.technology_version }}";
+                                      "defaultPluginTechVersion"="${{ env.ODS_version }}";
                                       "allianceMode"=$true;                            
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
           Write-Host $metaEdConfiguration
-          $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json'
+          $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
        
       - name: build model
         run: |
           ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          node ./index.js --config ./MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+          node ./index.js --config ./MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json
         working-directory: MetaEd/build
               
       - name: deploy model
         run: | 
-          node ./index.js --config ../../../../MetaEdConfig-API-${{ env.technology_version }}-DS-${{ env.data_model_version }}.json
+          node ./index.js --config ../../../../MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json
           exit 0 #ignore error on non-existing TPDM extension when deploying
         working-directory: MetaEd/build/node_modules/@edfi/metaed-odsapi-deploy/dist
         
       - name: Upload artifact
         uses: actions/upload-artifact@e448a9b857ee2131e752b06002bf0e093c65e571
         with:
-          name: Extensions.TPDM.Community.${{ env.tpdm_version }}.${{ env.technology_version }}
+          name: Extensions.TPDM.Community.${{ env.tpdm_version }}.${{ env.ODS_version }}
           path: MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM/
 
