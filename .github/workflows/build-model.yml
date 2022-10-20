@@ -61,7 +61,7 @@ jobs:
         with:
           repository: Ed-Fi-Alliance/Ed-Fi-Model
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
-          ref: DS-${{ env.ed_fi_model_ref }}
+          ref: ${{ env.ed_fi_model_ref }}
           path: Ed-Fi-Model
    
       - name: Create MetaEd config 
