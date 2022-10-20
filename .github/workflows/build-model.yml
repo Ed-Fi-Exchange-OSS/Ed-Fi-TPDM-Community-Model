@@ -32,12 +32,14 @@ jobs:
     steps:
       - name: Set env variables 
         run: |
-          if ("${{ github.event_name }}" -eq "workflow_dispatch") {
-            echo "data_model_version=${{ github.event.inputs.data_model_version }}" >> $env:GITHUB_ENV
-            echo "ODS_version=${{ github.event.inputs.ODS_version }}" >> $env:GITHUB_ENV
-            echo "tpdm_version=${{ github.event.inputs.tpdm_version }}" >> $env:GITHUB_ENV
-            echo "ed_fi_model_ref=${{ github.event.inputs.ed_fi_model_ref }}" >> $env:GITHUB_ENV
-          } 
+          if ("${{ github.event.inputs.data_model_version }}" -neq "") {
+            echo "data_model_version=${{ github.event.inputs.data_model_version }}" >> $env:GITHUB_ENV }
+          if ("${{ github.event.inputs.ODS_version }}" -neq "") {
+            echo "ODS_version=${{ github.event.inputs.ODS_version }}" >> $env:GITHUB_ENV }
+          if ("${{ github.event.inputs.tpdm_version }}" -neq "") {
+            echo "tpdm_version=${{ github.event.inputs.tpdm_version }}" >> $env:GITHUB_ENV }
+          if ("${{ github.event.inputs.ed_fi_model_ref }}" -neq "") {
+            echo "ed_fi_model_ref=${{ github.event.inputs.ed_fi_model_ref }}" >> $env:GITHUB_ENV} 
     
       - name: Git long filename support
         run: git config --system core.longpaths true
