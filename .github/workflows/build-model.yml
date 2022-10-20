@@ -32,13 +32,13 @@ jobs:
     steps:
       - name: Set env variables 
         run: |
-          if ("${{ github.event.inputs.data_model_version }}" -neq "") {
+          if ("${{ github.event.inputs.data_model_version }}" -ne "") {
             echo "data_model_version=${{ github.event.inputs.data_model_version }}" >> $env:GITHUB_ENV }
-          if ("${{ github.event.inputs.ODS_version }}" -neq "") {
+          if ("${{ github.event.inputs.ODS_version }}" -ne "") {
             echo "ODS_version=${{ github.event.inputs.ODS_version }}" >> $env:GITHUB_ENV }
-          if ("${{ github.event.inputs.tpdm_version }}" -neq "") {
+          if ("${{ github.event.inputs.tpdm_version }}" -ne "") {
             echo "tpdm_version=${{ github.event.inputs.tpdm_version }}" >> $env:GITHUB_ENV }
-          if ("${{ github.event.inputs.ed_fi_model_ref }}" -neq "") {
+          if ("${{ github.event.inputs.ed_fi_model_ref }}" -ne "") {
             echo "ed_fi_model_ref=${{ github.event.inputs.ed_fi_model_ref }}" >> $env:GITHUB_ENV} 
     
       - name: Git long filename support
