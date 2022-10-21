@@ -56,6 +56,11 @@ jobs:
         with:
           path: MetaEdExtensionSource
       
+      - name: Debugging with tmate
+        # You may pin to the exact commit or the version.
+        # uses: mxschmitt/action-tmate@28f608baaa037465aa887c21a7924e9e6b66a9e0
+        uses: mxschmitt/action-tmate@v3.13
+      
       - name: checkout Ed-Fi Model
         uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
         with:
