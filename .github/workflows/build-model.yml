@@ -19,10 +19,10 @@ on:
   pull_request:
 
 env:
-  data_model_version: "4.0.0-a"
-  ODS_version: "6.0"
+  data_model_version: "4.0.0"
+  ODS_version: "6.1"
   tpdm_version: "1.1.0"
-  ed_fi_model_ref: "DS-4.0.0-a-ME-3.0.1"
+  ed_fi_model_ref: "DS-4.0-ME-3.x"
   node_version: "16.13.1"
   
 jobs:  
