@@ -6,23 +6,23 @@ on:
     inputs:
       data_model_version:
         type: string
-        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 4.0"
+        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.0"
       ODS_version:
         type: string
-        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 6.1"
+        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.0"
       tpdm_version:
         type: string
-        description: "tpdm_version: The TPDM version being built. Default: 1.1.0"
+        description: "tpdm_version: The TPDM version being built. Default: 1.2.0"
       ed_fi_model_ref:
         type: string
-        description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-4.0-ME-3.x"
+        description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-5.0-ME-3.x"
   pull_request:
 
 env:
-  data_model_version: "4.0"
-  ODS_version: "6.1"
-  tpdm_version: "1.1.0"
-  ed_fi_model_ref: "DS-4.0-ME-3.x"
+  data_model_version: "5.0.0"
+  ODS_version: "7.0"
+  tpdm_version: "1.2.0"
+  ed_fi_model_ref: "DS-5.0-ME-3.x"
   node_version: "16.13.1"
   
 jobs:  
@@ -44,33 +44,41 @@ jobs:
       - name: Git long filename support
         run: git config --system core.longpaths true
        
-      - name: checkout MetaEd-js
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+      - name: Checkout MetaEd-js repo
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
         with:
           repository: Ed-Fi-Closed/MetaEd-js
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
           path: MetaEd
        
-      - name: checkout TPM-Community-Model
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+      - name: Checkout TPM-Community-Model repo
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
         with:
           path: MetaEdExtensionSource
     
-      - name: checkout Ed-Fi Model
-        uses: actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579
+      - name: Checkout Ed-Fi Model repo
+        uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
         with:
-          repository: Ed-Fi-Alliance/Ed-Fi-Model
+          repository: Ed-Fi-Closed/Ed-Fi-Model
           token: ${{secrets.EDFI_BUILD_AGENT_PAT }}
           ref: ${{ env.ed_fi_model_ref }}
           path: Ed-Fi-Model
    
+      - name: Install NPM Packages
+        run: npm install
+        working-directory: MetaEd
+
+      - name: Build MetaEd
+        run: npm run build
+        working-directory: MetaEd
+
       - name: Create MetaEd config 
         run: |
           $OutputFolder = "${{ github.workspace }}\MetaEdOutput"
           if (-not (Test-Path $OutputFolder)) {
               New-Item $OutputFolder -ItemType Directory
           }
-          $DeployFolder = "${{ github.workspace }}\MetaEdDeploy"
+          $DeployFolder = "${{ github.workspace }}\MetaEdDeploy\Ed-Fi-ODS-Implementation\Application\EdFi.Ods.Extensions.TPDM"
           if (-not (Test-Path $DeployFolder)) {
               New-Item $DeployFolder -ItemType Directory
           }
@@ -84,34 +92,31 @@ jobs:
           $projectList.Add(@{"namespaceName"="TPDM";"projectName"="TPDM";"projectVersion"="${{ env.tpdm_version }}";"projectExtension"="EXTENSION";"description"="TPDM-Community";})
           $metaEdConfiguration = @{
                                       "artifactDirectory"="$OutputFolder";
-                                      "deployDirectory"="$DeployFolder";
+                                      "deployDirectory"="${{ github.workspace }}\MetaEdDeploy";
                                       "pluginTechVersion"=@{};
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
                                       "pluginConfigDirectories"=$emptyList;
                                       "defaultPluginTechVersion"="${{ env.ODS_version }}";
-                                      "allianceMode"=$true;                            
+                                      "allianceMode"=$true;                 
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
           Write-Host $metaEdConfiguration
           $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
-       
-      - name: build model
+   
+      - name: MetaEd - Build TPDM-Community
         run: |
-          ## node ./index.js %MetaEdCoreSourceParameter% %MetaEdExtensionSourceParameter% --target %MetaEdBuildTarget% %DeployCoreSwitch% --defaultPluginTechVersion %TechnologyVersion%
-          node ./index.js --config ./MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json
+          node ./index.js --config ./MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json -a
         working-directory: MetaEd/build
-              
-      - name: deploy model
+                 
+      - name: MetaEd - Deploy TPDM-Community
         run: | 
-          node ./index.js --config ../../../../MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json
-          exit 0 #ignore error on non-existing TPDM extension when deploying
-        working-directory: MetaEd/build/node_modules/@edfi/metaed-odsapi-deploy/dist
+          node index.js -a -c ../../../build/MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json
+        working-directory: MetaEd/packages/metaed-odsapi-deploy-console/dist
         
       - name: Upload artifact
         uses: actions/upload-artifact@e448a9b857ee2131e752b06002bf0e093c65e571
         with:
-          name: Extensions.TPDM.Community.${{ env.tpdm_version }}.${{ env.ODS_version }}
+          name: Extensions.TPDM.Community.${{ env.tpdm_version }}.${{ env.ODS_version }}.Standard.${{ env.data_model_version }}
           path: MetaEdDeploy/Ed-Fi-ODS-Implementation/Application/EdFi.Ods.Extensions.TPDM/
-
