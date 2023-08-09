@@ -21,7 +21,7 @@ on:
 env:
   data_model_version: "5.0.0"
   ODS_version: "7.0"
-  tpdm_version: "1.1.0"
+  tpdm_version: "1.2.0"
   ed_fi_model_ref: "DS-5.0-ME-3.x"
   node_version: "16.13.1"
   
