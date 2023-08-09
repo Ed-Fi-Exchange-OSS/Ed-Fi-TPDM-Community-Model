@@ -12,7 +12,7 @@ on:
         description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.0"
       tpdm_version:
         type: string
-        description: "tpdm_version: The TPDM version being built. Default: 1.1.0"
+        description: "tpdm_version: The TPDM version being built. Default: 1.2.0"
       ed_fi_model_ref:
         type: string
         description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-5.0-ME-3.x"
