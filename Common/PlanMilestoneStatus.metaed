@@ -1,0 +1,14 @@
+Common PlanMilestoneStatus
+    documentation "The status of the plan milestone"
+    descriptor MilestoneStatusType
+        documentation "The type of the status achieved for the milestone."
+        is required
+    date MilestoneStatusDate
+        documentation "The month, day, and year on which the status was achieved for the milestone."
+        is required
+    descriptor MilestoneStatusPhase
+        documentation "The phase in time when the milestone status was achieved."
+        is optional
+    shared string MilestoneStatusDescription
+        documentation "Additional information associated with the milestine status achieved."
+        is optional

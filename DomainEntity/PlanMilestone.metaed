@@ -1,0 +1,26 @@
+Domain Entity PlanMilestone
+    documentation ""
+    domain entity EdFi.EducationOrganization
+        documentation "A reference to the Education Organization associated with the plan."
+        is part of identity
+    domain entity EdFi.Student
+        documentation "A reference to the Student associiated with the plan."
+        is part of identity
+    shared string PlanMilestoneCode
+        documentation "The code or identifier associated with an element associated with the plan milestone (e.g., course, certification, etc)"
+        is part of identity
+    descriptor PlanMilestoneType
+        documentation "The type of milestone defined for the student's plan."
+       is part of identity
+    descriptor PlanMilestonePhase
+        documentation "The phase in time when the milestone is planned."
+        is part of identity
+    shared string PlanMilestoneName
+        documentation "The name for the milestone"
+        is part of identity
+    common PlanMilestoneStatus
+        documentation "The dated status of the milestone achieved."
+        is optional
+    domain entity EdFi.GraduationPlan
+        documentation "The graduation plan associated with the student's plan."
+        is optional

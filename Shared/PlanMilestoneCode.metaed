@@ -1,0 +1,4 @@
+Shared String PlanMilestoneCode
+    documentation "The code or identifier associated with an element associated with the plan milestone (e.g., course, certification, etc)"
+    min length 1
+    max length 60

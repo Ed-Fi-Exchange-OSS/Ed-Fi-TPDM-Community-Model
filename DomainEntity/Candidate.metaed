@@ -36,7 +36,7 @@ Domain Entity Candidate
   bool HispanicLatinoEthnicity
       documentation "An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino."""
       is optional
-  descriptor EdFi.OldEthnicity
+  descriptor OldEthnicity
       documentation "Previous definition of Ethnicity combining Hispanic/Latino and race: 1 - American Indian or Alaskan Native 2 - Asian or Pacific Islander 3 - Black, not of Hispanic origin 4 - Hispanic 5 - White, not of Hispanic origin."
       is optional
   descriptor EdFi.Race
@@ -114,4 +114,7 @@ Domain Entity Candidate
   domain entity Application
       deprecated "This element can lead to confusion when a Candidate is enrolled in multiple programs and has been moved to CandidateEducatorPreparationProgramAssociation, expect removal in an future release"
       documentation "The EPP application submitted by the accepted Candidate."
+      is optional
+  domain entity EdFi.Credential
+      documentation "The legal document giving authorization to perform specific services."
       is optional

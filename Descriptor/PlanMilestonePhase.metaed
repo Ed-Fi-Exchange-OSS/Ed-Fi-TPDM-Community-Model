@@ -1,0 +1,2 @@
+Descriptor PlanMilestonePhase
+    documentation "The phase in time when the milestone is planned."
