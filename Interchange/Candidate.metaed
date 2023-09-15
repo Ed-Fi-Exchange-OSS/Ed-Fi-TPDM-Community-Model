@@ -14,10 +14,12 @@ Interchange Candidate
   domain entity CredentialEvent
   domain entity EdFi.Person
   domain entity FinancialAid
+  domain entity PlanMilestone
 
   association CandidateRelationshipToStaffAssociation
   association CandidateEducatorPreparationProgramAssociation
   association EdFi.StudentSchoolAssociation
+  association EdFi.StudentSectionAssociation
   association EdFi.StudentEducationOrganizationAssociation
   association EdFi.StudentEducationOrganizationResponsibilityAssociation
   association FieldworkExperienceSectionAssociation

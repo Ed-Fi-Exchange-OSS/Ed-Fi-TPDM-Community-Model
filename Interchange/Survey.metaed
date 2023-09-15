@@ -1,0 +1,4 @@
+Interchange EdFi.Survey additions
+
+  association SurveyResponsePersonTargetAssociation
+  association SurveySectionResponsePersonTargetAssociation
