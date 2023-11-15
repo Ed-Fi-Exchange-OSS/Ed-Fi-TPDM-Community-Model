@@ -14,7 +14,13 @@ Interchange Candidate
   domain entity CredentialEvent
   domain entity EdFi.Person
   domain entity FinancialAid
+  domain entity Plan
   domain entity PlanMilestone
+  domain entity PlanPhase
+  domain entity StudentPlan
+  domain entity StudentPlanMilestoneStatus
+  domain entity StudentPlanPhaseStatus
+
 
   association CandidateRelationshipToStaffAssociation
   association CandidateEducatorPreparationProgramAssociation

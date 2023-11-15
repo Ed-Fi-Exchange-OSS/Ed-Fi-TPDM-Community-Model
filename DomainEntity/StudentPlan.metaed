@@ -1,0 +1,11 @@
+Domain Entity StudentPlan
+    documentation "The entity representing the association or assignment of the student to the plan being pursued."
+    domain entity EdFi.Student
+        documentation "A reference to the student associated with the plan."
+        is part of identity
+    domain entity Plan
+        documentation "A reference to the plan associated with or assigned to the student."
+        is part of identity
+    common EdFi.Period
+        documentation "The time periods for which the student was assigned and pursing the plan."
+        is optional collection

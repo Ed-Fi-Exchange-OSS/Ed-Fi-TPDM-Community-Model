@@ -1,0 +1,23 @@
+Domain Entity StudentPlanMilestoneStatus
+    documentation "The status of the student's achievement of the plan milestone."
+    domain entity StudentPlan
+        documentation "A reference to the student's plan assignment or association."
+        is part of identity
+        merge StudentPlan.Plan.PlanName with PlanMilestone.PlanPhase.Plan.PlanName
+    domain entity PlanMilestone
+        documentation "A reference to the PlanMilestone against which the status is being recorded."
+        is part of identity
+        merge PlanMilestone.PlanPhase.Plan.PlanName with PlanPhase.Plan.PlanName
+    descriptor PlanMilestoneStatus
+        documentation "The status achieved for the milestone."
+        is part of identity
+    date PlanMilestoneStatusDate
+        documentation "The month, day, and year on which the status was achieved for the milestone."
+        is part of identity
+    shared string EdFi.Description
+        documentation "Additional information associated with the milestone status achieved."
+        is optional
+        role name PlanMilestoneStatus
+    domain entity PlanPhase
+        documentation "The phase in time when the milestone status was achieved."
+        is optional
