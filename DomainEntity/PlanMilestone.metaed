@@ -1,8 +1,5 @@
 Domain Entity PlanMilestone
     documentation "A significant event or achievement as part of a plan."
-    domain entity PlanPhase
-        documentation "A reference to the phase in time when the milestone is planned."
-        is part of identity
     shared string PlanMilestoneName
         documentation "The descriptive name of the milestone."
         is part of identity

@@ -13,3 +13,7 @@ Domain Entity PlanPhase
         documentation "Additional information describing the plan's phase"
         is optional
         role name PhasePlan
+    domain entity PlanMilestone
+        documentation "A reference to the plan milestones associated with this phase"
+        is optional collection
+        role name PlanPhasePlan

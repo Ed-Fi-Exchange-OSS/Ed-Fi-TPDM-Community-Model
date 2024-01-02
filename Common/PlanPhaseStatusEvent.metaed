@@ -1,0 +1,8 @@
+Common PlanPhaseStatusEvent
+    documentation "An event recongnizing the change in status for the phase"
+    descriptor PlanPhaseStatus
+        documentation "The student's status associated with entering or completing the phase"
+        is part of identity
+    date PlanPhaseStatusDate
+        documentation "The month, day and year on which the status was achieved for the phase"
+        is part of identity
