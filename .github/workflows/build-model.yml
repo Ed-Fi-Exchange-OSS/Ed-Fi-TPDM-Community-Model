@@ -20,10 +20,10 @@ on:
 
 env:
   data_model_version: "5.0.0"
-  ODS_version: "7.0"
+  ODS_version: "7.1"
   tpdm_version: "1.2.0"
   ed_fi_model_ref: "DS-5.0-ME-3.x"
-  node_version: "16.13.1"
+  node_version: "18"
   
 jobs:  
     
@@ -104,6 +104,9 @@ jobs:
           Write-Host $metaEdConfiguration
           $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
+
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
    
       - name: MetaEd - Build TPDM-Community
         run: |
