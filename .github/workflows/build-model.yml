@@ -6,10 +6,10 @@ on:
     inputs:
       data_model_version:
         type: string
-        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.0"
+        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.0.0"
       ODS_version:
         type: string
-        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.0"
+        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.1"
       tpdm_version:
         type: string
         description: "tpdm_version: The TPDM version being built. Default: 1.2.0"
@@ -97,7 +97,7 @@ jobs:
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
                                       "pluginConfigDirectories"=$emptyList;
-                                      "defaultPluginTechVersion"="${{ env.ODS_version }}";
+                                      "defaultPluginTechVersion"="${{ env.ODS_version }}.0";
                                       "allianceMode"=$true;                 
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
