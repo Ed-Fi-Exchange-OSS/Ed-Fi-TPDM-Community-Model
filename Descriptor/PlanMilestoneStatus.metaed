@@ -1,0 +1,3 @@
+Descriptor PlanMilestoneStatus
+    documentation "The student's status associated with the plan milestone."
+
