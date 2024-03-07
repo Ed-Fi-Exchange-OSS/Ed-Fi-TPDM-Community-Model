@@ -1,4 +1,0 @@
-Domain Entity EdFi.Student additions
-  domain entity EdFi.Credential
-    documentation "The legal document giving authorization to perform specific services."
-    is optional

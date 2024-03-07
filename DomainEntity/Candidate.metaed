@@ -115,6 +115,3 @@ Domain Entity Candidate
       deprecated "This element can lead to confusion when a Candidate is enrolled in multiple programs and has been moved to CandidateEducatorPreparationProgramAssociation, expect removal in an future release"
       documentation "The EPP application submitted by the accepted Candidate."
       is optional
-  domain entity EdFi.Credential
-      documentation "The legal document giving authorization to perform specific services."
-      is optional
