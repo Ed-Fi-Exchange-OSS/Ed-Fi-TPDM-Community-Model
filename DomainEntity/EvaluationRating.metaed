@@ -27,3 +27,10 @@ Domain Entity EvaluationRating
     descriptor EvaluationRatingStatus
         documentation "The Status of the poerformance evaluation."
         is optional
+    shared string Comments
+        documentation "Any comments about the performance evaluation to be captured."
+        is optional
+    shared integer EdFi.Duration
+        documentation "The actual or estimated number of clock minutes during which the performance evaluation was conducted."
+        is optional
+        role name Actual
