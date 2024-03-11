@@ -8,10 +8,10 @@ Domain Entity StudentPlanMilestoneStatus
         documentation "A reference to the PlanMilestone against which the status is being recorded."
         is part of identity
     bool CompletionIndicator
-        documentation "Indicator on wether the student has completed the plan milestone."
+        documentation "Indicator on whether the student has completed the plan milestone."
         is optional
     common PlanMilestoneStatusEvent
-        documentation "The student's milestone status and the date of rthe status change."
+        documentation "The student's milestone status and the date of the status change."
         is optional collection
     domain entity PlanPhase
         documentation "The phase in time when the milestone status was achieved."

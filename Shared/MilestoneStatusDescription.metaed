@@ -1,4 +1,4 @@
 Shared String MilestoneStatusDescription	
-    documentation "Additional information associated with the milestine status achieved."
+    documentation "Additional information associated with the milestone status achieved."
     min length 0
     max length 60

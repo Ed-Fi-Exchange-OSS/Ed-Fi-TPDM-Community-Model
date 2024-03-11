@@ -8,7 +8,7 @@ Domain Entity StudentPlanPhaseStatus
         documentation "A reference to the phase in time associated with the status."
         is part of identity
     bool CompletionIndicator
-        documentation "Indicator on wether the student has completed the phase associated with the plan."
+        documentation "Indicator on whether the student has completed the phase associated with the plan."
         is optional
     common PlanPhaseStatusEvent
         documentation "The student's phase status and the date of the status change."
