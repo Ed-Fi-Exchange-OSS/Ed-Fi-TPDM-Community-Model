@@ -18,6 +18,7 @@ Interchange Candidate
   association CandidateRelationshipToStaffAssociation
   association CandidateEducatorPreparationProgramAssociation
   association EdFi.StudentSchoolAssociation
+  association EdFi.StudentSectionAssociation
   association EdFi.StudentEducationOrganizationAssociation
   association EdFi.StudentEducationOrganizationResponsibilityAssociation
   association FieldworkExperienceSectionAssociation

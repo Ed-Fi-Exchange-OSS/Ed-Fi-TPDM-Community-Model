@@ -1,0 +1,2 @@
+Descriptor PlanPhaseStatus
+    documentation "The student's status associated with entering or completing the phase."

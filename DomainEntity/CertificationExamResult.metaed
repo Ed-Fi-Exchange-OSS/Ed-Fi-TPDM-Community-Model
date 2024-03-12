@@ -21,3 +21,7 @@ Domain Entity CertificationExamResult
     descriptor CertificationExamStatus
         documentation "The status of the Certification Exam attempt."
         is optional
+    domain entity EdFi.StudentAssessment
+        documentation "Reference to a detailed result for Assessment taken by a student."
+        is optional
+        role name CertificationExam

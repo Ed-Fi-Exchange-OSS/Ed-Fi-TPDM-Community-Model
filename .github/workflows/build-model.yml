@@ -6,10 +6,10 @@ on:
     inputs:
       data_model_version:
         type: string
-        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.0"
+        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.0.0"
       ODS_version:
         type: string
-        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.0"
+        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.1"
       tpdm_version:
         type: string
         description: "tpdm_version: The TPDM version being built. Default: 1.2.0"
@@ -20,10 +20,10 @@ on:
 
 env:
   data_model_version: "5.0.0"
-  ODS_version: "7.0"
+  ODS_version: "7.1"
   tpdm_version: "1.2.0"
   ed_fi_model_ref: "DS-5.0-ME-3.x"
-  node_version: "16.13.1"
+  node_version: "18"
   
 jobs:  
     
@@ -97,14 +97,14 @@ jobs:
                                       "projects"=$projectList;
                                       "projectPaths"=$projectPaths;
                                       "pluginConfigDirectories"=$emptyList;
-                                      "defaultPluginTechVersion"="${{ env.ODS_version }}";
+                                      "defaultPluginTechVersion"="${{ env.ODS_version }}.0";
                                       "allianceMode"=$true;                 
                                   }
           $MetaEdConfigBase.Add("metaEdConfiguration",$metaEdConfiguration)
           Write-Host $metaEdConfiguration
           $FilePath = 'MetaEd/build/MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json'
           $MetaEdConfigBase | ConvertTo-Json -Depth 100 | Out-File -FilePath $FilePath -NoNewline -Encoding Ascii
-   
+
       - name: MetaEd - Build TPDM-Community
         run: |
           node ./index.js --config ./MetaEdConfig-API-${{ env.ODS_version }}-DS-${{ env.data_model_version }}.json -a

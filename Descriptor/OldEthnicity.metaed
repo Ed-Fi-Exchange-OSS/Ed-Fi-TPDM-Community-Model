@@ -1,0 +1,3 @@
+Descriptor OldEthnicity
+    deprecated "Users of this element are advised to use Race and HispanicLatinoEthnicity instead. Expect removal of this element in a future release."
+    documentation "Previous definition of Ethnicity combining Hispanic/Latino and Race."
