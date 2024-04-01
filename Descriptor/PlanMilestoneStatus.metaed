@@ -1,3 +1,3 @@
-Descriptor PlanMilestoneStatus
-    documentation "The student's status associated with the plan milestone."
+Descriptor PathwayMilestoneStatus
+    documentation "The student's status associated with the pathway milestone."
 

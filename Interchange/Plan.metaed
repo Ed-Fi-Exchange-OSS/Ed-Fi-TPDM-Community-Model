@@ -3,9 +3,9 @@ Interchange Plan
   documentation "This interchange defines Plans and all their identifying information"
 
   domain entity EdFi.Student
-  domain entity Plan
-  domain entity PlanMilestone
-  domain entity PlanPhase
-  domain entity StudentPlan
-  domain entity StudentPlanMilestoneStatus
-  domain entity StudentPlanPhaseStatus
+  domain entity Pathway
+  domain entity PathwayMilestone
+  domain entity PathwayPhase
+  domain entity StudentPathway
+  domain entity StudentPathwayMilestoneStatus
+  domain entity StudentPathwayPhaseStatus

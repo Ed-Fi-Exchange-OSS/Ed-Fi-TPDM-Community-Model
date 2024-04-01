@@ -1,0 +1,19 @@
+Domain Entity PathwayPhase
+    documentation "A stage in the process of a student achieving milestones."
+    domain entity Pathway
+        documentation "A reference to the pathway associated with the phase."
+        is part of identity
+    shared string PathwayPhaseName
+        documentation "The name of the phase associated with the pathway."
+        is part of identity
+    integer PathwayPhaseSequence
+        documentation "Indicates the number in order, starting with 1, that the phases are organized into."
+        is optional
+    shared string EdFi.Description
+        documentation "Additional information describing the pathway's phase"
+        is optional
+        role name PhasePathway
+    domain entity PathwayMilestone
+        documentation "A reference to the pathway milestones associated with this phase"
+        is optional collection
+        role name PathwayPhase
