@@ -1,4 +1,0 @@
-Shared String PathwayName
-    documentation "The name for the pathway associated with pathway milestones"
-    min length 0 
-    max length 60

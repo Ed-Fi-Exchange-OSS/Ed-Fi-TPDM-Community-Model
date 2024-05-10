@@ -1,0 +1,4 @@
+Shared String PathPhaseName
+    documentation "The name for the path associated with path milestones"
+    min length 0 
+    max length 60

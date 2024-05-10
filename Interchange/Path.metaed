@@ -1,0 +1,11 @@
+Interchange Path
+
+  documentation "This interchange defines Plans and all their identifying information"
+
+  domain entity EdFi.Student
+  domain entity Path
+  domain entity PathMilestone
+  domain entity PathPhase
+  domain entity StudentPath
+  domain entity StudentPathMilestoneStatus
+  domain entity StudentPathPhaseStatus

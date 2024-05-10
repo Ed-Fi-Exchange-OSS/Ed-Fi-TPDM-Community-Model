@@ -1,4 +1,0 @@
-Shared String PathwayMilestoneCode
-    documentation "The code or identifier associated with an element associated with the pathway milestone (e.g., course, certification, etc)"
-    min length 1
-    max length 60

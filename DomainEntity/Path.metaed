@@ -1,11 +1,11 @@
-Domain Entity Pathway
+Domain Entity Path
     documentation "A scheme for achieving milestones organized by phases for students to follow and be tracked against."
     domain entity EdFi.EducationOrganization
-        documentation "A reference to the Education Organization associated with the pathway."
+        documentation "A reference to the Education Organization associated with the path."
         is part of identity
-    shared string PathwayName
-        documentation "The name of the pathway."
+    shared string PathName
+        documentation "The name of the path."
         is part of identity
     domain entity EdFi.GraduationPlan
-        documentation "The graduation plan associated with this pathway."
+        documentation "The graduation plan associated with this path."
         is optional
