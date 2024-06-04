@@ -1,6 +1,6 @@
 Interchange Path
 
-  documentation "This interchange defines Plans and all their identifying information"
+  documentation "This interchange defines Paths and all their identifying information"
 
   domain entity EdFi.Student
   domain entity Path
