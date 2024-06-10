@@ -1,0 +1,16 @@
+Domain Entity PathMilestone
+    documentation "A significant event or achievement as part of a path."
+    shared string PathMilestoneName
+        documentation "The descriptive name of the milestone."
+        is part of identity
+    descriptor PathMilestoneType
+        documentation "The type of milestone defined for the student's path."
+        is part of identity
+    shared string PathMilestoneCode
+        documentation "The code or identifier associated with an element associated with the path milestone (e.g., course, certification, etc)"
+        is optional
+        role name PathMilestoneCode
+    shared string EdFi.Description
+        documentation "Additional information describing the path's milestone to be achieved."
+        is optional
+        role name PathMilestone

@@ -1,0 +1,4 @@
+Shared String PathMilestoneCode
+    documentation "The code or identifier associated with an element associated with the path milestone (e.g., course, certification, etc)"
+    min length 1
+    max length 60

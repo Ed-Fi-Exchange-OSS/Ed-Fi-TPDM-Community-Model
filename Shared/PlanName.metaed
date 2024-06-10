@@ -1,4 +1,0 @@
-Shared String PlanName
-    documentation "The name for the plan associated with plan milestones"
-    min length 0 
-    max length 60

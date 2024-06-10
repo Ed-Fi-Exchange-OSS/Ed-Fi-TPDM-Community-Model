@@ -1,0 +1,11 @@
+Domain Entity StudentPath
+    documentation "The entity representing the association or assignment of the student to the path being pursued."
+    domain entity EdFi.Student
+        documentation "A reference to the student associated with the path."
+        is part of identity
+    domain entity Path
+        documentation "A reference to the path associated with or assigned to the student."
+        is part of identity
+    common EdFi.Period
+        documentation "The time periods for which the student was assigned and pursing the path."
+        is optional collection

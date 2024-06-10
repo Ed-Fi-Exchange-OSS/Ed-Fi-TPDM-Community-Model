@@ -1,0 +1,19 @@
+Domain Entity StudentPathMilestoneStatus
+    documentation "The status of the student's achievement of the path milestone."
+    domain entity StudentPath
+        documentation "A reference to the student's path assignment or association."
+        is part of identity
+    domain entity PathMilestone
+        documentation "A reference to the PathMilestone against which the status is being recorded."
+        is part of identity
+    bool CompletionIndicator
+        documentation "Indicator on whether the student has completed the path milestone."
+        is optional
+    common PathMilestoneStatusEvent
+        documentation "The student's milestone status and the date of the status change."
+        is optional
+    domain entity PathPhase
+        documentation "The phase in time when the milestone status was achieved."
+        is optional
+        merge PathPhase.Path.PathName with StudentPath.Path.PathName // comment this out and add the role name and code gen works
+

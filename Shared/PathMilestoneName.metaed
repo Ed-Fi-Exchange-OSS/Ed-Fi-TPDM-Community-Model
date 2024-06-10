@@ -1,4 +1,4 @@
-Shared String PlanMilestoneName
+Shared String PathMilestoneName
     documentation "The name for the milestone"
     min length 0 
     max length 60

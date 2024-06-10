@@ -1,0 +1,3 @@
+Descriptor PathMilestoneStatus
+    documentation "The student's status associated with the path milestone."
+

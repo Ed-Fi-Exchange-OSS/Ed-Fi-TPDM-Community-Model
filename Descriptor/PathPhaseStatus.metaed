@@ -1,2 +1,2 @@
-Descriptor PlanPhaseStatus
+Descriptor PathPhaseStatus
     documentation "The student's status associated with entering or completing the phase."
