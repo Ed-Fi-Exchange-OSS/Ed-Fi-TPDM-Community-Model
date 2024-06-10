@@ -6,23 +6,23 @@ on:
     inputs:
       data_model_version:
         type: string
-        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.0.0"
+        description: "data_model_version: The data standard version corresponding to the Ed-Fi Model branch. Default: 5.1.0"
       ODS_version:
         type: string
-        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.1"
+        description: "ODS_version: The Ed-Fi ODS/API version corresponding to the Ed-Fi Model branch. Default: 7.2"
       tpdm_version:
         type: string
         description: "tpdm_version: The TPDM version being built. Default: 1.2.0"
       ed_fi_model_ref:
         type: string
-        description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-5.0-ME-3.x"
+        description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-5.1-ME-3.x"
   pull_request:
 
 env:
-  data_model_version: "5.0.0"
-  ODS_version: "7.1"
+  data_model_version: "5.1.0"
+  ODS_version: "7.2"
   tpdm_version: "1.2.0"
-  ed_fi_model_ref: "DS-5.0-ME-3.x"
+  ed_fi_model_ref: "DS-5.1-ME-3.x"
   node_version: "18"
   
 jobs:  
