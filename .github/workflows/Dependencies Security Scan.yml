@@ -7,6 +7,8 @@ on:
     paths:
       - 'src/**'
 
+permissions: read-all
+
 jobs:
   scan-actions:
     name: Scan Actions
@@ -16,8 +18,6 @@ jobs:
     name: Analyze Code Dependencies
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      contents: read
       security-events: write
 
     strategy:

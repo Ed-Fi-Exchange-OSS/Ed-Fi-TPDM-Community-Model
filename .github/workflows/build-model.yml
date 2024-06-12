@@ -18,6 +18,8 @@ on:
         description: "ed_fi_model_ref: The reference name from the Ed-Fi Model repo to pull. Default: DS-5.1-ME-3.x"
   pull_request:
 
+permissions: read-all
+
 env:
   data_model_version: "5.1.0"
   ODS_version: "7.2"
